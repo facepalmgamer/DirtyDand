@@ -11,5 +11,7 @@ namespace DirtyDand.Globals
 
         //Barbarian Shit
         //Wizard Shit
+        //testing
+        int x = 27;
     }
 }
