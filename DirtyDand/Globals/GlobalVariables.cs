@@ -8,5 +8,8 @@ namespace DirtyDand.Globals
 {
     public static class GlobalVariables
     {
+
+        //Barbarian Shit
+        //Wizard Shit
     }
 }
