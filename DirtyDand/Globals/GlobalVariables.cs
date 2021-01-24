@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DirtyDand.Globals
 {
-    class GlobalVariables
+    public static class GlobalVariables
     {
     }
 }
