@@ -8,5 +8,7 @@ namespace DirtyDand.Globals
 {
     public static class GlobalVariables
     {
+        //testing
+        int x = 27;
     }
 }
