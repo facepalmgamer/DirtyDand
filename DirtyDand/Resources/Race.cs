@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static DirtyDand.Globals.GlobalVariables;
 
 namespace DirtyDand.Resources
 {
     public class Race
     {
-        public enum Alignment {lg, ln, le, ng, n, ne, cg, cn, ce};
-        public enum AbilityScores {Str, Dex, Con, Int, Wis, Cha};
+        
         public enum Size {s, m};
         private int age {get; set;}
         private Alignment alignment {get; set;}

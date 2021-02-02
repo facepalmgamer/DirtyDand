@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using DirtyDand.Handlers;
 namespace DirtyDand
 {
     public partial class Form1 : Form
@@ -15,6 +16,20 @@ namespace DirtyDand
         public Form1()
         {
             InitializeComponent();
+            InitializeHandlers();
+
         }
+
+        private void InitializeHandlers()
+        {
+            SpellHandler spell = new SpellHandler();
+        }
+
+        public async void SearchAsync(int[] levels)
+        {
+
+        }
+
+
     }
 }

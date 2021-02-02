@@ -1,10 +1,5 @@
-﻿using System;
+﻿using DirtyDand.Resources;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using DirtyDand.Resources;
 
 namespace DirtyDand.Globals
 {
@@ -14,5 +9,14 @@ namespace DirtyDand.Globals
         static List<CClass> classRegistry = new List<CClass>();
         static List<Spell> spellRegistry = new List<Spell>();
         static List<Background> backgroundRegistry = new List<Background>();
+
+
+        public enum School { Abjuration, Conjuration, Divination, Enchantment, Evocation, Illusion, Necromancy, Transmutation };
+        public enum Caster { Artificer, Bard, Cleric, Druid, Paladin, Ranger, Sorcerer, Warlock, Wizard };
+        public enum Time { A, Ba, R, M, Ms, H };
+        public enum Alignment { lg, ln, le, ng, n, ne, cg, cn, ce };
+        public enum AbilityScores { Str, Dex, Con, Int, Wis, Cha };
+        public enum Components { V, S, M };
+
     }
 }
