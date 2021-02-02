@@ -101,7 +101,7 @@ namespace Scraper
         {
             List<string> info = new List<string>();
 
-            IWebDriver driver = new ChromeDriver(@"D:\dev\");
+            IWebDriver driver = new ChromeDriver(@"C:\dev\");
             driver.Manage().Timeouts().ImplicitWait = new TimeSpan(0,1,0);
             driver.Url = url;
 
