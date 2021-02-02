@@ -18,10 +18,11 @@ namespace DirtyDand.Resources
         private int duration { get; }
         private int level { get; }
         private int range { get; }
-        private Caster casterList { get; }
-        //private List<Components>() {get;}
+        private List<Caster> casterList { get; }
+        private List<Components> componentsList{get;}
+        string material;
 
-        public Spell(String spellName, String spellDescript, School school, bool concentration, Time time, int duration, int level, int range, Caster casterList)
+        public Spell(String spellName, String spellDescript, School school, bool concentration, Time time, int duration, int level, int range, List<Caster> casterList, List<Components> componentsList, string material)
         {
             this.spellName = spellName;
             this.spellDescript = spellDescript;
@@ -32,6 +33,8 @@ namespace DirtyDand.Resources
             this.level = level;
             this.range = range;
             this.casterList = casterList;
+            this.componentsList = componentsList;
+            this.material = material;
         }
     }
 }
