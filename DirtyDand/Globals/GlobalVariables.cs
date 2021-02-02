@@ -5,11 +5,10 @@ namespace DirtyDand.Globals
 {
     public static class GlobalVariables
     {
-        static List<Race> raceRegistry = new List<Race>();
-        static List<CClass> classRegistry = new List<CClass>();
-        static List<Spell> spellRegistry = new List<Spell>();
-        static List<Background> backgroundRegistry = new List<Background>();
-
+        public static List<Race> raceRegistry = new List<Race>();
+        public static List<CClass> classRegistry = new List<CClass>();
+        public static List<Spell> spellRegistry = new List<Spell>();
+        public static List<Background> backgroundRegistry = new List<Background>();
 
         public enum School { Abjuration, Conjuration, Divination, Enchantment, Evocation, Illusion, Necromancy, Transmutation };
         public enum Caster { Artificer, Bard, Cleric, Druid, Paladin, Ranger, Sorcerer, Warlock, Wizard };

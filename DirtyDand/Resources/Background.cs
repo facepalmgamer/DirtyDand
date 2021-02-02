@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DirtyDand.Resources
 {
-    class Background
+    public class Background
     {
 
     }
