@@ -8,10 +8,9 @@ namespace DirtyDand.Globals
 {
     public static class GlobalVariables
     {
-
-        //Barbarian Shit
-        //Wizard Shit
-        //testing
-        int x = 27;
+        List<Race> raceRegistry = new List<Race>();
+        List<CClass> classRegistry = new List<CClass>();
+        List<Spell> spellRegistry = new List<Spell>();
+        List<Background> backgroundRegistry = new List<Background>();
     }
 }
