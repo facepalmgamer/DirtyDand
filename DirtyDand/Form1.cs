@@ -72,9 +72,9 @@ namespace DirtyDand
             foreach (List<Spell> e in levels)
                 spellRegistry.AddRange(e);
 
-        }
+        }g
 
-        public async void SearchAsync(/*List<classes?>*/ classes, int[] level, Components[] comps, School[] schools, Time[] time, int[] range, bool concitration, )
+        public async void SearchAsync(List<Caster> castList, int[] level, Components[] comps, School[] schools, Time[] time, int[] range, bool concitration, )
         {
 
 
