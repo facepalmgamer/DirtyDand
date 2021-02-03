@@ -17,6 +17,7 @@ namespace DirtyDand.Handlers
             result = File.ReadAllText("Spells5e.txt");
             string[] spells = result.Split('~');
 
+            
             foreach(string e in spells)
             {
                 //Splits file into spells

@@ -8,6 +8,6 @@ namespace DirtyDand.Resources
 {
     public class Background
     {
-
+        
     }
 }
