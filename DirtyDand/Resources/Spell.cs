@@ -16,7 +16,7 @@ namespace DirtyDand.Resources
         private bool concentration { get; }
         private Time time { get; }
         private string duration { get; }
-        private int level { get; }
+        public int level { get; }
         private int range { get; }
         private List<Caster> casterList { get; }
         private List<Components> componentsList{get;}
