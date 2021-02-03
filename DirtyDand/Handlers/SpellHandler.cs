@@ -102,7 +102,7 @@ namespace DirtyDand.Handlers
                 //Gets the full spell description
                 string description = String.Empty;
                 int count = 7;
-                while(!lines[count].Substring(0, 8).Equals("Classes: "))
+                while(!lines[count].Contains("Classes: "))
                 {
                     description += lines[count];
                     count++;
