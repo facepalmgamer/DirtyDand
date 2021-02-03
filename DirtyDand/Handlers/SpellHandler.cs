@@ -87,7 +87,10 @@ namespace DirtyDand.Handlers
                 }
                 
                 //Gets the spell duration
-                string duration = lines[5];
+                string duration = lines[5].Substring(10);
+                bool concentration = false;
+                if (duration.Contains("Concentration"))
+                    concentration = true;
                 
                 //Gets the full spell description
                 string description = String.Empty;
@@ -122,7 +125,7 @@ namespace DirtyDand.Handlers
                     casterList.Add(Caster.Wizard);
 
                 //Gets the source the spell was published from
-                string source = lines[lines.Count() - 2];
+                string source = lines[lines.Count() - 2].Substring(8);
 
             }
         }
