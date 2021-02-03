@@ -24,14 +24,14 @@ namespace DirtyDand.Handlers
                 string[] lines = e.Split('\n');
                 
                 //Gets the spell name
-                string name = lines[0];
+                string spellName = lines[0];
                 
                 //Gets the spell level
                 int level = 0;
                 if (Int32.TryParse(lines[1].Substring(0, 1), out int strLevel))
                     level = strLevel;
                 
-                //Gets the spell lines[1]
+                //Gets the spell school
                 School eSchool;
                 if (lines[1].IndexOf("Abjuration") >= 0 || lines[1].IndexOf("abjuration") >= 0)
                     eSchool = School.Abjuration;
@@ -65,14 +65,15 @@ namespace DirtyDand.Handlers
                 else if (lines[2].IndexOf("1 hour") == 0)
                     time = Time.H;
                 // Gets the range of the spell
-                string fRange = lines[3].Substring(7, 8);
+                string fRange = lines[3].Substring(7, 1);
                 int range;
-                if (Int32.TryParse(lines[1].Substring(0, 1), out int strRange))
-                    range = strRange;
-                else if (fRange.Equals("T"))
-                    range = 1;
-                else
-                    range = 0;
+                if (!Int32.TryParse(lines[1].Substring(0, 1), out range))
+                {
+                    if (fRange.Equals("T"))
+                        range = 1;//Touch Range
+                    else
+                        range = 0;//Self Range
+                }
 
                 //Gets the spell components
                 List<Components> compsList = new List<Components>();
@@ -128,6 +129,7 @@ namespace DirtyDand.Handlers
                 //Gets the source the spell was published from
                 string source = lines[lines.Count() - 2].Substring(8);
 
+                spellRegistry.Add(new Resources.Spell(spellName, description, eSchool, concentration, time, ))
             }
         }
     }
