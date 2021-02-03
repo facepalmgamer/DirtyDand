@@ -129,7 +129,7 @@ namespace DirtyDand.Handlers
                 //Gets the source the spell was published from
                 string source = lines[lines.Count() - 2].Substring(8);
 
-                spellRegistry.Add(new Resources.Spell(spellName, description, eSchool, concentration, time, ))
+                spellRegistry.Add(new Resources.Spell(spellName, description, eSchool, concentration, time, duration, level, range, casterList, compsList, materials));
             }
         }
     }
