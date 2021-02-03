@@ -21,12 +21,14 @@ namespace DirtyDand.Resources
         private List<Caster> casterList { get; }
         private List<Components> componentsList{get;}
         string material;
+        private bool ritual;
 
-        public Spell(String spellName, String spellDescript, School school, bool concentration, Time time, string duration, int level, int range, List<Caster> casterList, List<Components> componentsList, string material = "")
+        public Spell(String spellName, String spellDescript, School school, bool ritual, bool concentration, Time time, string duration, int level, int range, List<Caster> casterList, List<Components> componentsList, string material = "")
         {
             this.spellName = spellName;
             this.spellDescript = spellDescript;
             this.school = school;
+            this.ritual = ritual;
             this.concentration = concentration;
             this.time = time;
             this.duration = duration;

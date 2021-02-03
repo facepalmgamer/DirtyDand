@@ -32,7 +32,7 @@ namespace DirtyDand.Handlers
                     level = strLevel;
                 
                 //Gets the spell school
-                School eSchool;
+                School eSchool = School.Abjuration;
                 if (lines[1].IndexOf("Abjuration") >= 0 || lines[1].IndexOf("abjuration") >= 0)
                     eSchool = School.Abjuration;
                 else if (lines[1].IndexOf("Conjuration") >= 0 || lines[1].IndexOf("conjuration") >= 0)
@@ -49,9 +49,14 @@ namespace DirtyDand.Handlers
                     eSchool = School.Necromancy;
                 else if (lines[1].IndexOf("Transmutation") >= 0 || lines[1].IndexOf("transmutation") >= 0)
                     eSchool = School.Transmutation;
+               
+                //Determines if the spell can be ritual cast
+                bool ritual = false;
+                if (lines[1].Contains("(ritual)"))
+                    ritual = true;
                 
                 //Gets the spell casting time
-                Time time;
+                Time time = Time.A;
                 if (lines[2].IndexOf("1 action") == 0)
                     time = Time.A;
                 else if (lines[2].IndexOf("1 bonus action") == 0)
@@ -129,7 +134,7 @@ namespace DirtyDand.Handlers
                 //Gets the source the spell was published from
                 string source = lines[lines.Count() - 2].Substring(8);
 
-                spellRegistry.Add(new Resources.Spell(spellName, description, eSchool, concentration, time, duration, level, range, casterList, compsList, materials));
+                spellRegistry.Add(new Resources.Spell(spellName, description, eSchool, ritual, concentration, time, duration, level, range, casterList, compsList, materials));
             }
         }
     }
