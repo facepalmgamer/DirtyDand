@@ -67,12 +67,13 @@ namespace DirtyDand.Handlers
                 // Gets the range of the spell
                 string fRange = lines[3].Substring(7, 8);
                 int range;
-                if (Int32.TryParse(lines[1].Substring(0, 1), out int strRange))
-                    range = strRange;
-                else if (fRange.Equals("T"))
-                    range = 1;
-                else
-                    range = 0;
+                if (!Int32.TryParse(lines[1].Substring(0, 1), out range))
+                {
+                    if (fRange.Equals("T"))
+                        range = 1;
+                    else
+                        range = 0;
+                }
 
                 //Gets the spell components
                 List<Components> compsList = new List<Components>();

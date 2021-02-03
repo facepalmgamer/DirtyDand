@@ -15,14 +15,14 @@ namespace DirtyDand.Resources
         private School school { get; }
         private bool concentration { get; }
         private Time time { get; }
-        private int duration { get; }
+        private string duration { get; }
         private int level { get; }
         private int range { get; }
         private List<Caster> casterList { get; }
         private List<Components> componentsList{get;}
         string material;
 
-        public Spell(String spellName, String spellDescript, School school, bool concentration, Time time, int duration, int level, int range, List<Caster> casterList, List<Components> componentsList, string material)
+        public Spell(String spellName, String spellDescript, School school, bool concentration, Time time, string duration, int level, int range, List<Caster> casterList, List<Components> componentsList, string material = "")
         {
             this.spellName = spellName;
             this.spellDescript = spellDescript;
