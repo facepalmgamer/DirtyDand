@@ -35,7 +35,7 @@ namespace DirtyDand
 
             for (int i = 0; i < spellRegistry.Count(); i++)
             {
-                switch(spellRegistry.ElementAt(i).level)
+                switch(spellRegistry.ElementAt(i).GetLevel())
                 {
                     case 0:
                         levels.ElementAt(0).Add(spellRegistry.ElementAt(i));
@@ -74,7 +74,7 @@ namespace DirtyDand
             foreach (List<Spell> e in levels)
                 spellRegistry.AddRange(e);
 
-        }g
+        }
 
         public async Task<List<Resources.Spell>> SearchAsync(/*List<classes?> classes,*/ int[] level, Components[] comps, School[] schools, Time[] time, int[] range, bool concitration, bool ritual, Source[] sources, string search)
         {
