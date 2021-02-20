@@ -26,6 +26,7 @@ namespace DirtyDand.Resources
             this.spellName = spellName;
             this.spellDescript = spellDescript;
             this.school = school;
+            this.ritual = ritual;
             this.concentration = concentration;
             this.ritual = ritual;
             this.time = time;
