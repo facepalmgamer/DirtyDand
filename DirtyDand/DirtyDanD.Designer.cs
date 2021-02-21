@@ -31,6 +31,7 @@ namespace DirtyDand
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DirtyDanD));
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.panelExitBorder = new System.Windows.Forms.Panel();
             this.buttonExit = new System.Windows.Forms.Button();
             this.buttonSave = new System.Windows.Forms.Button();
             this.buttonHelp = new System.Windows.Forms.Button();
@@ -54,18 +55,23 @@ namespace DirtyDand
             this.buttonSelectCharacter = new System.Windows.Forms.Button();
             this.buttonCharacter = new System.Windows.Forms.Button();
             this.panelTitle = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelChildForm = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panelBottomText = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
             this.panelHandbook.SuspendLayout();
             this.panelCharacter.SuspendLayout();
             this.panelNewCharacter.SuspendLayout();
             this.panelSelectCharacter.SuspendLayout();
+            this.panelChildForm.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
             // 
             this.panelMenu.AutoScroll = true;
             this.panelMenu.BackColor = System.Drawing.Color.Black;
+            this.panelMenu.Controls.Add(this.panelExitBorder);
             this.panelMenu.Controls.Add(this.buttonExit);
             this.panelMenu.Controls.Add(this.buttonSave);
             this.panelMenu.Controls.Add(this.buttonHelp);
@@ -78,24 +84,33 @@ namespace DirtyDand
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Margin = new System.Windows.Forms.Padding(4);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(320, 1041);
+            this.panelMenu.Size = new System.Drawing.Size(272, 1041);
             this.panelMenu.TabIndex = 0;
+            // 
+            // panelExitBorder
+            // 
+            this.panelExitBorder.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelExitBorder.Location = new System.Drawing.Point(0, 970);
+            this.panelExitBorder.Name = "panelExitBorder";
+            this.panelExitBorder.Size = new System.Drawing.Size(272, 1);
+            this.panelExitBorder.TabIndex = 8;
             // 
             // buttonExit
             // 
             this.buttonExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.buttonExit.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonExit.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.buttonExit.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.buttonExit.FlatAppearance.BorderSize = 0;
             this.buttonExit.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(11)))), ((int)(((byte)(11)))));
             this.buttonExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.buttonExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonExit.ForeColor = System.Drawing.Color.LightGray;
-            this.buttonExit.Location = new System.Drawing.Point(0, 943);
+            this.buttonExit.Location = new System.Drawing.Point(0, 971);
             this.buttonExit.Margin = new System.Windows.Forms.Padding(4);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.buttonExit.Size = new System.Drawing.Size(320, 70);
+            this.buttonExit.Size = new System.Drawing.Size(272, 70);
             this.buttonExit.TabIndex = 7;
             this.buttonExit.Text = "Exit";
             this.buttonExit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -106,17 +121,18 @@ namespace DirtyDand
             // 
             this.buttonSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.buttonSave.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonSave.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.buttonSave.FlatAppearance.BorderSize = 0;
             this.buttonSave.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(11)))), ((int)(((byte)(11)))));
             this.buttonSave.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.buttonSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.buttonSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSave.ForeColor = System.Drawing.Color.LightGray;
-            this.buttonSave.Location = new System.Drawing.Point(0, 873);
+            this.buttonSave.Location = new System.Drawing.Point(0, 857);
             this.buttonSave.Margin = new System.Windows.Forms.Padding(4);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.buttonSave.Size = new System.Drawing.Size(320, 70);
+            this.buttonSave.Size = new System.Drawing.Size(272, 70);
             this.buttonSave.TabIndex = 6;
             this.buttonSave.Text = "Save";
             this.buttonSave.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -126,17 +142,18 @@ namespace DirtyDand
             // 
             this.buttonHelp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.buttonHelp.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonHelp.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.buttonHelp.FlatAppearance.BorderSize = 0;
             this.buttonHelp.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(11)))), ((int)(((byte)(11)))));
             this.buttonHelp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.buttonHelp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.buttonHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonHelp.ForeColor = System.Drawing.Color.LightGray;
-            this.buttonHelp.Location = new System.Drawing.Point(0, 803);
+            this.buttonHelp.Location = new System.Drawing.Point(0, 787);
             this.buttonHelp.Margin = new System.Windows.Forms.Padding(4);
             this.buttonHelp.Name = "buttonHelp";
             this.buttonHelp.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.buttonHelp.Size = new System.Drawing.Size(320, 70);
+            this.buttonHelp.Size = new System.Drawing.Size(272, 70);
             this.buttonHelp.TabIndex = 5;
             this.buttonHelp.Text = "Help";
             this.buttonHelp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -151,10 +168,10 @@ namespace DirtyDand
             this.panelHandbook.Controls.Add(this.buttonFeatSearch);
             this.panelHandbook.Controls.Add(this.buttonSpellSearch);
             this.panelHandbook.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelHandbook.Location = new System.Drawing.Point(0, 526);
+            this.panelHandbook.Location = new System.Drawing.Point(0, 510);
             this.panelHandbook.Margin = new System.Windows.Forms.Padding(4);
             this.panelHandbook.Name = "panelHandbook";
-            this.panelHandbook.Size = new System.Drawing.Size(320, 277);
+            this.panelHandbook.Size = new System.Drawing.Size(272, 277);
             this.panelHandbook.TabIndex = 4;
             // 
             // buttonItemSearch
@@ -170,7 +187,7 @@ namespace DirtyDand
             this.buttonItemSearch.Margin = new System.Windows.Forms.Padding(4);
             this.buttonItemSearch.Name = "buttonItemSearch";
             this.buttonItemSearch.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
-            this.buttonItemSearch.Size = new System.Drawing.Size(320, 55);
+            this.buttonItemSearch.Size = new System.Drawing.Size(272, 55);
             this.buttonItemSearch.TabIndex = 6;
             this.buttonItemSearch.Text = "Items";
             this.buttonItemSearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -189,7 +206,7 @@ namespace DirtyDand
             this.buttonClassAbilitySearch.Margin = new System.Windows.Forms.Padding(4);
             this.buttonClassAbilitySearch.Name = "buttonClassAbilitySearch";
             this.buttonClassAbilitySearch.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
-            this.buttonClassAbilitySearch.Size = new System.Drawing.Size(320, 55);
+            this.buttonClassAbilitySearch.Size = new System.Drawing.Size(272, 55);
             this.buttonClassAbilitySearch.TabIndex = 5;
             this.buttonClassAbilitySearch.Text = "Abilities";
             this.buttonClassAbilitySearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -208,7 +225,7 @@ namespace DirtyDand
             this.buttonBackgroundSearch.Margin = new System.Windows.Forms.Padding(4);
             this.buttonBackgroundSearch.Name = "buttonBackgroundSearch";
             this.buttonBackgroundSearch.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
-            this.buttonBackgroundSearch.Size = new System.Drawing.Size(320, 55);
+            this.buttonBackgroundSearch.Size = new System.Drawing.Size(272, 55);
             this.buttonBackgroundSearch.TabIndex = 4;
             this.buttonBackgroundSearch.Text = "Backgrounds";
             this.buttonBackgroundSearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -227,7 +244,7 @@ namespace DirtyDand
             this.buttonFeatSearch.Margin = new System.Windows.Forms.Padding(4);
             this.buttonFeatSearch.Name = "buttonFeatSearch";
             this.buttonFeatSearch.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
-            this.buttonFeatSearch.Size = new System.Drawing.Size(320, 55);
+            this.buttonFeatSearch.Size = new System.Drawing.Size(272, 55);
             this.buttonFeatSearch.TabIndex = 2;
             this.buttonFeatSearch.Text = "Feats";
             this.buttonFeatSearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -246,7 +263,7 @@ namespace DirtyDand
             this.buttonSpellSearch.Margin = new System.Windows.Forms.Padding(4);
             this.buttonSpellSearch.Name = "buttonSpellSearch";
             this.buttonSpellSearch.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
-            this.buttonSpellSearch.Size = new System.Drawing.Size(320, 55);
+            this.buttonSpellSearch.Size = new System.Drawing.Size(272, 55);
             this.buttonSpellSearch.TabIndex = 0;
             this.buttonSpellSearch.Text = "Spells";
             this.buttonSpellSearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -256,17 +273,18 @@ namespace DirtyDand
             // 
             this.buttonHandbook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.buttonHandbook.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonHandbook.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.buttonHandbook.FlatAppearance.BorderSize = 0;
             this.buttonHandbook.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(11)))), ((int)(((byte)(11)))));
             this.buttonHandbook.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.buttonHandbook.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.buttonHandbook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonHandbook.ForeColor = System.Drawing.Color.LightGray;
-            this.buttonHandbook.Location = new System.Drawing.Point(0, 456);
+            this.buttonHandbook.Location = new System.Drawing.Point(0, 440);
             this.buttonHandbook.Margin = new System.Windows.Forms.Padding(4);
             this.buttonHandbook.Name = "buttonHandbook";
             this.buttonHandbook.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.buttonHandbook.Size = new System.Drawing.Size(320, 70);
+            this.buttonHandbook.Size = new System.Drawing.Size(272, 70);
             this.buttonHandbook.TabIndex = 3;
             this.buttonHandbook.Text = "Handbook";
             this.buttonHandbook.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -283,10 +301,10 @@ namespace DirtyDand
             this.panelCharacter.Controls.Add(this.panelSelectCharacter);
             this.panelCharacter.Controls.Add(this.buttonSelectCharacter);
             this.panelCharacter.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelCharacter.Location = new System.Drawing.Point(0, 236);
+            this.panelCharacter.Location = new System.Drawing.Point(0, 220);
             this.panelCharacter.Margin = new System.Windows.Forms.Padding(4);
             this.panelCharacter.Name = "panelCharacter";
-            this.panelCharacter.Size = new System.Drawing.Size(320, 220);
+            this.panelCharacter.Size = new System.Drawing.Size(272, 220);
             this.panelCharacter.TabIndex = 2;
             // 
             // buttonExportCharacter
@@ -302,7 +320,7 @@ namespace DirtyDand
             this.buttonExportCharacter.Margin = new System.Windows.Forms.Padding(4);
             this.buttonExportCharacter.Name = "buttonExportCharacter";
             this.buttonExportCharacter.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
-            this.buttonExportCharacter.Size = new System.Drawing.Size(320, 55);
+            this.buttonExportCharacter.Size = new System.Drawing.Size(272, 55);
             this.buttonExportCharacter.TabIndex = 5;
             this.buttonExportCharacter.Text = "Export Character";
             this.buttonExportCharacter.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -321,7 +339,7 @@ namespace DirtyDand
             this.buttonRemoveCharacter.Margin = new System.Windows.Forms.Padding(4);
             this.buttonRemoveCharacter.Name = "buttonRemoveCharacter";
             this.buttonRemoveCharacter.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
-            this.buttonRemoveCharacter.Size = new System.Drawing.Size(320, 55);
+            this.buttonRemoveCharacter.Size = new System.Drawing.Size(272, 55);
             this.buttonRemoveCharacter.TabIndex = 4;
             this.buttonRemoveCharacter.Text = "Remove Character";
             this.buttonRemoveCharacter.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -336,7 +354,7 @@ namespace DirtyDand
             this.panelNewCharacter.Location = new System.Drawing.Point(0, 145);
             this.panelNewCharacter.Margin = new System.Windows.Forms.Padding(4);
             this.panelNewCharacter.Name = "panelNewCharacter";
-            this.panelNewCharacter.Size = new System.Drawing.Size(320, 105);
+            this.panelNewCharacter.Size = new System.Drawing.Size(272, 105);
             this.panelNewCharacter.TabIndex = 3;
             // 
             // buttonLoadCharacter
@@ -352,7 +370,7 @@ namespace DirtyDand
             this.buttonLoadCharacter.Margin = new System.Windows.Forms.Padding(4);
             this.buttonLoadCharacter.Name = "buttonLoadCharacter";
             this.buttonLoadCharacter.Padding = new System.Windows.Forms.Padding(80, 0, 0, 0);
-            this.buttonLoadCharacter.Size = new System.Drawing.Size(320, 35);
+            this.buttonLoadCharacter.Size = new System.Drawing.Size(272, 35);
             this.buttonLoadCharacter.TabIndex = 2;
             this.buttonLoadCharacter.Text = "Load Character";
             this.buttonLoadCharacter.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -371,7 +389,7 @@ namespace DirtyDand
             this.buttonCustomCharacter.Margin = new System.Windows.Forms.Padding(4);
             this.buttonCustomCharacter.Name = "buttonCustomCharacter";
             this.buttonCustomCharacter.Padding = new System.Windows.Forms.Padding(80, 0, 0, 0);
-            this.buttonCustomCharacter.Size = new System.Drawing.Size(320, 35);
+            this.buttonCustomCharacter.Size = new System.Drawing.Size(272, 35);
             this.buttonCustomCharacter.TabIndex = 1;
             this.buttonCustomCharacter.Text = "Custom Character";
             this.buttonCustomCharacter.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -390,7 +408,7 @@ namespace DirtyDand
             this.buttonRandomCharacter.Margin = new System.Windows.Forms.Padding(4);
             this.buttonRandomCharacter.Name = "buttonRandomCharacter";
             this.buttonRandomCharacter.Padding = new System.Windows.Forms.Padding(80, 0, 0, 0);
-            this.buttonRandomCharacter.Size = new System.Drawing.Size(320, 35);
+            this.buttonRandomCharacter.Size = new System.Drawing.Size(272, 35);
             this.buttonRandomCharacter.TabIndex = 0;
             this.buttonRandomCharacter.Text = "Random Character";
             this.buttonRandomCharacter.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -409,7 +427,7 @@ namespace DirtyDand
             this.buttonNewCharacter.Margin = new System.Windows.Forms.Padding(4);
             this.buttonNewCharacter.Name = "buttonNewCharacter";
             this.buttonNewCharacter.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
-            this.buttonNewCharacter.Size = new System.Drawing.Size(320, 55);
+            this.buttonNewCharacter.Size = new System.Drawing.Size(272, 55);
             this.buttonNewCharacter.TabIndex = 2;
             this.buttonNewCharacter.Text = "New Character";
             this.buttonNewCharacter.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -423,7 +441,7 @@ namespace DirtyDand
             this.panelSelectCharacter.Location = new System.Drawing.Point(0, 55);
             this.panelSelectCharacter.Margin = new System.Windows.Forms.Padding(4);
             this.panelSelectCharacter.Name = "panelSelectCharacter";
-            this.panelSelectCharacter.Size = new System.Drawing.Size(320, 35);
+            this.panelSelectCharacter.Size = new System.Drawing.Size(272, 35);
             this.panelSelectCharacter.TabIndex = 1;
             // 
             // buttonCharacter1
@@ -439,7 +457,7 @@ namespace DirtyDand
             this.buttonCharacter1.Margin = new System.Windows.Forms.Padding(4);
             this.buttonCharacter1.Name = "buttonCharacter1";
             this.buttonCharacter1.Padding = new System.Windows.Forms.Padding(80, 0, 0, 0);
-            this.buttonCharacter1.Size = new System.Drawing.Size(320, 35);
+            this.buttonCharacter1.Size = new System.Drawing.Size(272, 35);
             this.buttonCharacter1.TabIndex = 0;
             this.buttonCharacter1.Text = "temp character";
             this.buttonCharacter1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -458,7 +476,7 @@ namespace DirtyDand
             this.buttonSelectCharacter.Margin = new System.Windows.Forms.Padding(4);
             this.buttonSelectCharacter.Name = "buttonSelectCharacter";
             this.buttonSelectCharacter.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
-            this.buttonSelectCharacter.Size = new System.Drawing.Size(320, 55);
+            this.buttonSelectCharacter.Size = new System.Drawing.Size(272, 55);
             this.buttonSelectCharacter.TabIndex = 0;
             this.buttonSelectCharacter.Text = "Select Character";
             this.buttonSelectCharacter.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -469,17 +487,18 @@ namespace DirtyDand
             // 
             this.buttonCharacter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.buttonCharacter.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonCharacter.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.buttonCharacter.FlatAppearance.BorderSize = 0;
             this.buttonCharacter.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(11)))), ((int)(((byte)(11)))));
             this.buttonCharacter.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.buttonCharacter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.buttonCharacter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCharacter.ForeColor = System.Drawing.Color.LightGray;
-            this.buttonCharacter.Location = new System.Drawing.Point(0, 166);
+            this.buttonCharacter.Location = new System.Drawing.Point(0, 150);
             this.buttonCharacter.Margin = new System.Windows.Forms.Padding(4);
             this.buttonCharacter.Name = "buttonCharacter";
             this.buttonCharacter.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.buttonCharacter.Size = new System.Drawing.Size(320, 70);
+            this.buttonCharacter.Size = new System.Drawing.Size(272, 70);
             this.buttonCharacter.TabIndex = 1;
             this.buttonCharacter.Text = "Character";
             this.buttonCharacter.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -492,32 +511,54 @@ namespace DirtyDand
             this.panelTitle.Location = new System.Drawing.Point(0, 0);
             this.panelTitle.Margin = new System.Windows.Forms.Padding(4);
             this.panelTitle.Name = "panelTitle";
-            this.panelTitle.Size = new System.Drawing.Size(320, 166);
+            this.panelTitle.Size = new System.Drawing.Size(272, 150);
             this.panelTitle.TabIndex = 0;
             // 
-            // panel1
+            // panelChildForm
             // 
-            this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(320, 875);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1584, 166);
-            this.panel1.TabIndex = 1;
+            this.panelChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.panelChildForm.Controls.Add(this.pictureBox1);
+            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelChildForm.Location = new System.Drawing.Point(272, 0);
+            this.panelChildForm.Name = "panelChildForm";
+            this.panelChildForm.Size = new System.Drawing.Size(1632, 1041);
+            this.panelChildForm.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = global::DirtyDand.Properties.Resources.dand_logo;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(566, 209);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(500, 500);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // panelBottomText
+            // 
+            this.panelBottomText.BackColor = System.Drawing.Color.Black;
+            this.panelBottomText.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelBottomText.Location = new System.Drawing.Point(272, 918);
+            this.panelBottomText.Name = "panelBottomText";
+            this.panelBottomText.Size = new System.Drawing.Size(1632, 123);
+            this.panelBottomText.TabIndex = 2;
             // 
             // DirtyDanD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
             this.ClientSize = new System.Drawing.Size(1904, 1041);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelBottomText);
+            this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.panelMenu);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.Black;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.MinimumSize = new System.Drawing.Size(640, 360);
+            this.MinimumSize = new System.Drawing.Size(772, 623);
             this.Name = "DirtyDanD";
             this.Text = "DirtyDanD";
             this.panelMenu.ResumeLayout(false);
@@ -525,8 +566,10 @@ namespace DirtyDand
             this.panelCharacter.ResumeLayout(false);
             this.panelNewCharacter.ResumeLayout(false);
             this.panelSelectCharacter.ResumeLayout(false);
+            this.panelChildForm.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            
+
         }
 
         #endregion
@@ -548,7 +591,6 @@ namespace DirtyDand
         private System.Windows.Forms.Button buttonHandbook;
         private System.Windows.Forms.Panel panelTitle;
         private System.Windows.Forms.Button buttonHelp;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button buttonCustomCharacter;
         private System.Windows.Forms.Button buttonRandomCharacter;
         private System.Windows.Forms.Button buttonNewCharacter;
@@ -556,6 +598,10 @@ namespace DirtyDand
         private System.Windows.Forms.Button buttonSelectCharacter;
         private System.Windows.Forms.Button buttonExit;
         private System.Windows.Forms.Button buttonSave;
+        private System.Windows.Forms.Panel panelChildForm;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panelBottomText;
+        private System.Windows.Forms.Panel panelExitBorder;
     }
 }
 
