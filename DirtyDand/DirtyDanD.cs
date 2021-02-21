@@ -4,17 +4,42 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static DirtyDand.Globals.GlobalVariables;
 
 namespace DirtyDand
 {
-    public partial class Form1 : Form
+    public partial class DirtyDanD : Form
     {
-        public Form1()
+        [DllImport("User32.dll", CharSet = CharSet.Auto)]
+        public static extern int ReleaseDC(IntPtr hWnd, IntPtr hDC);
+
+        [DllImport("User32.dll")]
+        private static extern IntPtr GetWindowDC(IntPtr hWnd);
+
+        protected override void WndProc(ref Message m)
         {
+            base.WndProc(ref m);
+            const int WM_NCPAINT = 0x85;
+            if (m.Msg == WM_NCPAINT)
+            {
+                IntPtr hdc = GetWindowDC(m.HWnd);
+                if ((int)hdc != 0)
+                {
+                    Graphics g = Graphics.FromHdc(hdc);
+                    g.FillRectangle(Brushes.Black, new Rectangle(0, 0, 4800, 23));
+                    g.Flush();
+                    ReleaseDC(m.HWnd, hdc);
+                }
+            }
+        }
+        public DirtyDanD()
+        {
+
             InitializeComponent();
+            
             //InitializeHandlers();
             hideSubMenus();
 
@@ -184,14 +209,14 @@ namespace DirtyDand
             {
                 panelSelectCharacter.Visible = true;
 
-                panelSelectCharacter.Size += new Size(0, 25 * characterRegistry.Count());
+                panelSelectCharacter.Size += new Size(0, 35 * characterRegistry.Count());
                 panelCharacter.Size += new Size(0, panelSelectCharacter.Size.Height);
             }
             else
             {
                 panelSelectCharacter.Visible = false;
 
-                panelSelectCharacter.Size -= new Size(0, 25 * characterRegistry.Count());
+                panelSelectCharacter.Size -= new Size(0, 35 * characterRegistry.Count());
                 panelCharacter.Size -= new Size(0, panelSelectCharacter.Size.Height);
             }
         }
@@ -213,6 +238,11 @@ namespace DirtyDand
         private void buttonHandbook_Click(object sender, EventArgs e)
         {
             panelHandbook.Visible = !panelHandbook.Visible;
+        }
+
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

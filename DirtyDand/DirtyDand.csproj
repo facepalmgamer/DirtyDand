@@ -49,11 +49,11 @@
     <Compile Include="Classes\Character.cs" />
     <Compile Include="Classes\Background.cs" />
     <Compile Include="Classes\CClass.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="DirtyDanD.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="DirtyDanD.Designer.cs">
+      <DependentUpon>DirtyDanD.cs</DependentUpon>
     </Compile>
     <Compile Include="Globals\GlobalVariables.cs" />
     <Compile Include="Handlers\SpellHandler.cs" />
@@ -61,8 +61,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Classes\Race.cs" />
     <Compile Include="Classes\Spell.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="DirtyDanD.resx">
+      <DependentUpon>DirtyDanD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -88,6 +88,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\dand logo.png" />
+    <Content Include="Resources\DirtDanDIcon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
