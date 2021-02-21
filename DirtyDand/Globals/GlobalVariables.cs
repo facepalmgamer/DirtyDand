@@ -9,6 +9,7 @@ namespace DirtyDand.Globals
         public static List<CClass> classRegistry = new List<CClass>();
         public static List<Spell> spellRegistry = new List<Spell>();
         public static List<Background> backgroundRegistry = new List<Background>();
+        public static List<Character> characterRegistry = new List<Character>();
 
         public enum School { Abjuration, Conjuration, Divination, Enchantment, Evocation, Illusion, Necromancy, Transmutation };
         public enum Caster { Artificer, Bard, Cleric, Druid, Paladin, Ranger, Sorcerer, Warlock, Wizard };

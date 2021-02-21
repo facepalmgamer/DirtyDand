@@ -1,30 +1,42 @@
-﻿using System;
+﻿using DirtyDand.Handlers;
+using DirtyDand.Resources;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
-using DirtyDand.Resources;
 using static DirtyDand.Globals.GlobalVariables;
-
-using DirtyDand.Handlers;
-using DirtyDand.Properties;
 
 namespace DirtyDand
 {
     public partial class Form1 : Form
-    { 
+    {
         public Form1()
         {
             InitializeComponent();
-            InitializeHandlers();
+            //InitializeHandlers();
+            hideSubMenus();
 
         }
+        private void hideSubMenus()
+        {
+            panelCharacter.Visible = false;
+            panelHandbook.Visible = false;
+            panelNewCharacter.Visible = false;
+            panelSelectCharacter.Visible = false;
+        }
 
+        private void showSubMenu(Panel subMenu)
+        {
+            if (subMenu.Visible == false)
+            {
+                hideSubMenus();
+                subMenu.Visible = true;
+            }
+            else
+                subMenu.Visible = false;
+        }
         private void InitializeHandlers()
         {
             SpellHandler spell = new SpellHandler();
@@ -35,7 +47,7 @@ namespace DirtyDand
 
             for (int i = 0; i < spellRegistry.Count(); i++)
             {
-                switch(spellRegistry.ElementAt(i).GetLevel())
+                switch (spellRegistry.ElementAt(i).GetLevel())
                 {
                     case 0:
                         levels.ElementAt(0).Add(spellRegistry.ElementAt(i));
@@ -78,7 +90,7 @@ namespace DirtyDand
 
         public async Task<List<Resources.Spell>> SearchAsync(/*List<classes?> classes,*/ int[] level, Components[] comps, School[] schools, Time[] time, int[] range, bool concitration, bool ritual, Source[] sources, string search)
         {
-            
+
             List<Resources.Spell> temp = new List<Resources.Spell>();
             List<Resources.Spell> temp2 = new List<Resources.Spell>();
 
@@ -161,6 +173,46 @@ namespace DirtyDand
 
         }
 
+        private void buttonCharacter_Click(object sender, EventArgs e)
+        {
+            panelCharacter.Visible = !panelCharacter.Visible;
+        }
 
+        private void buttonSelectCharacter_Click(object sender, EventArgs e)
+        {
+            if (!panelSelectCharacter.Visible)
+            {
+                panelSelectCharacter.Visible = true;
+
+                panelSelectCharacter.Size += new Size(0, 25 * characterRegistry.Count());
+                panelCharacter.Size += new Size(0, panelSelectCharacter.Size.Height);
+            }
+            else
+            {
+                panelSelectCharacter.Visible = false;
+
+                panelSelectCharacter.Size -= new Size(0, 25 * characterRegistry.Count());
+                panelCharacter.Size -= new Size(0, panelSelectCharacter.Size.Height);
+            }
+        }
+
+        private void buttonNewCharacter_Click(object sender, EventArgs e)
+        {
+            if (!panelNewCharacter.Visible)
+            {
+                panelNewCharacter.Visible = true;
+                panelCharacter.Size += new Size(0, panelNewCharacter.Size.Height);
+            }
+            else
+            {
+                panelNewCharacter.Visible = false;
+                panelCharacter.Size -= new Size(0, panelNewCharacter.Size.Height);
+            }
+        }
+
+        private void buttonHandbook_Click(object sender, EventArgs e)
+        {
+            panelHandbook.Visible = !panelHandbook.Visible;
+        }
     }
 }

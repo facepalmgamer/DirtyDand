@@ -22,7 +22,7 @@ namespace DirtyDand.Handlers
             {
                 //Splits file into spells
                 string[] lines = e.Split('\n');
-                
+                Source source = Source.PHB; //SEAMUS ADD THIS SOMEWHERE, GL! also fix line 135, had to comment out since we changed to ENUM
                 //Gets the spell name
                 string spellName = lines[0];
                 
@@ -132,9 +132,9 @@ namespace DirtyDand.Handlers
                     casterList.Add(Caster.Wizard);
 
                 //Gets the source the spell was published from
-                string source = lines[lines.Count() - 2].Substring(8);
+                //string source = lines[lines.Count() - 2].Substring(8);
 
-                spellRegistry.Add(new Resources.Spell(spellName, description, eSchool, ritual, concentration, time, duration, level, range, casterList, compsList, materials));
+                spellRegistry.Add(new Resources.Spell(spellName, description, eSchool, concentration, ritual, time, duration, level, range, casterList, compsList, source, materials));
             }
         }
     }
