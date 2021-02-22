@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using static DirtyDand.Globals.GlobalVariables;
 
@@ -14,22 +12,30 @@ namespace DirtyDand.Handlers
         public SpellHandler()
         {
             string result;
-            result = File.ReadAllText(Directory.GetCurrentDirectory().Substring(0,Directory.GetCurrentDirectory().IndexOf("bin"))+"\\Resources\\Spells5e.txt");
+            result = File.ReadAllText(Directory.GetCurrentDirectory().Substring(0, Directory.GetCurrentDirectory().IndexOf("bin")) + "\\Resources\\Spells5e.txt");
             string[] spells = result.Split('~');
 
-            
-            foreach(string e in spells)
+
+            foreach (string e in spells)
             {
                 //Splits file into spells
-                string[] lines = e.Split('\n');
+                string[] fakeLine = e.Split('\n');
+                List<string> lines = new List<string>();
+                foreach (string l in fakeLine)
+                {
+                    if (l.Equals("\r"))
+                        continue;
+                    lines.Add(l);
+                }
+
                 //Gets the spell name
                 string spellName = lines[0];
-                
+
                 //Gets the spell level
                 int level = 0;
                 if (Int32.TryParse(lines[1].Substring(0, 1), out int strLevel))
                     level = strLevel;
-                
+
                 //Gets the spell school
                 School eSchool = School.Abjuration;
                 if (lines[1].IndexOf("Abjuration") >= 0 || lines[1].IndexOf("abjuration") >= 0)
@@ -48,63 +54,72 @@ namespace DirtyDand.Handlers
                     eSchool = School.Necromancy;
                 else if (lines[1].IndexOf("Transmutation") >= 0 || lines[1].IndexOf("transmutation") >= 0)
                     eSchool = School.Transmutation;
-               
+
                 //Determines if the spell can be ritual cast
                 bool ritual = false;
                 if (lines[1].Contains("(ritual)"))
                     ritual = true;
-                
+
                 //Gets the spell casting time
                 Time time = Time.A;
-                if (lines[2].IndexOf("1 action") == 0)
+                if (lines[2].Contains("1 action"))
                     time = Time.A;
-                else if (lines[2].IndexOf("1 bonus action") == 0)
+                else if (lines[2].Contains("1 bonus action"))
                     time = Time.Ba;
-                else if (lines[2].IndexOf("1 reaction") == 0)
+                else if (lines[2].Contains("1 reaction"))
                     time = Time.R;
-                else if (lines[2].IndexOf("1 minute") == 0)
+                else if (lines[2].Contains("1 minute"))
                     time = Time.M;
-                else if (lines[2].IndexOf("10 minutes") == 0)
+                else if (lines[2].Contains("10 minutes"))
                     time = Time.Ms;
-                else if (lines[2].IndexOf("1 hour") == 0)
+                else if (lines[2].Contains("1 hour"))
                     time = Time.H;
                 // Gets the range of the spell
-                string fRange = lines[3].Substring(7, 1);
+                string specialRange = String.Empty;
                 int range;
-                if (!Int32.TryParse(lines[1].Substring(0, 1), out range))
-                {
-                    if (fRange.Equals("T"))
-                        range = 1;//Touch Range
-                    else
-                        range = 0;//Self Range
-                }
+                if (!Int32.TryParse(lines[3].Substring(7, 3), out range))
+                    if (!Int32.TryParse(lines[3].Substring(7, 2), out range))
+                        if (!Int32.TryParse(lines[3].Substring(7, 1), out range))
+                            if (lines[3].Substring(7, 1).Equals("T"))
+                                range = 1;//Touch Range
+                            else if (lines[3].Substring(7, 2).Equals("Sp"))
+                                specialRange = "Special";
+                            else if (lines[3].Substring(7, 2).Equals("Se") && lines[3].Length == 12)
+                                range = 0;//Self Range
+                            else
+                            {
+                                range = 0;
+                                specialRange = lines[3].Substring(lines[3].IndexOf("("), lines[3].Length - lines[3].IndexOf(")"));
+                            }
+                if (lines[3].Contains("mile"))
+                    specialRange = "mile";
 
                 //Gets the spell components
                 List<Components> compsList = new List<Components>();
                 string materials = String.Empty;
-                if (lines[4].IndexOf("M") >= 0)
-                    compsList.Add(Components.M);
-                else if (lines[4].IndexOf("S") >= 0)
+                if (lines[4].IndexOf("V") >= 0)
+                    compsList.Add(Components.V);
+                if (lines[4].IndexOf("S") >= 0)
                     compsList.Add(Components.S);
-                else if(lines[4].IndexOf("M") >= 0)
+                if (lines[4].IndexOf("M") >= 0)
                 {
                     compsList.Add(Components.M);
                     materials = lines[4].Substring(lines[4].IndexOf("M") + 2);
                 }
-                
+
                 //Gets the spell duration
                 string duration = lines[5].Substring(10);
                 bool concentration = false;
                 if (duration.Contains("Concentration"))
                     concentration = true;
-                
+
                 //Gets the full spell description
                 string description = String.Empty;
-                int count = 7;
-                while(!lines[count].Contains("Classes: "))
+                int count = 6;
+                while (!lines[count].Contains("Classes:"))
                 {
                     description += lines[count];
-                    count++;
+                    ++count;
                 }
 
                 //Gets the list of classes able to use the spell
@@ -113,21 +128,21 @@ namespace DirtyDand.Handlers
                 string classList = lines[count];
                 if (lines[count].IndexOf("Artificer") >= 0)
                     casterList.Add(Caster.Artificer);
-                else if (lines[count].IndexOf("Bard") >= 0)
+                if (lines[count].IndexOf("Bard") >= 0)
                     casterList.Add(Caster.Bard);
-                else if (lines[count].IndexOf("Cleric") >= 0)
+                if (lines[count].IndexOf("Cleric") >= 0)
                     casterList.Add(Caster.Cleric);
-                else if (lines[count].IndexOf("Druid") >= 0)
+                if (lines[count].IndexOf("Druid") >= 0)
                     casterList.Add(Caster.Druid);
-                else if (lines[count].IndexOf("Paladin") >= 0)
+                if (lines[count].IndexOf("Paladin") >= 0)
                     casterList.Add(Caster.Paladin);
-                else if (lines[count].IndexOf("Ranger") >= 0)
+                if (lines[count].IndexOf("Ranger") >= 0)
                     casterList.Add(Caster.Ranger);
-                else if (lines[count].IndexOf("Sorcerer") >= 0)
+                if (lines[count].IndexOf("Sorcerer") >= 0)
                     casterList.Add(Caster.Sorcerer);
-                else if (lines[count].IndexOf("Warlock") >= 0)
+                if (lines[count].IndexOf("Warlock") >= 0)
                     casterList.Add(Caster.Warlock);
-                else if (lines[count].IndexOf("Wizard") >= 0)
+                if (lines[count].IndexOf("Wizard") >= 0)
                     casterList.Add(Caster.Wizard);
 
                 //Gets the source the spell was published from
@@ -171,7 +186,7 @@ namespace DirtyDand.Handlers
                     source = Source.PS;
                 else if (fakeSource.Contains("TTP"))
                     source = Source.TTP;
-                else if (fakeSource.Contains("US"))
+                else if (fakeSource.Contains("UA"))
                     source = Source.UA;
                 else if (fakeSource.Contains("WGE"))
                     source = Source.WGE;
