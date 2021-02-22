@@ -22,7 +22,6 @@ namespace DirtyDand.Handlers
             {
                 //Splits file into spells
                 string[] lines = e.Split('\n');
-                Source source = Source.PHB; //SEAMUS ADD THIS SOMEWHERE, GL! also fix line 135, had to comment out since we changed to ENUM
                 //Gets the spell name
                 string spellName = lines[0];
                 
@@ -132,8 +131,50 @@ namespace DirtyDand.Handlers
                     casterList.Add(Caster.Wizard);
 
                 //Gets the source the spell was published from
-                //string source = lines[lines.Count() - 2].Substring(8);
-
+                Source source = Source.PHB;
+                string fakeSource = lines[lines.Count() - 2].Substring(8);
+                if (fakeSource.Contains("PHB"))
+                    source = Source.PHB;
+                else if (fakeSource.Contains("DMG"))
+                    source = Source.DMG;
+                else if (fakeSource.Contains("XGE"))
+                    source = Source.XGE;
+                else if (fakeSource.Contains("TCE"))
+                    source = Source.TCE;
+                else if (fakeSource.Contains("GGR"))
+                    source = Source.GGR;
+                else if (fakeSource.Contains("IDRotF"))
+                    source = Source.IDRotF;
+                else if (fakeSource.Contains("MTF"))
+                    source = Source.MTF;
+                else if (fakeSource.Contains("MOT"))
+                    source = Source.MOT;
+                else if (fakeSource.Contains("AI"))
+                    source = Source.AI;
+                else if (fakeSource.Contains("SCAG"))
+                    source = Source.SCAG;
+                else if (fakeSource.Contains("EEPC"))
+                    source = Source.EEPC;
+                else if (fakeSource.Contains("VGM"))
+                    source = Source.VGM;
+                else if (fakeSource.Contains("ERLW"))
+                    source = Source.ERLW;
+                else if (fakeSource.Contains("AWM"))
+                    source = Source.AWM;
+                else if (fakeSource.Contains("LR"))
+                    source = Source.LR;
+                else if (fakeSource.Contains("LLK"))
+                    source = Source.LLK;
+                else if (fakeSource.Contains("OGA"))
+                    source = Source.OGA;
+                else if (fakeSource.Contains("PS"))
+                    source = Source.PS;
+                else if (fakeSource.Contains("TTP"))
+                    source = Source.TTP;
+                else if (fakeSource.Contains("US"))
+                    source = Source.UA;
+                else if (fakeSource.Contains("WGE"))
+                    source = Source.WGE;
                 spellRegistry.Add(new Resources.Spell(spellName, description, eSchool, concentration, ritual, time, duration, level, range, casterList, compsList, source, materials));
             }
         }
