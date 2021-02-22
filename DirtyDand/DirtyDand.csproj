@@ -95,8 +95,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DirtDanDIcon.ico" />
+    <Content Include="Resources\Ability Outline.png" />
     <Content Include="Resources\dand logo.png" />
     <Content Include="Resources\DirtDanDIcon.ico" />
+    <Content Include="Resources\warlock.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

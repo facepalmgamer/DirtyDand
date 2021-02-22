@@ -50,6 +50,7 @@ namespace DirtyDand
             panelHandbook.Visible = false;
             panelNewCharacter.Visible = false;
             panelSelectCharacter.Visible = false;
+            panelExit.Visible = false;
         }
 
         private void showSubMenu(Panel subMenu)
@@ -240,10 +241,7 @@ namespace DirtyDand
             panelHandbook.Visible = !panelHandbook.Visible;
         }
 
-        private void buttonExit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+       
 
         private Form activeForm = null;
         private void openChildForm(Form childForm)
@@ -258,6 +256,21 @@ namespace DirtyDand
             panelChildForm.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
+        }
+
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            panelExit.Visible = !panelExit.Visible;
+        }
+
+        private void buttonExitWithoutSaving_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void buttonSaveAndExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

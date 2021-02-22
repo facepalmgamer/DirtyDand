@@ -63,6 +63,16 @@ namespace DirtyDand.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap Ability_Outline {
+            get {
+                object obj = ResourceManager.GetObject("Ability_Outline", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap dand_logo {
             get {
                 object obj = ResourceManager.GetObject("dand logo", resourceCulture);
@@ -77,6 +87,16 @@ namespace DirtyDand.Properties {
             get {
                 object obj = ResourceManager.GetObject("DirtDanDIcon", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap warlock {
+            get {
+                object obj = ResourceManager.GetObject("warlock", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }
