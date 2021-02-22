@@ -91,6 +91,22 @@ namespace DirtyDand.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Abi-Dalzim&apos;s Horrid Wilting
+        ///8th-level necromancy
+        ///Casting Time: 1 action
+        ///Range: 150 feet
+        ///Components: V, S, M (a bit of sponge)
+        ///Duration: Instantaneous
+        ///
+        ///You draw the moisture from every creature in a 30-foot cube centered on a point you choose within range. Each creature in that area must make a Constitution saving throw. Constructs and undead aren&apos;t affected, and plants and water elementals make this saving throw with disadvantage. A creature takes 12d8 necrotic damage on a failed save, or half as muc [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string Spells5E {
+            get {
+                return ResourceManager.GetString("Spells5E", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         public static System.Drawing.Bitmap warlock {
