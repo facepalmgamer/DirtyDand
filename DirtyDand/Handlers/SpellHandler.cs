@@ -13,22 +13,20 @@ namespace DirtyDand.Handlers
         {
             string result;
             result = File.ReadAllText(Directory.GetCurrentDirectory().Substring(0, Directory.GetCurrentDirectory().IndexOf("bin")) + "\\Resources\\Spells5e.txt");
-            string[] spells = result.Split('~');
-
+            string[] fakeSpells = result.Split('~');
+            List<string> spells = fakeSpells.ToList();
+            spells.RemoveAt(spells.Count() - 1);
 
             foreach (string e in spells)
             {
                 //Splits file into spells
                 string[] fakeLine = e.Split('\n');
-                List<string> lines = new List<string>();
-                foreach (string l in fakeLine)
-                {
-                    if (l.Equals("\r"))
-                        continue;
-                    lines.Add(l);
-                }
+                List<string> lines = fakeLine.ToList();
+                lines.Remove("\r");
+                
 
                 //Gets the spell name
+                
                 string spellName = lines[0];
 
                 //Gets the spell level
@@ -86,6 +84,10 @@ namespace DirtyDand.Handlers
                                 specialRange = "Special";
                             else if (lines[3].Substring(7, 2).Equals("Se") && lines[3].Length == 12)
                                 range = 0;//Self Range
+                            else if (lines[3].Substring(7, 2).Equals("Si"))
+                                specialRange = "Sight"; //The damn sight ranges
+                            else if (lines[3].Substring(7, 2).Equals("Un"))
+                                specialRange = "Unlimited";
                             else
                             {
                                 range = 0;
@@ -116,7 +118,7 @@ namespace DirtyDand.Handlers
                 //Gets the full spell description
                 string description = String.Empty;
                 int count = 6;
-                while (!lines[count].Contains("Classes:"))
+                while (!lines[count].Contains("Classes:") && !lines[count].Contains("Subclasses:") && !lines[count].Contains("Backgrounds:"))
                 {
                     description += lines[count];
                     ++count;
