@@ -8934,4 +8934,3 @@ Subclasses (legacy): Favored Soul v2 (UA) Sorcerer, Favored Soul v3 (UA) Sorcere
 Races: Human (Mark of Sentinel)
 Backgrounds: Orzhov Representative
 Source: PHB, page 289. Available in the SRD.
-~
