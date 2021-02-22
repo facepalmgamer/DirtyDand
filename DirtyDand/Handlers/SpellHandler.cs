@@ -13,9 +13,7 @@ namespace DirtyDand.Handlers
         {
             string result;
             result = File.ReadAllText(Directory.GetCurrentDirectory().Substring(0, Directory.GetCurrentDirectory().IndexOf("bin")) + "\\Resources\\Spells5e.txt");
-            string[] fakeSpells = result.Split('~');
-            List<string> spells = fakeSpells.ToList();
-            spells.RemoveAt(spells.Count() - 1);
+            string[] spells = result.Split('~');
 
             foreach (string e in spells)
             {
