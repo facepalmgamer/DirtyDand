@@ -16,7 +16,7 @@ namespace DirtyDand
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DirtyDanD());
+            Application.Run(new MainForm());
         }
     }
 }

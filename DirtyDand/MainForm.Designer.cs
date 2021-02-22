@@ -1,7 +1,7 @@
 ﻿
 namespace DirtyDand
 {
-    partial class DirtyDanD
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace DirtyDand
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DirtyDanD));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panelMenu = new System.Windows.Forms.Panel();
             this.panelExitBorder = new System.Windows.Forms.Panel();
             this.buttonExit = new System.Windows.Forms.Button();

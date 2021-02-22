@@ -11,9 +11,9 @@ using static DirtyDand.Globals.GlobalVariables;
 
 namespace DirtyDand
 {
-    public partial class DirtyDanD : Form
+    public partial class MainForm : Form
     {
-        public DirtyDanD()
+        public MainForm()
         {
 
             InitializeComponent();
@@ -239,6 +239,8 @@ namespace DirtyDand
         private void buttonExit_Click(object sender, EventArgs e)
         {
             panelExit.Visible = !panelExit.Visible;
+            if (panelMenu.AutoScroll && panelExit.Visible)
+                panelMenu.ScrollControlIntoView(panelExit);
         }
 
         private void buttonExitWithoutSaving_Click(object sender, EventArgs e)
