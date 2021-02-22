@@ -1,7 +1,7 @@
 ﻿
 namespace DirtyDand
 {
-    partial class SpellForm
+    partial class CharacterForm
     {
         /// <summary>
         /// Required designer variable.
@@ -34,22 +34,22 @@ namespace DirtyDand
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panel1.BackColor = System.Drawing.Color.Navy;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1632, 918);
+            this.panel1.Size = new System.Drawing.Size(1920, 1080);
             this.panel1.TabIndex = 0;
             // 
-            // SpellForm
+            // CharacterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1632, 918);
+            this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "SpellForm";
-            this.Text = "SpellForm";
+            this.Name = "CharacterForm";
+            this.Text = "CharacterForm";
             this.ResumeLayout(false);
 
         }

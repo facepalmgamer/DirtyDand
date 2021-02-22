@@ -54,11 +54,9 @@ namespace DirtyDand
             this.buttonCustomCharacter = new System.Windows.Forms.Button();
             this.buttonRandomCharacter = new System.Windows.Forms.Button();
             this.buttonNewCharacter = new System.Windows.Forms.Button();
-            this.panelSelectCharacter = new System.Windows.Forms.Panel();
-            this.buttonCharacter1 = new System.Windows.Forms.Button();
             this.buttonSelectCharacter = new System.Windows.Forms.Button();
             this.buttonCharacter = new System.Windows.Forms.Button();
-            this.panelTitle = new System.Windows.Forms.Panel();
+            this.panelCharacterPreview = new System.Windows.Forms.Panel();
             this.pictureBoxMugShot = new System.Windows.Forms.PictureBox();
             this.textBoxRaceClass = new System.Windows.Forms.TextBox();
             this.textBoxName = new System.Windows.Forms.TextBox();
@@ -102,8 +100,7 @@ namespace DirtyDand
             this.panelHandbook.SuspendLayout();
             this.panelCharacter.SuspendLayout();
             this.panelNewCharacter.SuspendLayout();
-            this.panelSelectCharacter.SuspendLayout();
-            this.panelTitle.SuspendLayout();
+            this.panelCharacterPreview.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMugShot)).BeginInit();
             this.panelOpenScreen.SuspendLayout();
             this.panelChildForm.SuspendLayout();
@@ -136,7 +133,7 @@ namespace DirtyDand
             this.panelMenu.Controls.Add(this.buttonHandbook);
             this.panelMenu.Controls.Add(this.panelCharacter);
             this.panelMenu.Controls.Add(this.buttonCharacter);
-            this.panelMenu.Controls.Add(this.panelTitle);
+            this.panelMenu.Controls.Add(this.panelCharacterPreview);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Margin = new System.Windows.Forms.Padding(4);
@@ -397,6 +394,7 @@ namespace DirtyDand
             this.buttonSpellSearch.Text = "Spells";
             this.buttonSpellSearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonSpellSearch.UseVisualStyleBackColor = true;
+            this.buttonSpellSearch.Click += new System.EventHandler(this.buttonSpellSearch_Click);
             // 
             // buttonHandbook
             // 
@@ -427,7 +425,6 @@ namespace DirtyDand
             this.panelCharacter.Controls.Add(this.buttonRemoveCharacter);
             this.panelCharacter.Controls.Add(this.panelNewCharacter);
             this.panelCharacter.Controls.Add(this.buttonNewCharacter);
-            this.panelCharacter.Controls.Add(this.panelSelectCharacter);
             this.panelCharacter.Controls.Add(this.buttonSelectCharacter);
             this.panelCharacter.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelCharacter.Location = new System.Drawing.Point(0, 220);
@@ -445,7 +442,7 @@ namespace DirtyDand
             this.buttonExportCharacter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.buttonExportCharacter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonExportCharacter.ForeColor = System.Drawing.Color.LightGray;
-            this.buttonExportCharacter.Location = new System.Drawing.Point(0, 305);
+            this.buttonExportCharacter.Location = new System.Drawing.Point(0, 270);
             this.buttonExportCharacter.Margin = new System.Windows.Forms.Padding(4);
             this.buttonExportCharacter.Name = "buttonExportCharacter";
             this.buttonExportCharacter.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
@@ -464,7 +461,7 @@ namespace DirtyDand
             this.buttonRemoveCharacter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.buttonRemoveCharacter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonRemoveCharacter.ForeColor = System.Drawing.Color.LightGray;
-            this.buttonRemoveCharacter.Location = new System.Drawing.Point(0, 250);
+            this.buttonRemoveCharacter.Location = new System.Drawing.Point(0, 215);
             this.buttonRemoveCharacter.Margin = new System.Windows.Forms.Padding(4);
             this.buttonRemoveCharacter.Name = "buttonRemoveCharacter";
             this.buttonRemoveCharacter.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
@@ -480,7 +477,7 @@ namespace DirtyDand
             this.panelNewCharacter.Controls.Add(this.buttonCustomCharacter);
             this.panelNewCharacter.Controls.Add(this.buttonRandomCharacter);
             this.panelNewCharacter.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelNewCharacter.Location = new System.Drawing.Point(0, 145);
+            this.panelNewCharacter.Location = new System.Drawing.Point(0, 110);
             this.panelNewCharacter.Margin = new System.Windows.Forms.Padding(4);
             this.panelNewCharacter.Name = "panelNewCharacter";
             this.panelNewCharacter.Size = new System.Drawing.Size(255, 105);
@@ -552,7 +549,7 @@ namespace DirtyDand
             this.buttonNewCharacter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.buttonNewCharacter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonNewCharacter.ForeColor = System.Drawing.Color.LightGray;
-            this.buttonNewCharacter.Location = new System.Drawing.Point(0, 90);
+            this.buttonNewCharacter.Location = new System.Drawing.Point(0, 55);
             this.buttonNewCharacter.Margin = new System.Windows.Forms.Padding(4);
             this.buttonNewCharacter.Name = "buttonNewCharacter";
             this.buttonNewCharacter.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
@@ -562,35 +559,6 @@ namespace DirtyDand
             this.buttonNewCharacter.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonNewCharacter.UseVisualStyleBackColor = true;
             this.buttonNewCharacter.Click += new System.EventHandler(this.buttonNewCharacter_Click);
-            // 
-            // panelSelectCharacter
-            // 
-            this.panelSelectCharacter.Controls.Add(this.buttonCharacter1);
-            this.panelSelectCharacter.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSelectCharacter.Location = new System.Drawing.Point(0, 55);
-            this.panelSelectCharacter.Margin = new System.Windows.Forms.Padding(4);
-            this.panelSelectCharacter.Name = "panelSelectCharacter";
-            this.panelSelectCharacter.Size = new System.Drawing.Size(255, 35);
-            this.panelSelectCharacter.TabIndex = 1;
-            // 
-            // buttonCharacter1
-            // 
-            this.buttonCharacter1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonCharacter1.FlatAppearance.BorderSize = 0;
-            this.buttonCharacter1.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(11)))), ((int)(((byte)(11)))));
-            this.buttonCharacter1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(11)))), ((int)(((byte)(11)))));
-            this.buttonCharacter1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.buttonCharacter1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCharacter1.ForeColor = System.Drawing.Color.LightGray;
-            this.buttonCharacter1.Location = new System.Drawing.Point(0, 0);
-            this.buttonCharacter1.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonCharacter1.Name = "buttonCharacter1";
-            this.buttonCharacter1.Padding = new System.Windows.Forms.Padding(80, 0, 0, 0);
-            this.buttonCharacter1.Size = new System.Drawing.Size(255, 35);
-            this.buttonCharacter1.TabIndex = 0;
-            this.buttonCharacter1.Text = "temp character";
-            this.buttonCharacter1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCharacter1.UseVisualStyleBackColor = true;
             // 
             // buttonSelectCharacter
             // 
@@ -634,18 +602,18 @@ namespace DirtyDand
             this.buttonCharacter.UseVisualStyleBackColor = false;
             this.buttonCharacter.Click += new System.EventHandler(this.buttonCharacter_Click);
             // 
-            // panelTitle
+            // panelCharacterPreview
             // 
-            this.panelTitle.Controls.Add(this.pictureBoxMugShot);
-            this.panelTitle.Controls.Add(this.textBoxRaceClass);
-            this.panelTitle.Controls.Add(this.textBoxName);
-            this.panelTitle.Controls.Add(this.textBoxCurrentCharacter);
-            this.panelTitle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitle.Location = new System.Drawing.Point(0, 0);
-            this.panelTitle.Margin = new System.Windows.Forms.Padding(4);
-            this.panelTitle.Name = "panelTitle";
-            this.panelTitle.Size = new System.Drawing.Size(255, 150);
-            this.panelTitle.TabIndex = 0;
+            this.panelCharacterPreview.Controls.Add(this.pictureBoxMugShot);
+            this.panelCharacterPreview.Controls.Add(this.textBoxRaceClass);
+            this.panelCharacterPreview.Controls.Add(this.textBoxName);
+            this.panelCharacterPreview.Controls.Add(this.textBoxCurrentCharacter);
+            this.panelCharacterPreview.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelCharacterPreview.Location = new System.Drawing.Point(0, 0);
+            this.panelCharacterPreview.Margin = new System.Windows.Forms.Padding(4);
+            this.panelCharacterPreview.Name = "panelCharacterPreview";
+            this.panelCharacterPreview.Size = new System.Drawing.Size(255, 150);
+            this.panelCharacterPreview.TabIndex = 0;
             // 
             // pictureBoxMugShot
             // 
@@ -1167,7 +1135,7 @@ namespace DirtyDand
             this.pictureBoxSTR.TabIndex = 1;
             this.pictureBoxSTR.TabStop = false;
             // 
-            // DirtyDanD
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -1180,16 +1148,15 @@ namespace DirtyDand
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(772, 623);
-            this.Name = "DirtyDanD";
+            this.Name = "MainForm";
             this.Text = "DirtyDanD";
             this.panelMenu.ResumeLayout(false);
             this.panelExit.ResumeLayout(false);
             this.panelHandbook.ResumeLayout(false);
             this.panelCharacter.ResumeLayout(false);
             this.panelNewCharacter.ResumeLayout(false);
-            this.panelSelectCharacter.ResumeLayout(false);
-            this.panelTitle.ResumeLayout(false);
-            this.panelTitle.PerformLayout();
+            this.panelCharacterPreview.ResumeLayout(false);
+            this.panelCharacterPreview.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMugShot)).EndInit();
             this.panelOpenScreen.ResumeLayout(false);
             this.panelChildForm.ResumeLayout(false);
@@ -1225,7 +1192,6 @@ namespace DirtyDand
         private System.Windows.Forms.Button buttonRemoveCharacter;
         private System.Windows.Forms.Panel panelNewCharacter;
         private System.Windows.Forms.Button buttonLoadCharacter;
-        private System.Windows.Forms.Panel panelSelectCharacter;
         private System.Windows.Forms.Button buttonCharacter;
         private System.Windows.Forms.Panel panelHandbook;
         private System.Windows.Forms.Button buttonItemSearch;
@@ -1234,11 +1200,10 @@ namespace DirtyDand
         private System.Windows.Forms.Button buttonFeatSearch;
         private System.Windows.Forms.Button buttonSpellSearch;
         private System.Windows.Forms.Button buttonHandbook;
-        private System.Windows.Forms.Panel panelTitle;
+        private System.Windows.Forms.Panel panelCharacterPreview;
         private System.Windows.Forms.Button buttonCustomCharacter;
         private System.Windows.Forms.Button buttonRandomCharacter;
         private System.Windows.Forms.Button buttonNewCharacter;
-        private System.Windows.Forms.Button buttonCharacter1;
         private System.Windows.Forms.Button buttonSelectCharacter;
         private System.Windows.Forms.TextBox textBoxRaceClass;
         private System.Windows.Forms.TextBox textBoxName;

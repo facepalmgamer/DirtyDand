@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CharacterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CharacterForm.Designer.cs">
+      <DependentUpon>CharacterForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Classes\Character.cs" />
     <Compile Include="Classes\Background.cs" />
     <Compile Include="Classes\CClass.cs" />
@@ -70,6 +76,9 @@
     <Compile Include="SpellForm.Designer.cs">
       <DependentUpon>SpellForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CharacterForm.resx">
+      <DependentUpon>CharacterForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -83,6 +92,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SpellForm.resx">
+      <DependentUpon>SpellForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="..\.editorconfig">
       <Link>.editorconfig</Link>
     </None>

@@ -14,7 +14,7 @@ namespace DirtyDand.Handlers
         public SpellHandler()
         {
             string result;
-            result = File.ReadAllText("Spells5e.txt");
+            result = File.ReadAllText(Directory.GetCurrentDirectory().Substring(0,Directory.GetCurrentDirectory().IndexOf("bin"))+"\\Resources\\Spells5e.txt");
             string[] spells = result.Split('~');
 
             

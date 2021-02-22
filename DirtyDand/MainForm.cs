@@ -18,7 +18,7 @@ namespace DirtyDand
 
             InitializeComponent();
             
-            //InitializeHandlers();
+            InitializeHandlers();
             hideSubMenus();
 
         }
@@ -27,20 +27,9 @@ namespace DirtyDand
             panelCharacter.Visible = false;
             panelHandbook.Visible = false;
             panelNewCharacter.Visible = false;
-            panelSelectCharacter.Visible = false;
             panelExit.Visible = false;
         }
 
-        private void showSubMenu(Panel subMenu)
-        {
-            if (subMenu.Visible == false)
-            {
-                hideSubMenus();
-                subMenu.Visible = true;
-            }
-            else
-                subMenu.Visible = false;
-        }
         private void InitializeHandlers()
         {
             SpellHandler spell = new SpellHandler();
@@ -184,20 +173,7 @@ namespace DirtyDand
 
         private void buttonSelectCharacter_Click(object sender, EventArgs e)
         {
-            if (!panelSelectCharacter.Visible)
-            {
-                panelSelectCharacter.Visible = true;
-
-                panelSelectCharacter.Size += new Size(0, 35 * characterRegistry.Count());
-                panelCharacter.Size += new Size(0, panelSelectCharacter.Size.Height);
-            }
-            else
-            {
-                panelSelectCharacter.Visible = false;
-
-                panelSelectCharacter.Size -= new Size(0, 35 * characterRegistry.Count());
-                panelCharacter.Size -= new Size(0, panelSelectCharacter.Size.Height);
-            }
+            openChildForm(new CharacterForm());
         }
 
         private void buttonNewCharacter_Click(object sender, EventArgs e)
@@ -251,6 +227,11 @@ namespace DirtyDand
         private void buttonSaveAndExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void buttonSpellSearch_Click(object sender, EventArgs e)
+        {
+            openChildForm(new SpellForm());
         }
     }
 }
