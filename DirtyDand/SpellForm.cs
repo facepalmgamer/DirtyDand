@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections;
+﻿using DirtyDand.Classes;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using static DirtyDand.Globals.GlobalVariables;
 
@@ -12,18 +10,18 @@ namespace DirtyDand
 {
     public partial class SpellForm : Form
     {
-
+        List<Spell> spellList = new List<Spell>(spellRegistry);
+        DataTable spellTable;
         public SpellForm()
         {
             InitializeComponent();
             InitializeSpells();
         }
-        
-        public  void InitializeSpells()
+
+        private void InitializeSpells()
         {
 
-
-            DataTable spellTable = new DataTable();
+            spellTable = new DataTable();
             spellTable.Columns.Add("Spell Name", typeof(string));
             spellTable.Columns.Add("Level", typeof(int));
             spellTable.Columns.Add("School", typeof(School));
@@ -33,9 +31,9 @@ namespace DirtyDand
             spellTable.Columns.Add("Con.", typeof(bool));
             spellTable.Columns.Add("Duration", typeof(string));
             spellTable.Columns.Add("Source", typeof(Source));
-            foreach (Classes.Spell spell in spellRegistry)
+            foreach (Spell spell in spellList)
             {
-                spellTable.Rows.Add(spell.spellName, spell.level, spell.school, spell.ritual, spell.GetCastTime(), spell.GetRange(), spell.concentration,spell.duration,spell.source);
+                spellTable.Rows.Add(spell.spellName, spell.level, spell.school, spell.ritual, spell.GetCastTime(), spell.GetRange(), spell.concentration, spell.duration, spell.source);
             }
             dataGridViewSpells.DataSource = spellTable;
             dataGridViewSpells.ReadOnly = true;
@@ -44,37 +42,30 @@ namespace DirtyDand
 
         }
 
-
-    }
-
-    class RowComparer : IComparer
-    {
-        private static int sortOrderModifier = 1;
-
-        public RowComparer(SortOrder sortOrder)
+        private void UpdateTable(string search)
         {
-            if (sortOrder == SortOrder.Descending)
-                sortOrderModifier = -1;
-        }
-
-        public int Compare(object x, object y)
-        {
-            DataGridViewRow DataGridViewRow1 = (DataGridViewRow)x;
-            DataGridViewRow DataGridViewRow2 = (DataGridViewRow)y;
-
-            // Try to sort based on the Last Name column.
-            int CompareResult = System.String.Compare(
-                DataGridViewRow1.Cells[1].Value.ToString(),
-                DataGridViewRow2.Cells[1].Value.ToString());
-
-            // If the Last Names are equal, sort based on the First Name.
-            if (CompareResult == 0)
+            List<Spell> temp = new List<Spell>(spellRegistry);
+            spellList = new List<Spell>(spellRegistry);
+            foreach (Spell spell in temp)
             {
-                CompareResult = System.String.Compare(
-                    DataGridViewRow1.Cells[0].Value.ToString(),
-                    DataGridViewRow2.Cells[0].Value.ToString());
+                if (!spell.spellName.ToLower().Contains(search.ToLower()))
+                        spellList.Remove(spell);
+                    
             }
-            return CompareResult * sortOrderModifier;
+            spellTable.Clear();
+            foreach (Spell spell in spellList)
+            {
+                spellTable.Rows.Add(spell.spellName, spell.level, spell.school, spell.ritual, spell.GetCastTime(), spell.GetRange(), spell.concentration, spell.duration, spell.source);
+            }
+            dataGridViewSpells.DataSource = spellTable;
+        }
+
+        private void buttonSearch_Click(object sender, EventArgs e)
+        {
+            UpdateTable(textBoxSearchBar.Text);
         }
     }
+
+
+
 }
