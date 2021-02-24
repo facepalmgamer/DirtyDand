@@ -1,4 +1,4 @@
-﻿namespace DirtyDand.Resources
+﻿namespace DirtyDand.Classes
 {
     public class Character
     {

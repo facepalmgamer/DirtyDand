@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using static DirtyDand.Globals.GlobalVariables;
 
-namespace DirtyDand.Resources
+namespace DirtyDand.Classes
 {
     public class Race
     {

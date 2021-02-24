@@ -2,102 +2,83 @@
 using System.Collections.Generic;
 using static DirtyDand.Globals.GlobalVariables;
 
-namespace DirtyDand.Resources
+namespace DirtyDand.Classes
 {
     public class Spell
     {
 
-        private String spellName;
-        private String spellDescript;
-        private School school;
-        private bool concentration;
-        private bool ritual;
-        private Time time;
-        private string duration;
-        private int level;
-        private int range;
-        private List<Caster> casterList;
-        private List<Components> componentsList;
-        private string material;
-        private Source source;
+        public String spellName { get; set; }
+        public String spellDescript { get; set; }
+        public School school { get; set; }
+        public bool concentration { get; set; }
+        public bool ritual { get; set; }
+        public Time time { get; set; }
+        public string duration { get; set; }
+        public int level { get; set; }
+        public int range { get; set; }
+        public List<Caster> casterList { get; set; }
+        public List<Components> componentsList { get; set; }
+        public string material { get; set; }
+        public Source source { get; set; }
+        public string specialRange { get; set; }
 
-        public Spell(String spellName, String spellDescript, School school, bool concentration, bool ritual, Time time, string duration, int level, int range, List<Caster> casterList, List<Components> componentsList, Source source, string material = "")
+        public Spell()
         {
-            this.spellName = spellName;
-            this.spellDescript = spellDescript;
-            this.school = school;
-            this.ritual = ritual;
-            this.concentration = concentration;
-            this.ritual = ritual;
-            this.time = time;
-            this.duration = duration;
-            this.level = level;
-            this.range = range;
-            this.casterList = casterList;
-            this.componentsList = componentsList;
-            this.material = material;
-            this.source = source;
+            level = 0;
+            ritual = false;
+            specialRange = " feet";
+            componentsList = new List<Components>();
+            material = String.Empty;
+            concentration = false;
+            spellDescript = String.Empty;
+            casterList = new List<Caster>();
         }
 
-        public string GetSpellName()
+        public string GetCastTime()
         {
-            return spellName;
-        }
-        public string GetSpellDescription()
-        {
-            return spellDescript;
+            switch (time)
+            {
+                case Time.A:
+                    return "Action";
+
+                case Time.Ba:
+                    return "Bonus Action";
+
+                case Time.day:
+                    return "1 Day";
+
+                case Time.H:
+                    return "1 Hour";
+
+                case Time.M:
+                    return "1 Minute";
+
+                case Time.Ms:
+                    return "10 Minutes";
+
+                case Time.R:
+                    return "1 Reaction";
+                default:
+                    return "ERROR 404: NOT FOUND";
+
+            }
         }
 
-        public School GetSchool()
+        public string GetRange()
         {
-            return school;
-        }
-
-        public bool GetConcentration()
-        {
-            return concentration;
-        }
-        public bool GetRitual()
-        {
-            return ritual;
-        }
-        public Time GetTime()
-        {
-            return time;
-        }
-
-        public string GetDuration()
-        {
-            return duration;
-        }
-        public int GetLevel()
-        {
-            return level;
-        }
-
-        public int GetRange()
-        {
-            return range;
-        }
-
-        public List<Caster> GetCasters()
-        {
-            return casterList;
-        }
-
-        public List<Components> GetComponents()
-        {
-            return componentsList;
-        }
-
-        public string GetMaterial()
-        {
-            return material;
-        }
-
-        public Source GetSource()
-        {
-            return source;
+            switch (range)
+            {
+                case -1:
+                    return specialRange;
+                case 0:
+                    if (specialRange.Equals(" feet"))
+                        return "Self";
+                    return "Self" + specialRange;
+                case -2:
+                    return "Touch";
+                default:
+                    return range.ToString() + specialRange;
+            }
         }
     }
 }

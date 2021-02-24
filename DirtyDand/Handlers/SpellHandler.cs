@@ -17,180 +17,184 @@ namespace DirtyDand.Handlers
 
             foreach (string e in spells)
             {
+                spellRegistry.Add(new Classes.Spell());
                 //Splits file into spells
                 string[] fakeLine = e.Split('\n');
                 List<string> lines = fakeLine.ToList();
                 lines.Remove("\r");
-                
+
 
                 //Gets the spell name
-                
-                string spellName = lines[0];
+
+                spellRegistry.Last().spellName = lines[0];
 
                 //Gets the spell level
-                int level = 0;
                 if (Int32.TryParse(lines[1].Substring(0, 1), out int strLevel))
-                    level = strLevel;
+                    spellRegistry.Last().level = strLevel;
 
                 //Gets the spell school
-                School eSchool = School.Abjuration;
                 if (lines[1].IndexOf("Abjuration") >= 0 || lines[1].IndexOf("abjuration") >= 0)
-                    eSchool = School.Abjuration;
+                    spellRegistry.Last().school = School.Abjuration;
                 else if (lines[1].IndexOf("Conjuration") >= 0 || lines[1].IndexOf("conjuration") >= 0)
-                    eSchool = School.Conjuration;
+                    spellRegistry.Last().school = School.Conjuration;
                 else if (lines[1].IndexOf("Divination") >= 0 || lines[1].IndexOf("divination") >= 0)
-                    eSchool = School.Divination;
+                    spellRegistry.Last().school = School.Divination;
                 else if (lines[1].IndexOf("Enchantment") >= 0 || lines[1].IndexOf("enchantment") >= 0)
-                    eSchool = School.Enchantment;
+                    spellRegistry.Last().school = School.Enchantment;
                 else if (lines[1].IndexOf("Evocation") >= 0 || lines[1].IndexOf("evocation") >= 0)
-                    eSchool = School.Evocation;
+                    spellRegistry.Last().school = School.Evocation;
                 else if (lines[1].IndexOf("Illusion") >= 0 || lines[1].IndexOf("illusion") >= 0)
-                    eSchool = School.Illusion;
+                    spellRegistry.Last().school = School.Illusion;
                 else if (lines[1].IndexOf("Necromancy") >= 0 || lines[1].IndexOf("necromancy") >= 0)
-                    eSchool = School.Necromancy;
+                    spellRegistry.Last().school = School.Necromancy;
                 else if (lines[1].IndexOf("Transmutation") >= 0 || lines[1].IndexOf("transmutation") >= 0)
-                    eSchool = School.Transmutation;
+                    spellRegistry.Last().school = School.Transmutation;
 
                 //Determines if the spell can be ritual cast
-                bool ritual = false;
                 if (lines[1].Contains("(ritual)"))
-                    ritual = true;
+                    spellRegistry.Last().ritual = true;
 
                 //Gets the spell casting time
-                Time time = Time.A;
                 if (lines[2].Contains("1 action"))
-                    time = Time.A;
+                    spellRegistry.Last().time = Time.A;
                 else if (lines[2].Contains("1 bonus action"))
-                    time = Time.Ba;
+                    spellRegistry.Last().time = Time.Ba;
                 else if (lines[2].Contains("1 reaction"))
-                    time = Time.R;
+                    spellRegistry.Last().time = Time.R;
                 else if (lines[2].Contains("1 minute"))
-                    time = Time.M;
+                    spellRegistry.Last().time = Time.M;
                 else if (lines[2].Contains("10 minutes"))
-                    time = Time.Ms;
+                    spellRegistry.Last().time = Time.Ms;
                 else if (lines[2].Contains("1 hour"))
-                    time = Time.H;
+                    spellRegistry.Last().time = Time.H;
                 // Gets the range of the spell
-                string specialRange = String.Empty;
-                int range;
+                int range = -1;
                 if (!Int32.TryParse(lines[3].Substring(7, 3), out range))
                     if (!Int32.TryParse(lines[3].Substring(7, 2), out range))
                         if (!Int32.TryParse(lines[3].Substring(7, 1), out range))
                             if (lines[3].Substring(7, 1).Equals("T"))
-                                range = 1;//Touch Range
+                                spellRegistry.Last().range = -1;//Touch Range
                             else if (lines[3].Substring(7, 2).Equals("Sp"))
-                                specialRange = "Special";
+                            {
+                                spellRegistry.Last().range = -1;
+                                spellRegistry.Last().specialRange = "Special";
+                            }
                             else if (lines[3].Substring(7, 2).Equals("Se") && lines[3].Length == 12)
-                                range = 0;//Self Range
+                                spellRegistry.Last().range = 0;//Self Range
                             else if (lines[3].Substring(7, 2).Equals("Si"))
-                                specialRange = "Sight"; //The damn sight ranges
+                            {
+                                spellRegistry.Last().range = -1;
+                                spellRegistry.Last().specialRange = "Sight"; //The damn sight ranges
+                            }
                             else if (lines[3].Substring(7, 2).Equals("Un"))
-                                specialRange = "Unlimited";
+                            {
+                                spellRegistry.Last().range = -1;
+                                spellRegistry.Last().specialRange = "Unlimited";
+                            }
                             else
                             {
-                                range = 0;
-                                specialRange = lines[3].Substring(lines[3].IndexOf("("), lines[3].Length - lines[3].IndexOf(")"));
+                                spellRegistry.Last().range = 0;
+                                spellRegistry.Last().specialRange = " " + lines[3].Substring(lines[3].IndexOf("(")+1, lines[3].Length - lines[3].IndexOf("(")-3);
                             }
+                if (range != -1)
+                    spellRegistry.Last().range = range;
                 if (lines[3].Contains("mile"))
-                    specialRange = "mile";
+                    spellRegistry.Last().specialRange = " mile";
 
                 //Gets the spell components
-                List<Components> compsList = new List<Components>();
-                string materials = String.Empty;
                 if (lines[4].IndexOf("V") >= 0)
-                    compsList.Add(Components.V);
+                    spellRegistry.Last().componentsList.Add(Components.V);
                 if (lines[4].IndexOf("S") >= 0)
-                    compsList.Add(Components.S);
+                    spellRegistry.Last().componentsList.Add(Components.S);
                 if (lines[4].IndexOf("M") >= 0)
                 {
-                    compsList.Add(Components.M);
-                    materials = lines[4].Substring(lines[4].IndexOf("M") + 2);
+                    spellRegistry.Last().componentsList.Add(Components.M);
+                    spellRegistry.Last().material = lines[4].Substring(lines[4].IndexOf("M") + 3,lines[4].Length - lines[4].IndexOf("M")-5);
                 }
 
                 //Gets the spell duration
-                string duration = lines[5].Substring(10);
-                bool concentration = false;
-                if (duration.Contains("Concentration"))
-                    concentration = true;
+                spellRegistry.Last().duration = lines[5].Substring(10);
+                if (spellRegistry.Last().duration.Contains("Concentration"))
+                {
+                    spellRegistry.Last().concentration = true;
+                    spellRegistry.Last().duration = spellRegistry.Last().duration.Remove(0, spellRegistry.Last().duration.IndexOf("to") + 3);
+                }
 
                 //Gets the full spell description
-                string description = String.Empty;
                 int count = 6;
                 while (!lines[count].Contains("Classes:") && !lines[count].Contains("Subclasses:") && !lines[count].Contains("Backgrounds:"))
                 {
-                    description += lines[count];
+                    spellRegistry.Last().spellDescript += lines[count];
                     ++count;
                 }
 
                 //Gets the list of classes able to use the spell
                 //Artificer, Bard, Cleric, Druid, Paladin, Ranger, Sorcerer, Warlock, Wizard
-                List<Caster> casterList = new List<Caster>();
                 string classList = lines[count];
-                if (lines[count].IndexOf("Artificer") >= 0)
-                    casterList.Add(Caster.Artificer);
-                if (lines[count].IndexOf("Bard") >= 0)
-                    casterList.Add(Caster.Bard);
-                if (lines[count].IndexOf("Cleric") >= 0)
-                    casterList.Add(Caster.Cleric);
-                if (lines[count].IndexOf("Druid") >= 0)
-                    casterList.Add(Caster.Druid);
-                if (lines[count].IndexOf("Paladin") >= 0)
-                    casterList.Add(Caster.Paladin);
-                if (lines[count].IndexOf("Ranger") >= 0)
-                    casterList.Add(Caster.Ranger);
-                if (lines[count].IndexOf("Sorcerer") >= 0)
-                    casterList.Add(Caster.Sorcerer);
-                if (lines[count].IndexOf("Warlock") >= 0)
-                    casterList.Add(Caster.Warlock);
-                if (lines[count].IndexOf("Wizard") >= 0)
-                    casterList.Add(Caster.Wizard);
+                if (lines[count].Contains("Artificer"))
+                    spellRegistry.Last().casterList.Add(Caster.Artificer);
+                if (lines[count].Contains("Bard"))
+                    spellRegistry.Last().casterList.Add(Caster.Bard);
+                if (lines[count].Contains("Cleric"))
+                    spellRegistry.Last().casterList.Add(Caster.Cleric);
+                if (lines[count].Contains("Druid"))
+                    spellRegistry.Last().casterList.Add(Caster.Druid);
+                if (lines[count].Contains("Paladin"))
+                    spellRegistry.Last().casterList.Add(Caster.Paladin);
+                if (lines[count].Contains("Ranger"))
+                    spellRegistry.Last().casterList.Add(Caster.Ranger);
+                if (lines[count].Contains("Sorcerer"))
+                    spellRegistry.Last().casterList.Add(Caster.Sorcerer);
+                if (lines[count].Contains("Warlock"))
+                    spellRegistry.Last().casterList.Add(Caster.Warlock);
+                if (lines[count].Contains("Wizard"))
+                    spellRegistry.Last().casterList.Add(Caster.Wizard);
 
                 //Gets the source the spell was published from
-                Source source = Source.PHB;
                 string fakeSource = lines[lines.Count() - 2].Substring(8);
                 if (fakeSource.Contains("PHB"))
-                    source = Source.PHB;
+                    spellRegistry.Last().source = Source.PHB;
                 else if (fakeSource.Contains("DMG"))
-                    source = Source.DMG;
+                    spellRegistry.Last().source = Source.DMG;
                 else if (fakeSource.Contains("XGE"))
-                    source = Source.XGE;
+                    spellRegistry.Last().source = Source.XGE;
                 else if (fakeSource.Contains("TCE"))
-                    source = Source.TCE;
+                    spellRegistry.Last().source = Source.TCE;
                 else if (fakeSource.Contains("GGR"))
-                    source = Source.GGR;
+                    spellRegistry.Last().source = Source.GGR;
                 else if (fakeSource.Contains("IDRotF"))
-                    source = Source.IDRotF;
+                    spellRegistry.Last().source = Source.IDRotF;
                 else if (fakeSource.Contains("MTF"))
-                    source = Source.MTF;
+                    spellRegistry.Last().source = Source.MTF;
                 else if (fakeSource.Contains("MOT"))
-                    source = Source.MOT;
+                    spellRegistry.Last().source = Source.MOT;
                 else if (fakeSource.Contains("AI"))
-                    source = Source.AI;
+                    spellRegistry.Last().source = Source.AI;
                 else if (fakeSource.Contains("SCAG"))
-                    source = Source.SCAG;
+                    spellRegistry.Last().source = Source.SCAG;
                 else if (fakeSource.Contains("EEPC"))
-                    source = Source.EEPC;
+                    spellRegistry.Last().source = Source.EEPC;
                 else if (fakeSource.Contains("VGM"))
-                    source = Source.VGM;
+                    spellRegistry.Last().source = Source.VGM;
                 else if (fakeSource.Contains("ERLW"))
-                    source = Source.ERLW;
+                    spellRegistry.Last().source = Source.ERLW;
                 else if (fakeSource.Contains("AWM"))
-                    source = Source.AWM;
+                    spellRegistry.Last().source = Source.AWM;
                 else if (fakeSource.Contains("LR"))
-                    source = Source.LR;
+                    spellRegistry.Last().source = Source.LR;
                 else if (fakeSource.Contains("LLK"))
-                    source = Source.LLK;
+                    spellRegistry.Last().source = Source.LLK;
                 else if (fakeSource.Contains("OGA"))
-                    source = Source.OGA;
+                    spellRegistry.Last().source = Source.OGA;
                 else if (fakeSource.Contains("PS"))
-                    source = Source.PS;
+                    spellRegistry.Last().source = Source.PS;
                 else if (fakeSource.Contains("TTP"))
-                    source = Source.TTP;
+                    spellRegistry.Last().source = Source.TTP;
                 else if (fakeSource.Contains("UA"))
-                    source = Source.UA;
+                    spellRegistry.Last().source = Source.UA;
                 else if (fakeSource.Contains("WGE"))
-                    source = Source.WGE;
-                spellRegistry.Add(new Resources.Spell(spellName, description, eSchool, concentration, ritual, time, duration, level, range, casterList, compsList, source, materials));
+                    spellRegistry.Last().source = Source.WGE;
+                
             }
         }
     }
