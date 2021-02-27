@@ -10,7 +10,7 @@ namespace DirtyDand.Globals
         string info { get; }
         public ToolTip(string key, string info)
         {
-            this.key = key;
+            this.key = key.ToLower().Trim();
             this.info = info;
         }
     }
@@ -41,12 +41,8 @@ namespace DirtyDand.Globals
         #region ToolTip List
         public static ToolTip[] toolTips =
         {
-            new ToolTip("test","test"),
-            new ToolTip("test1","test"),
-            new ToolTip("test2","test"),
-            new ToolTip("test3","test"),
-            new ToolTip("test4","test"),
-            new ToolTip("test5","test")
+            new ToolTip("incapacitated","An incapacitated creature can't take Actions or Reactions"),
+            new ToolTip("deafend","A deafend creature can't hear and automatically fails any ability check that requires hearing")
 
         };
         #endregion
