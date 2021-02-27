@@ -4,6 +4,16 @@ using System.Drawing;
 
 namespace DirtyDand.Globals
 {
+    public struct ToolTip
+    {
+        string key { get; }
+        string info { get; }
+        public ToolTip(string key, string info)
+        {
+            this.key = key;
+            this.info = info;
+        }
+    }
     public static class GlobalVariables
     {
         #region Registries
@@ -25,9 +35,21 @@ namespace DirtyDand.Globals
         public enum Alignment { lg, ln, le, ng, n, ne, cg, cn, ce };
         public enum AbilityScores { Str, Dex, Con, Int, Wis, Cha };
         public enum Components { V, S, M };
-        public enum Source {AI, DMG, ERLW, EEPC, EGW, GGR, IDRotF, MTF, MOT, PHB, SCAG, TCE, VGM, XGE, AWM, LR, LLK, OGA, PS, TTP, UA, WGE };
+        public enum Source { AI, DMG, ERLW, EEPC, EGW, GGR, IDRotF, MTF, MOT, PHB, SCAG, TCE, VGM, XGE, AWM, LR, LLK, OGA, PS, TTP, UA, WGE };
         #endregion
 
+        #region ToolTip List
+        public static ToolTip[] toolTips =
+        {
+            new ToolTip("test","test"),
+            new ToolTip("test1","test"),
+            new ToolTip("test2","test"),
+            new ToolTip("test3","test"),
+            new ToolTip("test4","test"),
+            new ToolTip("test5","test")
+
+        };
+        #endregion
 
 
 
