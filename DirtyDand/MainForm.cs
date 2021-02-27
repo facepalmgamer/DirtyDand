@@ -1,11 +1,9 @@
-﻿using DirtyDand.Handlers;
-using DirtyDand.Classes;
+﻿using DirtyDand.Classes;
+using DirtyDand.Handlers;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
-using System.Runtime.InteropServices;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using static DirtyDand.Globals.GlobalVariables;
 
@@ -13,16 +11,17 @@ namespace DirtyDand
 {
     public partial class MainForm : Form
     {
+
         public MainForm()
         {
 
             InitializeComponent();
-            
+
+            InitializeMainMenu();
             InitializeHandlers();
-            hideSubMenus();
 
         }
-        private void hideSubMenus()
+        public void InitializeMainMenu()
         {
             panelCharacter.Visible = false;
             panelHandbook.Visible = false;
@@ -81,91 +80,7 @@ namespace DirtyDand
 
         }
 
-        /*public async Task<List<Spell>> SearchAsync(List<classes?> classes, int[] level, Components[] comps, School[] schools, Time[] time, int[] range, bool concitration, bool ritual, Source[] sources, string search)
-        {
-
-            List<Spell> temp = new List<Spell>();
-            List<Spell> temp2 = new List<Spell>();
-
-            foreach (Spell s in spellRegistry)
-                foreach (int l in level)
-                    if (l == s.level)
-                    {
-                        temp.Add(s);
-                        break;
-                    }
-            foreach (Spell s in temp)
-                if (s.GetComponents().ToArray().Equals(comps))
-                {
-                    temp2.Add(s);
-                    break;
-                }
-            temp.Clear();
-            foreach (Spell s in temp2)
-                foreach (School sc in schools)
-                    if (s.GetSchool() == sc)
-                    {
-                        temp.Add(s);
-                        break;
-                    }
-            temp2.Clear();
-            foreach (Spell s in temp)
-                foreach (Time t in time)
-                    if (s.GetTime() == t)
-                    {
-                        temp.Add(s);
-                        break;
-                    }
-            temp.Clear();
-            foreach (Spell s in temp2)
-                foreach (int r in range)
-                    if (s.GetRange() == r)
-                    {
-                        temp.Add(s);
-                        break;
-                    }
-            temp2.Clear();
-            foreach (Spell s in temp2)
-                foreach (Source b in sources)
-                    if (s.GetSource() == b)
-                    {
-                        temp2.Add(s);
-                        break;
-                    }
-            temp.Clear();
-            foreach (Spell s in temp2)
-                if (s.GetSpellName().Contains(search))
-                    temp.Add(s);
-            if (concitration)
-            {
-                temp2.Clear();
-                foreach (Spell s in temp)
-                    if (s.GetConcentration())
-                        temp2.Add(s);
-            }
-            if (ritual)
-            {
-                if (!concitration)
-                {
-                    temp2.Clear();
-                    foreach (Spell s in temp)
-                        if (s.GetRitual())
-                            temp2.Add(s);
-                    return temp2;
-                }
-                else
-                {
-                    temp.Clear();
-                    foreach (Spell s in temp2)
-                        if (s.GetRitual())
-                            temp.Add(s);
-                    return temp;
-                }
-            }
-            return temp;
-
-        }*/
-
+        #region Character
         private void buttonCharacter_Click(object sender, EventArgs e)
         {
             panelCharacter.Visible = !panelCharacter.Visible;
@@ -175,7 +90,7 @@ namespace DirtyDand
         {
             openChildForm(new CharacterForm());
         }
-
+        #region New Character
         private void buttonNewCharacter_Click(object sender, EventArgs e)
         {
             if (!panelNewCharacter.Visible)
@@ -189,13 +104,20 @@ namespace DirtyDand
                 panelCharacter.Size -= new Size(0, panelNewCharacter.Size.Height);
             }
         }
+        #endregion
+        #endregion
 
+        #region Handbook
         private void buttonHandbook_Click(object sender, EventArgs e)
         {
             panelHandbook.Visible = !panelHandbook.Visible;
         }
 
-       
+        private void buttonSpellSearch_Click(object sender, EventArgs e)
+        {
+            openChildForm(new SpellForm());
+        }
+        #endregion
 
         private Form activeForm = null;
         private void openChildForm(Form childForm)
@@ -212,6 +134,7 @@ namespace DirtyDand
             childForm.Show();
         }
 
+        #region Exit
         private void buttonExit_Click(object sender, EventArgs e)
         {
             panelExit.Visible = !panelExit.Visible;
@@ -228,10 +151,7 @@ namespace DirtyDand
         {
             Application.Exit();
         }
+        #endregion
 
-        private void buttonSpellSearch_Click(object sender, EventArgs e)
-        {
-            openChildForm(new SpellForm());
-        }
     }
 }

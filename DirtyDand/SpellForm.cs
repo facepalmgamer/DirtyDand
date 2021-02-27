@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
 using System.Windows.Forms;
 using static DirtyDand.Globals.GlobalVariables;
 
@@ -38,12 +39,16 @@ namespace DirtyDand
             dataGridViewSpells.DataSource = spellTable;
             dataGridViewSpells.ReadOnly = true;
 
+            dataGridViewSpells.AutoResizeColumns();
+            dataGridViewSpells.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 
-
+            dataGridViewSpells.DefaultCellStyle.BackColor = red;
         }
 
         private void UpdateTable(string search)
         {
+           
+            
             List<Spell> temp = new List<Spell>(spellRegistry);
             spellList = new List<Spell>(spellRegistry);
             foreach (Spell spell in temp)

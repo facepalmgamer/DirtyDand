@@ -58,42 +58,42 @@ namespace DirtyDand
             this.buttonCharacter = new System.Windows.Forms.Button();
             this.panelCharacterPreview = new System.Windows.Forms.Panel();
             this.pictureBoxMugShot = new System.Windows.Forms.PictureBox();
-            this.textBoxRaceClass = new System.Windows.Forms.TextBox();
-            this.textBoxName = new System.Windows.Forms.TextBox();
-            this.textBoxCurrentCharacter = new System.Windows.Forms.TextBox();
+            this.labelRaceClass = new System.Windows.Forms.Label();
+            this.labelName = new System.Windows.Forms.Label();
+            this.labelCurrentCharacter = new System.Windows.Forms.Label();
             this.panelOpenScreen = new System.Windows.Forms.Panel();
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.panelInfo = new System.Windows.Forms.Panel();
             this.panelAbilityCHA = new System.Windows.Forms.Panel();
-            this.textBoxCHAMod = new System.Windows.Forms.TextBox();
-            this.textBoxCHAScore = new System.Windows.Forms.TextBox();
-            this.textBoxCHALabel = new System.Windows.Forms.TextBox();
+            this.labelCHAMod = new System.Windows.Forms.Label();
+            this.labelCHAScore = new System.Windows.Forms.Label();
+            this.labelCHALabel = new System.Windows.Forms.Label();
             this.pictureBoxCHA = new System.Windows.Forms.PictureBox();
             this.panelAbilityWis = new System.Windows.Forms.Panel();
-            this.textBoxWISMod = new System.Windows.Forms.TextBox();
-            this.textBoxWISScore = new System.Windows.Forms.TextBox();
-            this.textBoxWISLabel = new System.Windows.Forms.TextBox();
+            this.labelWISMod = new System.Windows.Forms.Label();
+            this.labelWISScore = new System.Windows.Forms.Label();
+            this.labelWISLabel = new System.Windows.Forms.Label();
             this.pictureBoxWIS = new System.Windows.Forms.PictureBox();
             this.panelAbilityINT = new System.Windows.Forms.Panel();
-            this.textBoxINTMod = new System.Windows.Forms.TextBox();
-            this.textBoxINTScore = new System.Windows.Forms.TextBox();
-            this.textBoxINTLabel = new System.Windows.Forms.TextBox();
+            this.labelINTMod = new System.Windows.Forms.Label();
+            this.labelINTScore = new System.Windows.Forms.Label();
+            this.labelINTLabel = new System.Windows.Forms.Label();
             this.pictureBoxINT = new System.Windows.Forms.PictureBox();
             this.panelAbilityCon = new System.Windows.Forms.Panel();
-            this.textBoxCONMod = new System.Windows.Forms.TextBox();
-            this.textBoxCONScore = new System.Windows.Forms.TextBox();
-            this.textBoxCONLabel = new System.Windows.Forms.TextBox();
+            this.labelCONMod = new System.Windows.Forms.Label();
+            this.labelCONScore = new System.Windows.Forms.Label();
+            this.labelCONLabel = new System.Windows.Forms.Label();
             this.pictureBoxCON = new System.Windows.Forms.PictureBox();
             this.panelAbilityDEX = new System.Windows.Forms.Panel();
-            this.textBoxDEXMod = new System.Windows.Forms.TextBox();
-            this.textBoxDEXScore = new System.Windows.Forms.TextBox();
-            this.textBoxDEXLabel = new System.Windows.Forms.TextBox();
+            this.labelDEXMod = new System.Windows.Forms.Label();
+            this.labelDEXScore = new System.Windows.Forms.Label();
+            this.labelDEXLabel = new System.Windows.Forms.Label();
             this.pictureBoxDEX = new System.Windows.Forms.PictureBox();
             this.panelAbilitySTR = new System.Windows.Forms.Panel();
-            this.textBoxSTRMod = new System.Windows.Forms.TextBox();
-            this.textBoxSTRScore = new System.Windows.Forms.TextBox();
-            this.textBoxSTRLable = new System.Windows.Forms.TextBox();
+            this.labelSTRMod = new System.Windows.Forms.Label();
+            this.labelSTRScore = new System.Windows.Forms.Label();
+            this.labelSTRLable = new System.Windows.Forms.Label();
             this.pictureBoxSTR = new System.Windows.Forms.PictureBox();
             this.panelMenu.SuspendLayout();
             this.panelExit.SuspendLayout();
@@ -605,9 +605,9 @@ namespace DirtyDand
             // panelCharacterPreview
             // 
             this.panelCharacterPreview.Controls.Add(this.pictureBoxMugShot);
-            this.panelCharacterPreview.Controls.Add(this.textBoxRaceClass);
-            this.panelCharacterPreview.Controls.Add(this.textBoxName);
-            this.panelCharacterPreview.Controls.Add(this.textBoxCurrentCharacter);
+            this.panelCharacterPreview.Controls.Add(this.labelRaceClass);
+            this.panelCharacterPreview.Controls.Add(this.labelName);
+            this.panelCharacterPreview.Controls.Add(this.labelCurrentCharacter);
             this.panelCharacterPreview.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelCharacterPreview.Location = new System.Drawing.Point(0, 0);
             this.panelCharacterPreview.Margin = new System.Windows.Forms.Padding(4);
@@ -626,47 +626,41 @@ namespace DirtyDand
             this.pictureBoxMugShot.TabIndex = 3;
             this.pictureBoxMugShot.TabStop = false;
             // 
-            // textBoxRaceClass
+            // labelRaceClass
             // 
-            this.textBoxRaceClass.BackColor = System.Drawing.Color.Black;
-            this.textBoxRaceClass.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxRaceClass.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textBoxRaceClass.ForeColor = System.Drawing.Color.LightGray;
-            this.textBoxRaceClass.Location = new System.Drawing.Point(0, 32);
-            this.textBoxRaceClass.Name = "textBoxRaceClass";
-            this.textBoxRaceClass.ReadOnly = true;
-            this.textBoxRaceClass.Size = new System.Drawing.Size(255, 16);
-            this.textBoxRaceClass.TabIndex = 2;
-            this.textBoxRaceClass.Text = "Level 20, Half-Orc, Warlock";
-            this.textBoxRaceClass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.labelRaceClass.BackColor = System.Drawing.Color.Black;
+            this.labelRaceClass.Dock = System.Windows.Forms.DockStyle.Top;
+            this.labelRaceClass.ForeColor = System.Drawing.Color.LightGray;
+            this.labelRaceClass.Location = new System.Drawing.Point(0, 32);
+            this.labelRaceClass.Name = "labelRaceClass";
+            this.labelRaceClass.Size = new System.Drawing.Size(255, 16);
+            this.labelRaceClass.TabIndex = 2;
+            this.labelRaceClass.Text = "Level 20, Half-Orc, Warlock";
+            this.labelRaceClass.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBoxName
+            // labelName
             // 
-            this.textBoxName.BackColor = System.Drawing.Color.Black;
-            this.textBoxName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxName.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textBoxName.ForeColor = System.Drawing.Color.LightGray;
-            this.textBoxName.Location = new System.Drawing.Point(0, 16);
-            this.textBoxName.Name = "textBoxName";
-            this.textBoxName.ReadOnly = true;
-            this.textBoxName.Size = new System.Drawing.Size(255, 16);
-            this.textBoxName.TabIndex = 1;
-            this.textBoxName.Text = "Dumbass McGee";
-            this.textBoxName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.labelName.BackColor = System.Drawing.Color.Black;
+            this.labelName.Dock = System.Windows.Forms.DockStyle.Top;
+            this.labelName.ForeColor = System.Drawing.Color.LightGray;
+            this.labelName.Location = new System.Drawing.Point(0, 16);
+            this.labelName.Name = "labelName";
+            this.labelName.Size = new System.Drawing.Size(255, 16);
+            this.labelName.TabIndex = 1;
+            this.labelName.Text = "Dumbass McGee";
+            this.labelName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBoxCurrentCharacter
+            // labelCurrentCharacter
             // 
-            this.textBoxCurrentCharacter.BackColor = System.Drawing.Color.Black;
-            this.textBoxCurrentCharacter.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxCurrentCharacter.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textBoxCurrentCharacter.ForeColor = System.Drawing.Color.LightGray;
-            this.textBoxCurrentCharacter.Location = new System.Drawing.Point(0, 0);
-            this.textBoxCurrentCharacter.Name = "textBoxCurrentCharacter";
-            this.textBoxCurrentCharacter.ReadOnly = true;
-            this.textBoxCurrentCharacter.Size = new System.Drawing.Size(255, 16);
-            this.textBoxCurrentCharacter.TabIndex = 0;
-            this.textBoxCurrentCharacter.Text = "Current Character:";
-            this.textBoxCurrentCharacter.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.labelCurrentCharacter.BackColor = System.Drawing.Color.Black;
+            this.labelCurrentCharacter.Dock = System.Windows.Forms.DockStyle.Top;
+            this.labelCurrentCharacter.ForeColor = System.Drawing.Color.LightGray;
+            this.labelCurrentCharacter.Location = new System.Drawing.Point(0, 0);
+            this.labelCurrentCharacter.Name = "labelCurrentCharacter";
+            this.labelCurrentCharacter.Size = new System.Drawing.Size(255, 16);
+            this.labelCurrentCharacter.TabIndex = 0;
+            this.labelCurrentCharacter.Text = "Current Character:";
+            this.labelCurrentCharacter.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panelOpenScreen
             // 
@@ -717,9 +711,9 @@ namespace DirtyDand
             // 
             // panelAbilityCHA
             // 
-            this.panelAbilityCHA.Controls.Add(this.textBoxCHAMod);
-            this.panelAbilityCHA.Controls.Add(this.textBoxCHAScore);
-            this.panelAbilityCHA.Controls.Add(this.textBoxCHALabel);
+            this.panelAbilityCHA.Controls.Add(this.labelCHAMod);
+            this.panelAbilityCHA.Controls.Add(this.labelCHAScore);
+            this.panelAbilityCHA.Controls.Add(this.labelCHALabel);
             this.panelAbilityCHA.Controls.Add(this.pictureBoxCHA);
             this.panelAbilityCHA.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelAbilityCHA.Location = new System.Drawing.Point(620, 0);
@@ -727,55 +721,56 @@ namespace DirtyDand
             this.panelAbilityCHA.Size = new System.Drawing.Size(124, 123);
             this.panelAbilityCHA.TabIndex = 12;
             // 
-            // textBoxCHAMod
+            // labelCHAMod
             // 
-            this.textBoxCHAMod.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxCHAMod.BackColor = System.Drawing.Color.Black;
-            this.textBoxCHAMod.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxCHAMod.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.textBoxCHAMod.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCHAMod.ForeColor = System.Drawing.Color.LightGray;
-            this.textBoxCHAMod.Location = new System.Drawing.Point(50, 88);
-            this.textBoxCHAMod.Name = "textBoxCHAMod";
-            this.textBoxCHAMod.ReadOnly = true;
-            this.textBoxCHAMod.Size = new System.Drawing.Size(24, 22);
-            this.textBoxCHAMod.TabIndex = 12;
-            this.textBoxCHAMod.Text = "+5";
-            this.textBoxCHAMod.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.labelCHAMod.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelCHAMod.AutoSize = true;
+            this.labelCHAMod.BackColor = System.Drawing.Color.Black;
+            this.labelCHAMod.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.labelCHAMod.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCHAMod.ForeColor = System.Drawing.Color.LightGray;
+            this.labelCHAMod.Location = new System.Drawing.Point(46, 88);
+            this.labelCHAMod.Name = "labelCHAMod";
+            this.labelCHAMod.Size = new System.Drawing.Size(31, 24);
+            this.labelCHAMod.TabIndex = 12;
+            this.labelCHAMod.Text = "+5";
+            this.labelCHAMod.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBoxCHAScore
+            // labelCHAScore
             // 
-            this.textBoxCHAScore.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxCHAScore.BackColor = System.Drawing.Color.Black;
-            this.textBoxCHAScore.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxCHAScore.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.textBoxCHAScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCHAScore.ForeColor = System.Drawing.Color.LightGray;
-            this.textBoxCHAScore.Location = new System.Drawing.Point(32, 34);
-            this.textBoxCHAScore.Name = "textBoxCHAScore";
-            this.textBoxCHAScore.ReadOnly = true;
-            this.textBoxCHAScore.Size = new System.Drawing.Size(60, 46);
-            this.textBoxCHAScore.TabIndex = 11;
-            this.textBoxCHAScore.Text = "20";
-            this.textBoxCHAScore.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.labelCHAScore.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelCHAScore.AutoSize = true;
+            this.labelCHAScore.BackColor = System.Drawing.Color.Black;
+            this.labelCHAScore.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.labelCHAScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCHAScore.ForeColor = System.Drawing.Color.LightGray;
+            this.labelCHAScore.Location = new System.Drawing.Point(30, 34);
+            this.labelCHAScore.Name = "labelCHAScore";
+            this.labelCHAScore.Size = new System.Drawing.Size(64, 46);
+            this.labelCHAScore.TabIndex = 11;
+            this.labelCHAScore.Text = "20";
+            this.labelCHAScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBoxCHALabel
+            // labelCHALabel
             // 
-            this.textBoxCHALabel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxCHALabel.BackColor = System.Drawing.Color.Black;
-            this.textBoxCHALabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxCHALabel.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.textBoxCHALabel.ForeColor = System.Drawing.Color.LightGray;
-            this.textBoxCHALabel.Location = new System.Drawing.Point(42, 12);
-            this.textBoxCHALabel.Name = "textBoxCHALabel";
-            this.textBoxCHALabel.ReadOnly = true;
-            this.textBoxCHALabel.Size = new System.Drawing.Size(40, 16);
-            this.textBoxCHALabel.TabIndex = 10;
-            this.textBoxCHALabel.Text = "CHA";
-            this.textBoxCHALabel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.labelCHALabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelCHALabel.AutoSize = true;
+            this.labelCHALabel.BackColor = System.Drawing.Color.Black;
+            this.labelCHALabel.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.labelCHALabel.ForeColor = System.Drawing.Color.LightGray;
+            this.labelCHALabel.Location = new System.Drawing.Point(42, 12);
+            this.labelCHALabel.Name = "labelCHALabel";
+            this.labelCHALabel.Size = new System.Drawing.Size(36, 17);
+            this.labelCHALabel.TabIndex = 10;
+            this.labelCHALabel.Text = "CHA";
+            this.labelCHALabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBoxCHA
             // 
+            this.pictureBoxCHA.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxCHA.BackgroundImage = global::DirtyDand.Properties.Resources.Ability_Outline;
             this.pictureBoxCHA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBoxCHA.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -787,9 +782,9 @@ namespace DirtyDand
             // 
             // panelAbilityWis
             // 
-            this.panelAbilityWis.Controls.Add(this.textBoxWISMod);
-            this.panelAbilityWis.Controls.Add(this.textBoxWISScore);
-            this.panelAbilityWis.Controls.Add(this.textBoxWISLabel);
+            this.panelAbilityWis.Controls.Add(this.labelWISMod);
+            this.panelAbilityWis.Controls.Add(this.labelWISScore);
+            this.panelAbilityWis.Controls.Add(this.labelWISLabel);
             this.panelAbilityWis.Controls.Add(this.pictureBoxWIS);
             this.panelAbilityWis.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelAbilityWis.Location = new System.Drawing.Point(496, 0);
@@ -797,55 +792,56 @@ namespace DirtyDand
             this.panelAbilityWis.Size = new System.Drawing.Size(124, 123);
             this.panelAbilityWis.TabIndex = 11;
             // 
-            // textBoxWISMod
+            // labelWISMod
             // 
-            this.textBoxWISMod.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxWISMod.BackColor = System.Drawing.Color.Black;
-            this.textBoxWISMod.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxWISMod.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.textBoxWISMod.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxWISMod.ForeColor = System.Drawing.Color.LightGray;
-            this.textBoxWISMod.Location = new System.Drawing.Point(50, 88);
-            this.textBoxWISMod.Name = "textBoxWISMod";
-            this.textBoxWISMod.ReadOnly = true;
-            this.textBoxWISMod.Size = new System.Drawing.Size(24, 22);
-            this.textBoxWISMod.TabIndex = 12;
-            this.textBoxWISMod.Text = "+5";
-            this.textBoxWISMod.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.labelWISMod.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelWISMod.AutoSize = true;
+            this.labelWISMod.BackColor = System.Drawing.Color.Black;
+            this.labelWISMod.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.labelWISMod.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelWISMod.ForeColor = System.Drawing.Color.LightGray;
+            this.labelWISMod.Location = new System.Drawing.Point(46, 88);
+            this.labelWISMod.Name = "labelWISMod";
+            this.labelWISMod.Size = new System.Drawing.Size(31, 24);
+            this.labelWISMod.TabIndex = 12;
+            this.labelWISMod.Text = "+5";
+            this.labelWISMod.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBoxWISScore
+            // labelWISScore
             // 
-            this.textBoxWISScore.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxWISScore.BackColor = System.Drawing.Color.Black;
-            this.textBoxWISScore.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxWISScore.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.textBoxWISScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxWISScore.ForeColor = System.Drawing.Color.LightGray;
-            this.textBoxWISScore.Location = new System.Drawing.Point(32, 34);
-            this.textBoxWISScore.Name = "textBoxWISScore";
-            this.textBoxWISScore.ReadOnly = true;
-            this.textBoxWISScore.Size = new System.Drawing.Size(60, 46);
-            this.textBoxWISScore.TabIndex = 11;
-            this.textBoxWISScore.Text = "20";
-            this.textBoxWISScore.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.labelWISScore.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelWISScore.AutoSize = true;
+            this.labelWISScore.BackColor = System.Drawing.Color.Black;
+            this.labelWISScore.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.labelWISScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelWISScore.ForeColor = System.Drawing.Color.LightGray;
+            this.labelWISScore.Location = new System.Drawing.Point(30, 34);
+            this.labelWISScore.Name = "labelWISScore";
+            this.labelWISScore.Size = new System.Drawing.Size(64, 46);
+            this.labelWISScore.TabIndex = 11;
+            this.labelWISScore.Text = "20";
+            this.labelWISScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBoxWISLabel
+            // labelWISLabel
             // 
-            this.textBoxWISLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxWISLabel.BackColor = System.Drawing.Color.Black;
-            this.textBoxWISLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxWISLabel.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.textBoxWISLabel.ForeColor = System.Drawing.Color.LightGray;
-            this.textBoxWISLabel.Location = new System.Drawing.Point(42, 12);
-            this.textBoxWISLabel.Name = "textBoxWISLabel";
-            this.textBoxWISLabel.ReadOnly = true;
-            this.textBoxWISLabel.Size = new System.Drawing.Size(40, 16);
-            this.textBoxWISLabel.TabIndex = 10;
-            this.textBoxWISLabel.Text = "WIS";
-            this.textBoxWISLabel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.labelWISLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelWISLabel.AutoSize = true;
+            this.labelWISLabel.BackColor = System.Drawing.Color.Black;
+            this.labelWISLabel.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.labelWISLabel.ForeColor = System.Drawing.Color.LightGray;
+            this.labelWISLabel.Location = new System.Drawing.Point(42, 12);
+            this.labelWISLabel.Name = "labelWISLabel";
+            this.labelWISLabel.Size = new System.Drawing.Size(33, 17);
+            this.labelWISLabel.TabIndex = 10;
+            this.labelWISLabel.Text = "WIS";
+            this.labelWISLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBoxWIS
             // 
+            this.pictureBoxWIS.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxWIS.BackgroundImage = global::DirtyDand.Properties.Resources.Ability_Outline;
             this.pictureBoxWIS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBoxWIS.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -857,9 +853,9 @@ namespace DirtyDand
             // 
             // panelAbilityINT
             // 
-            this.panelAbilityINT.Controls.Add(this.textBoxINTMod);
-            this.panelAbilityINT.Controls.Add(this.textBoxINTScore);
-            this.panelAbilityINT.Controls.Add(this.textBoxINTLabel);
+            this.panelAbilityINT.Controls.Add(this.labelINTMod);
+            this.panelAbilityINT.Controls.Add(this.labelINTScore);
+            this.panelAbilityINT.Controls.Add(this.labelINTLabel);
             this.panelAbilityINT.Controls.Add(this.pictureBoxINT);
             this.panelAbilityINT.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelAbilityINT.Location = new System.Drawing.Point(372, 0);
@@ -867,55 +863,56 @@ namespace DirtyDand
             this.panelAbilityINT.Size = new System.Drawing.Size(124, 123);
             this.panelAbilityINT.TabIndex = 10;
             // 
-            // textBoxINTMod
+            // labelINTMod
             // 
-            this.textBoxINTMod.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxINTMod.BackColor = System.Drawing.Color.Black;
-            this.textBoxINTMod.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxINTMod.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.textBoxINTMod.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxINTMod.ForeColor = System.Drawing.Color.LightGray;
-            this.textBoxINTMod.Location = new System.Drawing.Point(50, 88);
-            this.textBoxINTMod.Name = "textBoxINTMod";
-            this.textBoxINTMod.ReadOnly = true;
-            this.textBoxINTMod.Size = new System.Drawing.Size(24, 22);
-            this.textBoxINTMod.TabIndex = 12;
-            this.textBoxINTMod.Text = "+5";
-            this.textBoxINTMod.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.labelINTMod.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelINTMod.AutoSize = true;
+            this.labelINTMod.BackColor = System.Drawing.Color.Black;
+            this.labelINTMod.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.labelINTMod.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelINTMod.ForeColor = System.Drawing.Color.LightGray;
+            this.labelINTMod.Location = new System.Drawing.Point(46, 88);
+            this.labelINTMod.Name = "labelINTMod";
+            this.labelINTMod.Size = new System.Drawing.Size(31, 24);
+            this.labelINTMod.TabIndex = 12;
+            this.labelINTMod.Text = "+5";
+            this.labelINTMod.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBoxINTScore
+            // labelINTScore
             // 
-            this.textBoxINTScore.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxINTScore.BackColor = System.Drawing.Color.Black;
-            this.textBoxINTScore.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxINTScore.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.textBoxINTScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxINTScore.ForeColor = System.Drawing.Color.LightGray;
-            this.textBoxINTScore.Location = new System.Drawing.Point(32, 34);
-            this.textBoxINTScore.Name = "textBoxINTScore";
-            this.textBoxINTScore.ReadOnly = true;
-            this.textBoxINTScore.Size = new System.Drawing.Size(60, 46);
-            this.textBoxINTScore.TabIndex = 11;
-            this.textBoxINTScore.Text = "20";
-            this.textBoxINTScore.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.labelINTScore.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelINTScore.AutoSize = true;
+            this.labelINTScore.BackColor = System.Drawing.Color.Black;
+            this.labelINTScore.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.labelINTScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelINTScore.ForeColor = System.Drawing.Color.LightGray;
+            this.labelINTScore.Location = new System.Drawing.Point(30, 34);
+            this.labelINTScore.Name = "labelINTScore";
+            this.labelINTScore.Size = new System.Drawing.Size(64, 46);
+            this.labelINTScore.TabIndex = 11;
+            this.labelINTScore.Text = "20";
+            this.labelINTScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBoxINTLabel
+            // labelINTLabel
             // 
-            this.textBoxINTLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxINTLabel.BackColor = System.Drawing.Color.Black;
-            this.textBoxINTLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxINTLabel.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.textBoxINTLabel.ForeColor = System.Drawing.Color.LightGray;
-            this.textBoxINTLabel.Location = new System.Drawing.Point(42, 12);
-            this.textBoxINTLabel.Name = "textBoxINTLabel";
-            this.textBoxINTLabel.ReadOnly = true;
-            this.textBoxINTLabel.Size = new System.Drawing.Size(40, 16);
-            this.textBoxINTLabel.TabIndex = 10;
-            this.textBoxINTLabel.Text = "INT";
-            this.textBoxINTLabel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.labelINTLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelINTLabel.AutoSize = true;
+            this.labelINTLabel.BackColor = System.Drawing.Color.Black;
+            this.labelINTLabel.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.labelINTLabel.ForeColor = System.Drawing.Color.LightGray;
+            this.labelINTLabel.Location = new System.Drawing.Point(42, 12);
+            this.labelINTLabel.Name = "labelINTLabel";
+            this.labelINTLabel.Size = new System.Drawing.Size(30, 17);
+            this.labelINTLabel.TabIndex = 10;
+            this.labelINTLabel.Text = "INT";
+            this.labelINTLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBoxINT
             // 
+            this.pictureBoxINT.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxINT.BackgroundImage = global::DirtyDand.Properties.Resources.Ability_Outline;
             this.pictureBoxINT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBoxINT.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -927,9 +924,9 @@ namespace DirtyDand
             // 
             // panelAbilityCon
             // 
-            this.panelAbilityCon.Controls.Add(this.textBoxCONMod);
-            this.panelAbilityCon.Controls.Add(this.textBoxCONScore);
-            this.panelAbilityCon.Controls.Add(this.textBoxCONLabel);
+            this.panelAbilityCon.Controls.Add(this.labelCONMod);
+            this.panelAbilityCon.Controls.Add(this.labelCONScore);
+            this.panelAbilityCon.Controls.Add(this.labelCONLabel);
             this.panelAbilityCon.Controls.Add(this.pictureBoxCON);
             this.panelAbilityCon.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelAbilityCon.Location = new System.Drawing.Point(248, 0);
@@ -937,55 +934,56 @@ namespace DirtyDand
             this.panelAbilityCon.Size = new System.Drawing.Size(124, 123);
             this.panelAbilityCon.TabIndex = 9;
             // 
-            // textBoxCONMod
+            // labelCONMod
             // 
-            this.textBoxCONMod.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxCONMod.BackColor = System.Drawing.Color.Black;
-            this.textBoxCONMod.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxCONMod.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.textBoxCONMod.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCONMod.ForeColor = System.Drawing.Color.LightGray;
-            this.textBoxCONMod.Location = new System.Drawing.Point(50, 88);
-            this.textBoxCONMod.Name = "textBoxCONMod";
-            this.textBoxCONMod.ReadOnly = true;
-            this.textBoxCONMod.Size = new System.Drawing.Size(24, 22);
-            this.textBoxCONMod.TabIndex = 12;
-            this.textBoxCONMod.Text = "+5";
-            this.textBoxCONMod.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.labelCONMod.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelCONMod.AutoSize = true;
+            this.labelCONMod.BackColor = System.Drawing.Color.Black;
+            this.labelCONMod.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.labelCONMod.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCONMod.ForeColor = System.Drawing.Color.LightGray;
+            this.labelCONMod.Location = new System.Drawing.Point(46, 88);
+            this.labelCONMod.Name = "labelCONMod";
+            this.labelCONMod.Size = new System.Drawing.Size(31, 24);
+            this.labelCONMod.TabIndex = 12;
+            this.labelCONMod.Text = "+5";
+            this.labelCONMod.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBoxCONScore
+            // labelCONScore
             // 
-            this.textBoxCONScore.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxCONScore.BackColor = System.Drawing.Color.Black;
-            this.textBoxCONScore.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxCONScore.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.textBoxCONScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCONScore.ForeColor = System.Drawing.Color.LightGray;
-            this.textBoxCONScore.Location = new System.Drawing.Point(32, 34);
-            this.textBoxCONScore.Name = "textBoxCONScore";
-            this.textBoxCONScore.ReadOnly = true;
-            this.textBoxCONScore.Size = new System.Drawing.Size(60, 46);
-            this.textBoxCONScore.TabIndex = 11;
-            this.textBoxCONScore.Text = "20";
-            this.textBoxCONScore.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.labelCONScore.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelCONScore.AutoSize = true;
+            this.labelCONScore.BackColor = System.Drawing.Color.Black;
+            this.labelCONScore.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.labelCONScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCONScore.ForeColor = System.Drawing.Color.LightGray;
+            this.labelCONScore.Location = new System.Drawing.Point(30, 34);
+            this.labelCONScore.Name = "labelCONScore";
+            this.labelCONScore.Size = new System.Drawing.Size(64, 46);
+            this.labelCONScore.TabIndex = 11;
+            this.labelCONScore.Text = "20";
+            this.labelCONScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBoxCONLabel
+            // labelCONLabel
             // 
-            this.textBoxCONLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxCONLabel.BackColor = System.Drawing.Color.Black;
-            this.textBoxCONLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxCONLabel.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.textBoxCONLabel.ForeColor = System.Drawing.Color.LightGray;
-            this.textBoxCONLabel.Location = new System.Drawing.Point(42, 12);
-            this.textBoxCONLabel.Name = "textBoxCONLabel";
-            this.textBoxCONLabel.ReadOnly = true;
-            this.textBoxCONLabel.Size = new System.Drawing.Size(40, 16);
-            this.textBoxCONLabel.TabIndex = 10;
-            this.textBoxCONLabel.Text = "CON";
-            this.textBoxCONLabel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.labelCONLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelCONLabel.AutoSize = true;
+            this.labelCONLabel.BackColor = System.Drawing.Color.Black;
+            this.labelCONLabel.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.labelCONLabel.ForeColor = System.Drawing.Color.LightGray;
+            this.labelCONLabel.Location = new System.Drawing.Point(42, 12);
+            this.labelCONLabel.Name = "labelCONLabel";
+            this.labelCONLabel.Size = new System.Drawing.Size(38, 17);
+            this.labelCONLabel.TabIndex = 10;
+            this.labelCONLabel.Text = "CON";
+            this.labelCONLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBoxCON
             // 
+            this.pictureBoxCON.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxCON.BackgroundImage = global::DirtyDand.Properties.Resources.Ability_Outline;
             this.pictureBoxCON.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBoxCON.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -997,9 +995,9 @@ namespace DirtyDand
             // 
             // panelAbilityDEX
             // 
-            this.panelAbilityDEX.Controls.Add(this.textBoxDEXMod);
-            this.panelAbilityDEX.Controls.Add(this.textBoxDEXScore);
-            this.panelAbilityDEX.Controls.Add(this.textBoxDEXLabel);
+            this.panelAbilityDEX.Controls.Add(this.labelDEXMod);
+            this.panelAbilityDEX.Controls.Add(this.labelDEXScore);
+            this.panelAbilityDEX.Controls.Add(this.labelDEXLabel);
             this.panelAbilityDEX.Controls.Add(this.pictureBoxDEX);
             this.panelAbilityDEX.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelAbilityDEX.Location = new System.Drawing.Point(124, 0);
@@ -1007,55 +1005,56 @@ namespace DirtyDand
             this.panelAbilityDEX.Size = new System.Drawing.Size(124, 123);
             this.panelAbilityDEX.TabIndex = 8;
             // 
-            // textBoxDEXMod
+            // labelDEXMod
             // 
-            this.textBoxDEXMod.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxDEXMod.BackColor = System.Drawing.Color.Black;
-            this.textBoxDEXMod.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxDEXMod.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.textBoxDEXMod.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxDEXMod.ForeColor = System.Drawing.Color.LightGray;
-            this.textBoxDEXMod.Location = new System.Drawing.Point(50, 88);
-            this.textBoxDEXMod.Name = "textBoxDEXMod";
-            this.textBoxDEXMod.ReadOnly = true;
-            this.textBoxDEXMod.Size = new System.Drawing.Size(24, 22);
-            this.textBoxDEXMod.TabIndex = 12;
-            this.textBoxDEXMod.Text = "+5";
-            this.textBoxDEXMod.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.labelDEXMod.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelDEXMod.AutoSize = true;
+            this.labelDEXMod.BackColor = System.Drawing.Color.Black;
+            this.labelDEXMod.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.labelDEXMod.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDEXMod.ForeColor = System.Drawing.Color.LightGray;
+            this.labelDEXMod.Location = new System.Drawing.Point(46, 88);
+            this.labelDEXMod.Name = "labelDEXMod";
+            this.labelDEXMod.Size = new System.Drawing.Size(31, 24);
+            this.labelDEXMod.TabIndex = 12;
+            this.labelDEXMod.Text = "+5";
+            this.labelDEXMod.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBoxDEXScore
+            // labelDEXScore
             // 
-            this.textBoxDEXScore.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxDEXScore.BackColor = System.Drawing.Color.Black;
-            this.textBoxDEXScore.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxDEXScore.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.textBoxDEXScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxDEXScore.ForeColor = System.Drawing.Color.LightGray;
-            this.textBoxDEXScore.Location = new System.Drawing.Point(32, 34);
-            this.textBoxDEXScore.Name = "textBoxDEXScore";
-            this.textBoxDEXScore.ReadOnly = true;
-            this.textBoxDEXScore.Size = new System.Drawing.Size(60, 46);
-            this.textBoxDEXScore.TabIndex = 11;
-            this.textBoxDEXScore.Text = "20";
-            this.textBoxDEXScore.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.labelDEXScore.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelDEXScore.AutoSize = true;
+            this.labelDEXScore.BackColor = System.Drawing.Color.Black;
+            this.labelDEXScore.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.labelDEXScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDEXScore.ForeColor = System.Drawing.Color.LightGray;
+            this.labelDEXScore.Location = new System.Drawing.Point(30, 34);
+            this.labelDEXScore.Name = "labelDEXScore";
+            this.labelDEXScore.Size = new System.Drawing.Size(64, 46);
+            this.labelDEXScore.TabIndex = 11;
+            this.labelDEXScore.Text = "20";
+            this.labelDEXScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBoxDEXLabel
+            // labelDEXLabel
             // 
-            this.textBoxDEXLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxDEXLabel.BackColor = System.Drawing.Color.Black;
-            this.textBoxDEXLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxDEXLabel.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.textBoxDEXLabel.ForeColor = System.Drawing.Color.LightGray;
-            this.textBoxDEXLabel.Location = new System.Drawing.Point(42, 12);
-            this.textBoxDEXLabel.Name = "textBoxDEXLabel";
-            this.textBoxDEXLabel.ReadOnly = true;
-            this.textBoxDEXLabel.Size = new System.Drawing.Size(40, 16);
-            this.textBoxDEXLabel.TabIndex = 10;
-            this.textBoxDEXLabel.Text = "DEX";
-            this.textBoxDEXLabel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.labelDEXLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelDEXLabel.AutoSize = true;
+            this.labelDEXLabel.BackColor = System.Drawing.Color.Black;
+            this.labelDEXLabel.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.labelDEXLabel.ForeColor = System.Drawing.Color.LightGray;
+            this.labelDEXLabel.Location = new System.Drawing.Point(42, 12);
+            this.labelDEXLabel.Name = "labelDEXLabel";
+            this.labelDEXLabel.Size = new System.Drawing.Size(36, 17);
+            this.labelDEXLabel.TabIndex = 10;
+            this.labelDEXLabel.Text = "DEX";
+            this.labelDEXLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBoxDEX
             // 
+            this.pictureBoxDEX.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxDEX.BackgroundImage = global::DirtyDand.Properties.Resources.Ability_Outline;
             this.pictureBoxDEX.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBoxDEX.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1067,9 +1066,9 @@ namespace DirtyDand
             // 
             // panelAbilitySTR
             // 
-            this.panelAbilitySTR.Controls.Add(this.textBoxSTRMod);
-            this.panelAbilitySTR.Controls.Add(this.textBoxSTRScore);
-            this.panelAbilitySTR.Controls.Add(this.textBoxSTRLable);
+            this.panelAbilitySTR.Controls.Add(this.labelSTRMod);
+            this.panelAbilitySTR.Controls.Add(this.labelSTRScore);
+            this.panelAbilitySTR.Controls.Add(this.labelSTRLable);
             this.panelAbilitySTR.Controls.Add(this.pictureBoxSTR);
             this.panelAbilitySTR.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelAbilitySTR.Location = new System.Drawing.Point(0, 0);
@@ -1077,55 +1076,56 @@ namespace DirtyDand
             this.panelAbilitySTR.Size = new System.Drawing.Size(124, 123);
             this.panelAbilitySTR.TabIndex = 7;
             // 
-            // textBoxSTRMod
+            // labelSTRMod
             // 
-            this.textBoxSTRMod.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxSTRMod.BackColor = System.Drawing.Color.Black;
-            this.textBoxSTRMod.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxSTRMod.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.textBoxSTRMod.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxSTRMod.ForeColor = System.Drawing.Color.LightGray;
-            this.textBoxSTRMod.Location = new System.Drawing.Point(50, 88);
-            this.textBoxSTRMod.Name = "textBoxSTRMod";
-            this.textBoxSTRMod.ReadOnly = true;
-            this.textBoxSTRMod.Size = new System.Drawing.Size(24, 22);
-            this.textBoxSTRMod.TabIndex = 12;
-            this.textBoxSTRMod.Text = "+5";
-            this.textBoxSTRMod.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.labelSTRMod.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelSTRMod.AutoSize = true;
+            this.labelSTRMod.BackColor = System.Drawing.Color.Black;
+            this.labelSTRMod.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.labelSTRMod.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSTRMod.ForeColor = System.Drawing.Color.LightGray;
+            this.labelSTRMod.Location = new System.Drawing.Point(46, 88);
+            this.labelSTRMod.Name = "labelSTRMod";
+            this.labelSTRMod.Size = new System.Drawing.Size(31, 24);
+            this.labelSTRMod.TabIndex = 12;
+            this.labelSTRMod.Text = "+5";
+            this.labelSTRMod.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBoxSTRScore
+            // labelSTRScore
             // 
-            this.textBoxSTRScore.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxSTRScore.BackColor = System.Drawing.Color.Black;
-            this.textBoxSTRScore.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxSTRScore.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.textBoxSTRScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxSTRScore.ForeColor = System.Drawing.Color.LightGray;
-            this.textBoxSTRScore.Location = new System.Drawing.Point(32, 34);
-            this.textBoxSTRScore.Name = "textBoxSTRScore";
-            this.textBoxSTRScore.ReadOnly = true;
-            this.textBoxSTRScore.Size = new System.Drawing.Size(60, 46);
-            this.textBoxSTRScore.TabIndex = 11;
-            this.textBoxSTRScore.Text = "20";
-            this.textBoxSTRScore.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.labelSTRScore.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelSTRScore.AutoSize = true;
+            this.labelSTRScore.BackColor = System.Drawing.Color.Black;
+            this.labelSTRScore.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.labelSTRScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSTRScore.ForeColor = System.Drawing.Color.LightGray;
+            this.labelSTRScore.Location = new System.Drawing.Point(30, 34);
+            this.labelSTRScore.Name = "labelSTRScore";
+            this.labelSTRScore.Size = new System.Drawing.Size(64, 46);
+            this.labelSTRScore.TabIndex = 11;
+            this.labelSTRScore.Text = "20";
+            this.labelSTRScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBoxSTRLable
+            // labelSTRLable
             // 
-            this.textBoxSTRLable.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxSTRLable.BackColor = System.Drawing.Color.Black;
-            this.textBoxSTRLable.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxSTRLable.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.textBoxSTRLable.ForeColor = System.Drawing.Color.LightGray;
-            this.textBoxSTRLable.Location = new System.Drawing.Point(42, 12);
-            this.textBoxSTRLable.Name = "textBoxSTRLable";
-            this.textBoxSTRLable.ReadOnly = true;
-            this.textBoxSTRLable.Size = new System.Drawing.Size(40, 16);
-            this.textBoxSTRLable.TabIndex = 10;
-            this.textBoxSTRLable.Text = "STR";
-            this.textBoxSTRLable.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.labelSTRLable.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelSTRLable.AutoSize = true;
+            this.labelSTRLable.BackColor = System.Drawing.Color.Black;
+            this.labelSTRLable.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.labelSTRLable.ForeColor = System.Drawing.Color.LightGray;
+            this.labelSTRLable.Location = new System.Drawing.Point(42, 12);
+            this.labelSTRLable.Name = "labelSTRLable";
+            this.labelSTRLable.Size = new System.Drawing.Size(36, 17);
+            this.labelSTRLable.TabIndex = 10;
+            this.labelSTRLable.Text = "STR";
+            this.labelSTRLable.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBoxSTR
             // 
+            this.pictureBoxSTR.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxSTR.BackgroundImage = global::DirtyDand.Properties.Resources.Ability_Outline;
             this.pictureBoxSTR.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBoxSTR.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1156,7 +1156,6 @@ namespace DirtyDand
             this.panelCharacter.ResumeLayout(false);
             this.panelNewCharacter.ResumeLayout(false);
             this.panelCharacterPreview.ResumeLayout(false);
-            this.panelCharacterPreview.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMugShot)).EndInit();
             this.panelOpenScreen.ResumeLayout(false);
             this.panelChildForm.ResumeLayout(false);
@@ -1205,43 +1204,43 @@ namespace DirtyDand
         private System.Windows.Forms.Button buttonRandomCharacter;
         private System.Windows.Forms.Button buttonNewCharacter;
         private System.Windows.Forms.Button buttonSelectCharacter;
-        private System.Windows.Forms.TextBox textBoxRaceClass;
-        private System.Windows.Forms.TextBox textBoxName;
-        private System.Windows.Forms.TextBox textBoxCurrentCharacter;
+        private System.Windows.Forms.Label labelRaceClass;
+        private System.Windows.Forms.Label labelName;
+        private System.Windows.Forms.Label labelCurrentCharacter;
         private System.Windows.Forms.PictureBox pictureBoxMugShot;
         private System.Windows.Forms.Panel panelOpenScreen;
         private System.Windows.Forms.Panel panelInfo;
         private System.Windows.Forms.Panel panelAbilityDEX;
-        private System.Windows.Forms.TextBox textBoxDEXMod;
-        private System.Windows.Forms.TextBox textBoxDEXScore;
-        private System.Windows.Forms.TextBox textBoxDEXLabel;
+        private System.Windows.Forms.Label labelDEXMod;
+        private System.Windows.Forms.Label labelDEXScore;
+        private System.Windows.Forms.Label labelDEXLabel;
         private System.Windows.Forms.PictureBox pictureBoxDEX;
         private System.Windows.Forms.Panel panelAbilitySTR;
-        private System.Windows.Forms.TextBox textBoxSTRMod;
-        private System.Windows.Forms.TextBox textBoxSTRScore;
-        private System.Windows.Forms.TextBox textBoxSTRLable;
+        private System.Windows.Forms.Label labelSTRMod;
+        private System.Windows.Forms.Label labelSTRScore;
+        private System.Windows.Forms.Label labelSTRLable;
         private System.Windows.Forms.PictureBox pictureBoxSTR;
         private System.Windows.Forms.Panel panelChildForm;
         private System.Windows.Forms.PictureBox pictureBoxLogo;
         private System.Windows.Forms.Panel panelAbilityCHA;
-        private System.Windows.Forms.TextBox textBoxCHAMod;
-        private System.Windows.Forms.TextBox textBoxCHAScore;
-        private System.Windows.Forms.TextBox textBoxCHALabel;
+        private System.Windows.Forms.Label labelCHAMod;
+        private System.Windows.Forms.Label labelCHAScore;
+        private System.Windows.Forms.Label labelCHALabel;
         private System.Windows.Forms.PictureBox pictureBoxCHA;
         private System.Windows.Forms.Panel panelAbilityWis;
-        private System.Windows.Forms.TextBox textBoxWISMod;
-        private System.Windows.Forms.TextBox textBoxWISScore;
-        private System.Windows.Forms.TextBox textBoxWISLabel;
+        private System.Windows.Forms.Label labelWISMod;
+        private System.Windows.Forms.Label labelWISScore;
+        private System.Windows.Forms.Label labelWISLabel;
         private System.Windows.Forms.PictureBox pictureBoxWIS;
         private System.Windows.Forms.Panel panelAbilityINT;
-        private System.Windows.Forms.TextBox textBoxINTMod;
-        private System.Windows.Forms.TextBox textBoxINTScore;
-        private System.Windows.Forms.TextBox textBoxINTLabel;
+        private System.Windows.Forms.Label labelINTMod;
+        private System.Windows.Forms.Label labelINTScore;
+        private System.Windows.Forms.Label labelINTLabel;
         private System.Windows.Forms.PictureBox pictureBoxINT;
         private System.Windows.Forms.Panel panelAbilityCon;
-        private System.Windows.Forms.TextBox textBoxCONMod;
-        private System.Windows.Forms.TextBox textBoxCONScore;
-        private System.Windows.Forms.TextBox textBoxCONLabel;
+        private System.Windows.Forms.Label labelCONMod;
+        private System.Windows.Forms.Label labelCONScore;
+        private System.Windows.Forms.Label labelCONLabel;
         private System.Windows.Forms.PictureBox pictureBoxCON;
         private System.Windows.Forms.Panel panelExit;
         private System.Windows.Forms.Button buttonExitWithoutSaving;

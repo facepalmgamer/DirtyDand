@@ -29,6 +29,9 @@ namespace DirtyDand
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelMain = new System.Windows.Forms.Panel();
             this.panelSpellMain = new System.Windows.Forms.Panel();
             this.dataGridViewSpells = new System.Windows.Forms.DataGridView();
@@ -64,14 +67,47 @@ namespace DirtyDand
             // 
             // dataGridViewSpells
             // 
+            this.dataGridViewSpells.AllowUserToAddRows = false;
+            this.dataGridViewSpells.AllowUserToDeleteRows = false;
+            this.dataGridViewSpells.AllowUserToOrderColumns = true;
+            this.dataGridViewSpells.AllowUserToResizeColumns = false;
+            this.dataGridViewSpells.AllowUserToResizeRows = false;
             this.dataGridViewSpells.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridViewSpells.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewSpells.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            this.dataGridViewSpells.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataGridViewSpells.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewSpells.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewSpells.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewSpells.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewSpells.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewSpells.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.dataGridViewSpells.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewSpells.Name = "dataGridViewSpells";
+            this.dataGridViewSpells.ReadOnly = true;
+            this.dataGridViewSpells.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewSpells.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridViewSpells.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewSpells.Size = new System.Drawing.Size(1632, 795);
             this.dataGridViewSpells.TabIndex = 0;
             // 
