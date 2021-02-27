@@ -38,15 +38,12 @@ namespace DirtyDand.Globals
         public enum Source { AI, DMG, ERLW, EEPC, EGW, GGR, IDRotF, MTF, MOT, PHB, SCAG, TCE, VGM, XGE, AWM, LR, LLK, OGA, PS, TTP, UA, WGE };
         #endregion
 
-        #region ToolTip List
         public static ToolTip[] toolTips =
         {
             new ToolTip("incapacitated","An incapacitated creature can't take Actions or Reactions"),
             new ToolTip("deafend","A deafend creature can't hear and automatically fails any ability check that requires hearing")
 
         };
-        #endregion
-
 
 
     }
