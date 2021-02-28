@@ -115,7 +115,7 @@ namespace DirtyDand
 
         private void buttonSpellSearch_Click(object sender, EventArgs e)
         {
-            openChildForm(new SpellForm());
+            openChildForm(new SpellSearchForm());
         }
         #endregion
 
