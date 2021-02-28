@@ -119,12 +119,13 @@ namespace DirtyDand
         }
         #endregion
 
-        private Form activeForm = null;
+        private Stack<Form> activeForms = new Stack<Form>();
         private void openChildForm(Form childForm)
         {
-            if (activeForm != null)
-                activeForm.Close();
-            activeForm = childForm;
+            if (activeForms.Count != 0)
+                while (activeForms.Count > 0)
+                    activeForms.Pop().Close();
+            activeForms.Push(childForm);
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
@@ -132,6 +133,25 @@ namespace DirtyDand
             panelChildForm.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
+        }
+
+        public void addSubChildForm(Form subChildForm)
+        {
+            activeForms.Peek().Hide();
+            activeForms.Push(subChildForm);
+            subChildForm.TopLevel = false;
+            subChildForm.FormBorderStyle = FormBorderStyle.None;
+            subChildForm.Dock = DockStyle.Fill;
+            panelChildForm.Controls.Add(subChildForm);
+            panelChildForm.Tag = subChildForm;
+            subChildForm.BringToFront();
+            subChildForm.Show();
+        }
+
+        public void closeTopForm()
+        {
+            activeForms.Pop().Close();
+            activeForms.Peek().Show();
         }
 
         #region Exit
