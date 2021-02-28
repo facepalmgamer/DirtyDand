@@ -13,8 +13,11 @@ namespace DirtyDand
     {
         List<Spell> spellList = new List<Spell>(spellRegistry);
         DataTable spellTable;
-        public SpellSearchForm()
+        MainForm main;
+         
+        public SpellSearchForm(MainForm main)
         {
+            this.main = main;
             InitializeComponent();
             InitializeSpells();
         }
@@ -68,6 +71,14 @@ namespace DirtyDand
         private void buttonSearch_Click(object sender, EventArgs e)
         {
             UpdateTable(textBoxSearchBar.Text);
+        }
+
+        private void dataGridViewSpells_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewSelectedRowCollection rows = dataGridViewSpells.SelectedRows;
+            if (rows.Count == 1)
+                main.OpenSpellForm(spellList[rows[0].Index]);
+                
         }
     }
 

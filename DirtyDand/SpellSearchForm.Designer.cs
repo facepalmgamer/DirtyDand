@@ -110,6 +110,7 @@ namespace DirtyDand
             this.dataGridViewSpells.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewSpells.Size = new System.Drawing.Size(1632, 795);
             this.dataGridViewSpells.TabIndex = 0;
+            this.dataGridViewSpells.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewSpells_CellDoubleClick);
             // 
             // panelSearch
             // 
@@ -149,14 +150,14 @@ namespace DirtyDand
             this.textBoxSearchBar.Size = new System.Drawing.Size(977, 103);
             this.textBoxSearchBar.TabIndex = 0;
             // 
-            // SpellForm
+            // SpellSearchForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1632, 918);
             this.Controls.Add(this.panelMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "SpellForm";
+            this.Name = "SpellSearchForm";
             this.Text = "SpellForm";
             this.panelMain.ResumeLayout(false);
             this.panelSpellMain.ResumeLayout(false);

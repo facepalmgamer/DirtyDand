@@ -115,12 +115,12 @@ namespace DirtyDand
 
         private void buttonSpellSearch_Click(object sender, EventArgs e)
         {
-            openChildForm(new SpellSearchForm());
+            openChildForm(new SpellSearchForm(this));
         }
         #endregion
 
         private Stack<Form> activeForms = new Stack<Form>();
-        private void openChildForm(Form childForm)
+        private  void openChildForm(Form childForm)
         {
             if (activeForms.Count != 0)
                 while (activeForms.Count > 0)
@@ -135,7 +135,7 @@ namespace DirtyDand
             childForm.Show();
         }
 
-        public void addSubChildForm(Form subChildForm)
+        public void openSubChildForm(Form subChildForm)
         {
             activeForms.Peek().Hide();
             activeForms.Push(subChildForm);
@@ -148,6 +148,10 @@ namespace DirtyDand
             subChildForm.Show();
         }
 
+        public void OpenSpellForm(Spell spell)
+        {
+            openSubChildForm(new SpellForm(spell));
+        }
         public void closeTopForm()
         {
             activeForms.Pop().Close();

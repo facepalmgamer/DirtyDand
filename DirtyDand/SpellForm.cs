@@ -1,20 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using DirtyDand.Classes;
 using System.Windows.Forms;
 
 namespace DirtyDand
 {
     public partial class SpellForm : Form
     {
-        public SpellForm()
+        Spell spell;
+        public SpellForm(Spell spell)
         {
+            this.spell = spell;
             InitializeComponent();
+            label1.Text = spell.spellName;
         }
     }
 }
