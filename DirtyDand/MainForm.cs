@@ -150,7 +150,7 @@ namespace DirtyDand
 
         public void OpenSpellForm(Spell spell)
         {
-            openSubChildForm(new SpellForm(spell));
+            openSubChildForm(new SpellForm(spell,this));
         }
         public void closeTopForm()
         {
