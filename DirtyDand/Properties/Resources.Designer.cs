@@ -91,6 +91,16 @@ namespace DirtyDand.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        public static byte[] MrsEavesSmallCaps {
+            get {
+                object obj = ResourceManager.GetObject("MrsEavesSmallCaps", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Abi-Dalzim&apos;s Horrid Wilting
         ///8th-level necromancy
         ///Casting Time: 1 action

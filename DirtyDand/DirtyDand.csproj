@@ -116,6 +116,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Resources\MrsEavesSmallCaps.otf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
