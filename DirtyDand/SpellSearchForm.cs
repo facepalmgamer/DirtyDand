@@ -50,8 +50,7 @@ namespace DirtyDand
 
         private void UpdateTable(string search)
         {
-           
-            
+
             List<Spell> temp = new List<Spell>(spellRegistry);
             spellList = new List<Spell>(spellRegistry);
             foreach (Spell spell in temp)
@@ -66,6 +65,8 @@ namespace DirtyDand
                 spellTable.Rows.Add(spell.spellName, spell.level, spell.school, spell.ritual, spell.GetCastTime(), spell.GetRange(), spell.concentration, spell.duration, spell.source);
             }
             dataGridViewSpells.DataSource = spellTable;
+            dataGridViewSpells.ClearSelection();
+
         }
 
         private void buttonSearch_Click(object sender, EventArgs e)
@@ -79,6 +80,12 @@ namespace DirtyDand
             if (rows.Count == 1)
                 main.OpenSpellForm(spellList[rows[0].Index]);
                 
+        }
+         
+        private void textBoxSearchBar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+                UpdateTable(textBoxSearchBar.Text);
         }
     }
 
