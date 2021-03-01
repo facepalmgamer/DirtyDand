@@ -91,6 +91,16 @@ namespace DirtyDand.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        public static byte[] MrsEavesSmallCaps {
+            get {
+                object obj = ResourceManager.GetObject("MrsEavesSmallCaps", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         public static System.Drawing.Bitmap pageBackground {

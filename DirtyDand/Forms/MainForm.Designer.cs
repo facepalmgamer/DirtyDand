@@ -136,7 +136,7 @@ namespace DirtyDand
             this.panelMenu.Controls.Add(this.panelCharacterPreview);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
-            this.panelMenu.Margin = new System.Windows.Forms.Padding(4);
+            this.panelMenu.Margin = new System.Windows.Forms.Padding(5);
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(272, 1041);
             this.panelMenu.TabIndex = 0;
@@ -144,7 +144,7 @@ namespace DirtyDand
             // panelExitBorder
             // 
             this.panelExitBorder.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelExitBorder.Location = new System.Drawing.Point(0, 927);
+            this.panelExitBorder.Location = new System.Drawing.Point(0, 926);
             this.panelExitBorder.Name = "panelExitBorder";
             this.panelExitBorder.Size = new System.Drawing.Size(255, 2);
             this.panelExitBorder.TabIndex = 12;
@@ -159,9 +159,10 @@ namespace DirtyDand
             this.buttonExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.buttonExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonExit.Font = new System.Drawing.Font("MrsEavesSmallCaps", 18F);
             this.buttonExit.ForeColor = System.Drawing.Color.LightGray;
-            this.buttonExit.Location = new System.Drawing.Point(0, 929);
-            this.buttonExit.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonExit.Location = new System.Drawing.Point(0, 928);
+            this.buttonExit.Margin = new System.Windows.Forms.Padding(5);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
             this.buttonExit.Size = new System.Drawing.Size(255, 70);
@@ -178,8 +179,8 @@ namespace DirtyDand
             this.panelExit.Controls.Add(this.buttonSaveAndExit);
             this.panelExit.Controls.Add(this.buttonSave);
             this.panelExit.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelExit.Location = new System.Drawing.Point(0, 999);
-            this.panelExit.Margin = new System.Windows.Forms.Padding(4);
+            this.panelExit.Location = new System.Drawing.Point(0, 998);
+            this.panelExit.Margin = new System.Windows.Forms.Padding(5);
             this.panelExit.Name = "panelExit";
             this.panelExit.Size = new System.Drawing.Size(255, 165);
             this.panelExit.TabIndex = 10;
@@ -192,9 +193,10 @@ namespace DirtyDand
             this.buttonExitWithoutSaving.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(11)))), ((int)(((byte)(11)))));
             this.buttonExitWithoutSaving.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.buttonExitWithoutSaving.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonExitWithoutSaving.Font = new System.Drawing.Font("MrsEavesSmallCaps", 12F);
             this.buttonExitWithoutSaving.ForeColor = System.Drawing.Color.LightGray;
             this.buttonExitWithoutSaving.Location = new System.Drawing.Point(0, 110);
-            this.buttonExitWithoutSaving.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonExitWithoutSaving.Margin = new System.Windows.Forms.Padding(5);
             this.buttonExitWithoutSaving.Name = "buttonExitWithoutSaving";
             this.buttonExitWithoutSaving.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
             this.buttonExitWithoutSaving.Size = new System.Drawing.Size(255, 55);
@@ -212,9 +214,10 @@ namespace DirtyDand
             this.buttonSaveAndExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(11)))), ((int)(((byte)(11)))));
             this.buttonSaveAndExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.buttonSaveAndExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSaveAndExit.Font = new System.Drawing.Font("MrsEavesSmallCaps", 12F);
             this.buttonSaveAndExit.ForeColor = System.Drawing.Color.LightGray;
             this.buttonSaveAndExit.Location = new System.Drawing.Point(0, 55);
-            this.buttonSaveAndExit.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonSaveAndExit.Margin = new System.Windows.Forms.Padding(5);
             this.buttonSaveAndExit.Name = "buttonSaveAndExit";
             this.buttonSaveAndExit.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
             this.buttonSaveAndExit.Size = new System.Drawing.Size(255, 55);
@@ -232,9 +235,10 @@ namespace DirtyDand
             this.buttonSave.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(11)))), ((int)(((byte)(11)))));
             this.buttonSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.buttonSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSave.Font = new System.Drawing.Font("MrsEavesSmallCaps", 12F);
             this.buttonSave.ForeColor = System.Drawing.Color.LightGray;
             this.buttonSave.Location = new System.Drawing.Point(0, 0);
-            this.buttonSave.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonSave.Margin = new System.Windows.Forms.Padding(5);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
             this.buttonSave.Size = new System.Drawing.Size(255, 55);
@@ -253,9 +257,10 @@ namespace DirtyDand
             this.buttonSettings.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.buttonSettings.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.buttonSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSettings.Font = new System.Drawing.Font("MrsEavesSmallCaps", 18F);
             this.buttonSettings.ForeColor = System.Drawing.Color.LightGray;
-            this.buttonSettings.Location = new System.Drawing.Point(0, 857);
-            this.buttonSettings.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonSettings.Location = new System.Drawing.Point(0, 856);
+            this.buttonSettings.Margin = new System.Windows.Forms.Padding(5);
             this.buttonSettings.Name = "buttonSettings";
             this.buttonSettings.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
             this.buttonSettings.Size = new System.Drawing.Size(255, 70);
@@ -274,9 +279,10 @@ namespace DirtyDand
             this.buttonHelp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.buttonHelp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.buttonHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonHelp.Font = new System.Drawing.Font("MrsEavesSmallCaps", 18F);
             this.buttonHelp.ForeColor = System.Drawing.Color.LightGray;
-            this.buttonHelp.Location = new System.Drawing.Point(0, 787);
-            this.buttonHelp.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonHelp.Location = new System.Drawing.Point(0, 786);
+            this.buttonHelp.Margin = new System.Windows.Forms.Padding(5);
             this.buttonHelp.Name = "buttonHelp";
             this.buttonHelp.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
             this.buttonHelp.Size = new System.Drawing.Size(255, 70);
@@ -294,8 +300,8 @@ namespace DirtyDand
             this.panelHandbook.Controls.Add(this.buttonFeatSearch);
             this.panelHandbook.Controls.Add(this.buttonSpellSearch);
             this.panelHandbook.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelHandbook.Location = new System.Drawing.Point(0, 510);
-            this.panelHandbook.Margin = new System.Windows.Forms.Padding(4);
+            this.panelHandbook.Location = new System.Drawing.Point(0, 509);
+            this.panelHandbook.Margin = new System.Windows.Forms.Padding(5);
             this.panelHandbook.Name = "panelHandbook";
             this.panelHandbook.Size = new System.Drawing.Size(255, 277);
             this.panelHandbook.TabIndex = 4;
@@ -308,9 +314,10 @@ namespace DirtyDand
             this.buttonItemSearch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(11)))), ((int)(((byte)(11)))));
             this.buttonItemSearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.buttonItemSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonItemSearch.Font = new System.Drawing.Font("MrsEavesSmallCaps", 12F);
             this.buttonItemSearch.ForeColor = System.Drawing.Color.LightGray;
             this.buttonItemSearch.Location = new System.Drawing.Point(0, 220);
-            this.buttonItemSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonItemSearch.Margin = new System.Windows.Forms.Padding(5);
             this.buttonItemSearch.Name = "buttonItemSearch";
             this.buttonItemSearch.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
             this.buttonItemSearch.Size = new System.Drawing.Size(255, 55);
@@ -327,9 +334,10 @@ namespace DirtyDand
             this.buttonClassAbilitySearch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(11)))), ((int)(((byte)(11)))));
             this.buttonClassAbilitySearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.buttonClassAbilitySearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonClassAbilitySearch.Font = new System.Drawing.Font("MrsEavesSmallCaps", 12F);
             this.buttonClassAbilitySearch.ForeColor = System.Drawing.Color.LightGray;
             this.buttonClassAbilitySearch.Location = new System.Drawing.Point(0, 165);
-            this.buttonClassAbilitySearch.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonClassAbilitySearch.Margin = new System.Windows.Forms.Padding(5);
             this.buttonClassAbilitySearch.Name = "buttonClassAbilitySearch";
             this.buttonClassAbilitySearch.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
             this.buttonClassAbilitySearch.Size = new System.Drawing.Size(255, 55);
@@ -346,9 +354,10 @@ namespace DirtyDand
             this.buttonBackgroundSearch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(11)))), ((int)(((byte)(11)))));
             this.buttonBackgroundSearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.buttonBackgroundSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBackgroundSearch.Font = new System.Drawing.Font("MrsEavesSmallCaps", 12F);
             this.buttonBackgroundSearch.ForeColor = System.Drawing.Color.LightGray;
             this.buttonBackgroundSearch.Location = new System.Drawing.Point(0, 110);
-            this.buttonBackgroundSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonBackgroundSearch.Margin = new System.Windows.Forms.Padding(5);
             this.buttonBackgroundSearch.Name = "buttonBackgroundSearch";
             this.buttonBackgroundSearch.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
             this.buttonBackgroundSearch.Size = new System.Drawing.Size(255, 55);
@@ -365,9 +374,10 @@ namespace DirtyDand
             this.buttonFeatSearch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(11)))), ((int)(((byte)(11)))));
             this.buttonFeatSearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.buttonFeatSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonFeatSearch.Font = new System.Drawing.Font("MrsEavesSmallCaps", 12F);
             this.buttonFeatSearch.ForeColor = System.Drawing.Color.LightGray;
             this.buttonFeatSearch.Location = new System.Drawing.Point(0, 55);
-            this.buttonFeatSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonFeatSearch.Margin = new System.Windows.Forms.Padding(5);
             this.buttonFeatSearch.Name = "buttonFeatSearch";
             this.buttonFeatSearch.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
             this.buttonFeatSearch.Size = new System.Drawing.Size(255, 55);
@@ -384,9 +394,10 @@ namespace DirtyDand
             this.buttonSpellSearch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(11)))), ((int)(((byte)(11)))));
             this.buttonSpellSearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.buttonSpellSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSpellSearch.Font = new System.Drawing.Font("MrsEavesSmallCaps", 12F);
             this.buttonSpellSearch.ForeColor = System.Drawing.Color.LightGray;
             this.buttonSpellSearch.Location = new System.Drawing.Point(0, 0);
-            this.buttonSpellSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonSpellSearch.Margin = new System.Windows.Forms.Padding(5);
             this.buttonSpellSearch.Name = "buttonSpellSearch";
             this.buttonSpellSearch.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
             this.buttonSpellSearch.Size = new System.Drawing.Size(255, 55);
@@ -406,9 +417,10 @@ namespace DirtyDand
             this.buttonHandbook.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.buttonHandbook.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.buttonHandbook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonHandbook.Font = new System.Drawing.Font("MrsEavesSmallCaps", 18F);
             this.buttonHandbook.ForeColor = System.Drawing.Color.LightGray;
-            this.buttonHandbook.Location = new System.Drawing.Point(0, 440);
-            this.buttonHandbook.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonHandbook.Location = new System.Drawing.Point(0, 439);
+            this.buttonHandbook.Margin = new System.Windows.Forms.Padding(5);
             this.buttonHandbook.Name = "buttonHandbook";
             this.buttonHandbook.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
             this.buttonHandbook.Size = new System.Drawing.Size(255, 70);
@@ -428,9 +440,9 @@ namespace DirtyDand
             this.panelCharacter.Controls.Add(this.buttonSelectCharacter);
             this.panelCharacter.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelCharacter.Location = new System.Drawing.Point(0, 220);
-            this.panelCharacter.Margin = new System.Windows.Forms.Padding(4);
+            this.panelCharacter.Margin = new System.Windows.Forms.Padding(5);
             this.panelCharacter.Name = "panelCharacter";
-            this.panelCharacter.Size = new System.Drawing.Size(255, 220);
+            this.panelCharacter.Size = new System.Drawing.Size(255, 219);
             this.panelCharacter.TabIndex = 2;
             // 
             // buttonExportCharacter
@@ -443,12 +455,13 @@ namespace DirtyDand
             this.buttonExportCharacter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonExportCharacter.ForeColor = System.Drawing.Color.LightGray;
             this.buttonExportCharacter.Location = new System.Drawing.Point(0, 270);
-            this.buttonExportCharacter.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonExportCharacter.Margin = new System.Windows.Forms.Padding(5);
             this.buttonExportCharacter.Name = "buttonExportCharacter";
             this.buttonExportCharacter.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
             this.buttonExportCharacter.Size = new System.Drawing.Size(255, 55);
             this.buttonExportCharacter.TabIndex = 5;
             this.buttonExportCharacter.Text = "Export Character";
+            this.buttonExportCharacter.Font = new System.Drawing.Font("MrsEavesSmallCaps", 12F);
             this.buttonExportCharacter.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonExportCharacter.UseVisualStyleBackColor = true;
             // 
@@ -462,12 +475,13 @@ namespace DirtyDand
             this.buttonRemoveCharacter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonRemoveCharacter.ForeColor = System.Drawing.Color.LightGray;
             this.buttonRemoveCharacter.Location = new System.Drawing.Point(0, 215);
-            this.buttonRemoveCharacter.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonRemoveCharacter.Margin = new System.Windows.Forms.Padding(5);
             this.buttonRemoveCharacter.Name = "buttonRemoveCharacter";
             this.buttonRemoveCharacter.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
             this.buttonRemoveCharacter.Size = new System.Drawing.Size(255, 55);
             this.buttonRemoveCharacter.TabIndex = 4;
             this.buttonRemoveCharacter.Text = "Remove Character";
+            this.buttonRemoveCharacter.Font = new System.Drawing.Font("MrsEavesSmallCaps", 12F);
             this.buttonRemoveCharacter.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonRemoveCharacter.UseVisualStyleBackColor = true;
             // 
@@ -478,7 +492,7 @@ namespace DirtyDand
             this.panelNewCharacter.Controls.Add(this.buttonRandomCharacter);
             this.panelNewCharacter.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelNewCharacter.Location = new System.Drawing.Point(0, 110);
-            this.panelNewCharacter.Margin = new System.Windows.Forms.Padding(4);
+            this.panelNewCharacter.Margin = new System.Windows.Forms.Padding(5);
             this.panelNewCharacter.Name = "panelNewCharacter";
             this.panelNewCharacter.Size = new System.Drawing.Size(255, 105);
             this.panelNewCharacter.TabIndex = 3;
@@ -491,9 +505,10 @@ namespace DirtyDand
             this.buttonLoadCharacter.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(11)))), ((int)(((byte)(11)))));
             this.buttonLoadCharacter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.buttonLoadCharacter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonLoadCharacter.Font = new System.Drawing.Font("MrsEavesSmallCaps", 12F);
             this.buttonLoadCharacter.ForeColor = System.Drawing.Color.LightGray;
             this.buttonLoadCharacter.Location = new System.Drawing.Point(0, 70);
-            this.buttonLoadCharacter.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonLoadCharacter.Margin = new System.Windows.Forms.Padding(5);
             this.buttonLoadCharacter.Name = "buttonLoadCharacter";
             this.buttonLoadCharacter.Padding = new System.Windows.Forms.Padding(80, 0, 0, 0);
             this.buttonLoadCharacter.Size = new System.Drawing.Size(255, 35);
@@ -510,9 +525,10 @@ namespace DirtyDand
             this.buttonCustomCharacter.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(11)))), ((int)(((byte)(11)))));
             this.buttonCustomCharacter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.buttonCustomCharacter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCustomCharacter.Font = new System.Drawing.Font("MrsEavesSmallCaps", 12F);
             this.buttonCustomCharacter.ForeColor = System.Drawing.Color.LightGray;
             this.buttonCustomCharacter.Location = new System.Drawing.Point(0, 35);
-            this.buttonCustomCharacter.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonCustomCharacter.Margin = new System.Windows.Forms.Padding(5);
             this.buttonCustomCharacter.Name = "buttonCustomCharacter";
             this.buttonCustomCharacter.Padding = new System.Windows.Forms.Padding(80, 0, 0, 0);
             this.buttonCustomCharacter.Size = new System.Drawing.Size(255, 35);
@@ -529,9 +545,10 @@ namespace DirtyDand
             this.buttonRandomCharacter.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(11)))), ((int)(((byte)(11)))));
             this.buttonRandomCharacter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.buttonRandomCharacter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRandomCharacter.Font = new System.Drawing.Font("MrsEavesSmallCaps", 12F);
             this.buttonRandomCharacter.ForeColor = System.Drawing.Color.LightGray;
             this.buttonRandomCharacter.Location = new System.Drawing.Point(0, 0);
-            this.buttonRandomCharacter.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonRandomCharacter.Margin = new System.Windows.Forms.Padding(5);
             this.buttonRandomCharacter.Name = "buttonRandomCharacter";
             this.buttonRandomCharacter.Padding = new System.Windows.Forms.Padding(80, 0, 0, 0);
             this.buttonRandomCharacter.Size = new System.Drawing.Size(255, 35);
@@ -548,9 +565,10 @@ namespace DirtyDand
             this.buttonNewCharacter.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(11)))), ((int)(((byte)(11)))));
             this.buttonNewCharacter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.buttonNewCharacter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonNewCharacter.Font = new System.Drawing.Font("MrsEavesSmallCaps", 12F);
             this.buttonNewCharacter.ForeColor = System.Drawing.Color.LightGray;
             this.buttonNewCharacter.Location = new System.Drawing.Point(0, 55);
-            this.buttonNewCharacter.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonNewCharacter.Margin = new System.Windows.Forms.Padding(5);
             this.buttonNewCharacter.Name = "buttonNewCharacter";
             this.buttonNewCharacter.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
             this.buttonNewCharacter.Size = new System.Drawing.Size(255, 55);
@@ -568,9 +586,10 @@ namespace DirtyDand
             this.buttonSelectCharacter.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(11)))), ((int)(((byte)(11)))));
             this.buttonSelectCharacter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.buttonSelectCharacter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSelectCharacter.Font = new System.Drawing.Font("MrsEavesSmallCaps", 12F);
             this.buttonSelectCharacter.ForeColor = System.Drawing.Color.LightGray;
             this.buttonSelectCharacter.Location = new System.Drawing.Point(0, 0);
-            this.buttonSelectCharacter.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonSelectCharacter.Margin = new System.Windows.Forms.Padding(5);
             this.buttonSelectCharacter.Name = "buttonSelectCharacter";
             this.buttonSelectCharacter.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
             this.buttonSelectCharacter.Size = new System.Drawing.Size(255, 55);
@@ -590,9 +609,10 @@ namespace DirtyDand
             this.buttonCharacter.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.buttonCharacter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.buttonCharacter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCharacter.Font = new System.Drawing.Font("MrsEavesSmallCaps", 18F);
             this.buttonCharacter.ForeColor = System.Drawing.Color.LightGray;
             this.buttonCharacter.Location = new System.Drawing.Point(0, 150);
-            this.buttonCharacter.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonCharacter.Margin = new System.Windows.Forms.Padding(5);
             this.buttonCharacter.Name = "buttonCharacter";
             this.buttonCharacter.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
             this.buttonCharacter.Size = new System.Drawing.Size(255, 70);
@@ -610,7 +630,7 @@ namespace DirtyDand
             this.panelCharacterPreview.Controls.Add(this.labelCurrentCharacter);
             this.panelCharacterPreview.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelCharacterPreview.Location = new System.Drawing.Point(0, 0);
-            this.panelCharacterPreview.Margin = new System.Windows.Forms.Padding(4);
+            this.panelCharacterPreview.Margin = new System.Windows.Forms.Padding(5);
             this.panelCharacterPreview.Name = "panelCharacterPreview";
             this.panelCharacterPreview.Size = new System.Drawing.Size(255, 150);
             this.panelCharacterPreview.TabIndex = 0;
@@ -689,7 +709,7 @@ namespace DirtyDand
             this.pictureBoxLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBoxLogo.Location = new System.Drawing.Point(566, 209);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(500, 500);
+            this.pictureBoxLogo.Size = new System.Drawing.Size(501, 501);
             this.pictureBoxLogo.TabIndex = 0;
             this.pictureBoxLogo.TabStop = false;
             // 
@@ -716,9 +736,9 @@ namespace DirtyDand
             this.panelAbilityCHA.Controls.Add(this.labelCHALabel);
             this.panelAbilityCHA.Controls.Add(this.pictureBoxCHA);
             this.panelAbilityCHA.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelAbilityCHA.Location = new System.Drawing.Point(620, 0);
+            this.panelAbilityCHA.Location = new System.Drawing.Point(615, 0);
             this.panelAbilityCHA.Name = "panelAbilityCHA";
-            this.panelAbilityCHA.Size = new System.Drawing.Size(124, 123);
+            this.panelAbilityCHA.Size = new System.Drawing.Size(123, 123);
             this.panelAbilityCHA.TabIndex = 12;
             // 
             // labelCHAMod
@@ -728,11 +748,11 @@ namespace DirtyDand
             this.labelCHAMod.AutoSize = true;
             this.labelCHAMod.BackColor = System.Drawing.Color.Black;
             this.labelCHAMod.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.labelCHAMod.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCHAMod.Font = new System.Drawing.Font("MrsEavesSmallCaps", 14F);
             this.labelCHAMod.ForeColor = System.Drawing.Color.LightGray;
             this.labelCHAMod.Location = new System.Drawing.Point(46, 88);
             this.labelCHAMod.Name = "labelCHAMod";
-            this.labelCHAMod.Size = new System.Drawing.Size(31, 24);
+            this.labelCHAMod.Size = new System.Drawing.Size(28, 21);
             this.labelCHAMod.TabIndex = 12;
             this.labelCHAMod.Text = "+5";
             this.labelCHAMod.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -744,11 +764,11 @@ namespace DirtyDand
             this.labelCHAScore.AutoSize = true;
             this.labelCHAScore.BackColor = System.Drawing.Color.Black;
             this.labelCHAScore.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.labelCHAScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCHAScore.Font = new System.Drawing.Font("MrsEavesSmallCaps", 30F);
             this.labelCHAScore.ForeColor = System.Drawing.Color.LightGray;
             this.labelCHAScore.Location = new System.Drawing.Point(30, 34);
             this.labelCHAScore.Name = "labelCHAScore";
-            this.labelCHAScore.Size = new System.Drawing.Size(64, 46);
+            this.labelCHAScore.Size = new System.Drawing.Size(57, 43);
             this.labelCHAScore.TabIndex = 11;
             this.labelCHAScore.Text = "20";
             this.labelCHAScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -761,9 +781,9 @@ namespace DirtyDand
             this.labelCHALabel.BackColor = System.Drawing.Color.Black;
             this.labelCHALabel.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.labelCHALabel.ForeColor = System.Drawing.Color.LightGray;
-            this.labelCHALabel.Location = new System.Drawing.Point(42, 12);
+            this.labelCHALabel.Location = new System.Drawing.Point(42, 11);
             this.labelCHALabel.Name = "labelCHALabel";
-            this.labelCHALabel.Size = new System.Drawing.Size(36, 17);
+            this.labelCHALabel.Size = new System.Drawing.Size(37, 15);
             this.labelCHALabel.TabIndex = 10;
             this.labelCHALabel.Text = "CHA";
             this.labelCHALabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -776,7 +796,7 @@ namespace DirtyDand
             this.pictureBoxCHA.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBoxCHA.Location = new System.Drawing.Point(0, 0);
             this.pictureBoxCHA.Name = "pictureBoxCHA";
-            this.pictureBoxCHA.Size = new System.Drawing.Size(124, 123);
+            this.pictureBoxCHA.Size = new System.Drawing.Size(123, 123);
             this.pictureBoxCHA.TabIndex = 1;
             this.pictureBoxCHA.TabStop = false;
             // 
@@ -787,9 +807,9 @@ namespace DirtyDand
             this.panelAbilityWis.Controls.Add(this.labelWISLabel);
             this.panelAbilityWis.Controls.Add(this.pictureBoxWIS);
             this.panelAbilityWis.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelAbilityWis.Location = new System.Drawing.Point(496, 0);
+            this.panelAbilityWis.Location = new System.Drawing.Point(492, 0);
             this.panelAbilityWis.Name = "panelAbilityWis";
-            this.panelAbilityWis.Size = new System.Drawing.Size(124, 123);
+            this.panelAbilityWis.Size = new System.Drawing.Size(123, 123);
             this.panelAbilityWis.TabIndex = 11;
             // 
             // labelWISMod
@@ -799,11 +819,11 @@ namespace DirtyDand
             this.labelWISMod.AutoSize = true;
             this.labelWISMod.BackColor = System.Drawing.Color.Black;
             this.labelWISMod.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.labelWISMod.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelWISMod.Font = new System.Drawing.Font("MrsEavesSmallCaps", 14F);
             this.labelWISMod.ForeColor = System.Drawing.Color.LightGray;
             this.labelWISMod.Location = new System.Drawing.Point(46, 88);
             this.labelWISMod.Name = "labelWISMod";
-            this.labelWISMod.Size = new System.Drawing.Size(31, 24);
+            this.labelWISMod.Size = new System.Drawing.Size(28, 21);
             this.labelWISMod.TabIndex = 12;
             this.labelWISMod.Text = "+5";
             this.labelWISMod.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -815,11 +835,11 @@ namespace DirtyDand
             this.labelWISScore.AutoSize = true;
             this.labelWISScore.BackColor = System.Drawing.Color.Black;
             this.labelWISScore.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.labelWISScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelWISScore.Font = new System.Drawing.Font("MrsEavesSmallCaps", 30F);
             this.labelWISScore.ForeColor = System.Drawing.Color.LightGray;
             this.labelWISScore.Location = new System.Drawing.Point(30, 34);
             this.labelWISScore.Name = "labelWISScore";
-            this.labelWISScore.Size = new System.Drawing.Size(64, 46);
+            this.labelWISScore.Size = new System.Drawing.Size(57, 43);
             this.labelWISScore.TabIndex = 11;
             this.labelWISScore.Text = "20";
             this.labelWISScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -832,9 +852,9 @@ namespace DirtyDand
             this.labelWISLabel.BackColor = System.Drawing.Color.Black;
             this.labelWISLabel.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.labelWISLabel.ForeColor = System.Drawing.Color.LightGray;
-            this.labelWISLabel.Location = new System.Drawing.Point(42, 12);
+            this.labelWISLabel.Location = new System.Drawing.Point(42, 11);
             this.labelWISLabel.Name = "labelWISLabel";
-            this.labelWISLabel.Size = new System.Drawing.Size(33, 17);
+            this.labelWISLabel.Size = new System.Drawing.Size(30, 15);
             this.labelWISLabel.TabIndex = 10;
             this.labelWISLabel.Text = "WIS";
             this.labelWISLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -847,7 +867,7 @@ namespace DirtyDand
             this.pictureBoxWIS.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBoxWIS.Location = new System.Drawing.Point(0, 0);
             this.pictureBoxWIS.Name = "pictureBoxWIS";
-            this.pictureBoxWIS.Size = new System.Drawing.Size(124, 123);
+            this.pictureBoxWIS.Size = new System.Drawing.Size(123, 123);
             this.pictureBoxWIS.TabIndex = 1;
             this.pictureBoxWIS.TabStop = false;
             // 
@@ -858,9 +878,9 @@ namespace DirtyDand
             this.panelAbilityINT.Controls.Add(this.labelINTLabel);
             this.panelAbilityINT.Controls.Add(this.pictureBoxINT);
             this.panelAbilityINT.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelAbilityINT.Location = new System.Drawing.Point(372, 0);
+            this.panelAbilityINT.Location = new System.Drawing.Point(369, 0);
             this.panelAbilityINT.Name = "panelAbilityINT";
-            this.panelAbilityINT.Size = new System.Drawing.Size(124, 123);
+            this.panelAbilityINT.Size = new System.Drawing.Size(123, 123);
             this.panelAbilityINT.TabIndex = 10;
             // 
             // labelINTMod
@@ -870,11 +890,11 @@ namespace DirtyDand
             this.labelINTMod.AutoSize = true;
             this.labelINTMod.BackColor = System.Drawing.Color.Black;
             this.labelINTMod.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.labelINTMod.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelINTMod.Font = new System.Drawing.Font("MrsEavesSmallCaps", 14F);
             this.labelINTMod.ForeColor = System.Drawing.Color.LightGray;
             this.labelINTMod.Location = new System.Drawing.Point(46, 88);
             this.labelINTMod.Name = "labelINTMod";
-            this.labelINTMod.Size = new System.Drawing.Size(31, 24);
+            this.labelINTMod.Size = new System.Drawing.Size(28, 21);
             this.labelINTMod.TabIndex = 12;
             this.labelINTMod.Text = "+5";
             this.labelINTMod.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -886,11 +906,11 @@ namespace DirtyDand
             this.labelINTScore.AutoSize = true;
             this.labelINTScore.BackColor = System.Drawing.Color.Black;
             this.labelINTScore.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.labelINTScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelINTScore.Font = new System.Drawing.Font("MrsEavesSmallCaps", 30F);
             this.labelINTScore.ForeColor = System.Drawing.Color.LightGray;
             this.labelINTScore.Location = new System.Drawing.Point(30, 34);
             this.labelINTScore.Name = "labelINTScore";
-            this.labelINTScore.Size = new System.Drawing.Size(64, 46);
+            this.labelINTScore.Size = new System.Drawing.Size(57, 43);
             this.labelINTScore.TabIndex = 11;
             this.labelINTScore.Text = "20";
             this.labelINTScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -903,9 +923,9 @@ namespace DirtyDand
             this.labelINTLabel.BackColor = System.Drawing.Color.Black;
             this.labelINTLabel.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.labelINTLabel.ForeColor = System.Drawing.Color.LightGray;
-            this.labelINTLabel.Location = new System.Drawing.Point(42, 12);
+            this.labelINTLabel.Location = new System.Drawing.Point(42, 11);
             this.labelINTLabel.Name = "labelINTLabel";
-            this.labelINTLabel.Size = new System.Drawing.Size(30, 17);
+            this.labelINTLabel.Size = new System.Drawing.Size(31, 15);
             this.labelINTLabel.TabIndex = 10;
             this.labelINTLabel.Text = "INT";
             this.labelINTLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -918,7 +938,7 @@ namespace DirtyDand
             this.pictureBoxINT.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBoxINT.Location = new System.Drawing.Point(0, 0);
             this.pictureBoxINT.Name = "pictureBoxINT";
-            this.pictureBoxINT.Size = new System.Drawing.Size(124, 123);
+            this.pictureBoxINT.Size = new System.Drawing.Size(123, 123);
             this.pictureBoxINT.TabIndex = 1;
             this.pictureBoxINT.TabStop = false;
             // 
@@ -929,9 +949,9 @@ namespace DirtyDand
             this.panelAbilityCon.Controls.Add(this.labelCONLabel);
             this.panelAbilityCon.Controls.Add(this.pictureBoxCON);
             this.panelAbilityCon.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelAbilityCon.Location = new System.Drawing.Point(248, 0);
+            this.panelAbilityCon.Location = new System.Drawing.Point(246, 0);
             this.panelAbilityCon.Name = "panelAbilityCon";
-            this.panelAbilityCon.Size = new System.Drawing.Size(124, 123);
+            this.panelAbilityCon.Size = new System.Drawing.Size(123, 123);
             this.panelAbilityCon.TabIndex = 9;
             // 
             // labelCONMod
@@ -941,11 +961,11 @@ namespace DirtyDand
             this.labelCONMod.AutoSize = true;
             this.labelCONMod.BackColor = System.Drawing.Color.Black;
             this.labelCONMod.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.labelCONMod.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCONMod.Font = new System.Drawing.Font("MrsEavesSmallCaps", 14F);
             this.labelCONMod.ForeColor = System.Drawing.Color.LightGray;
             this.labelCONMod.Location = new System.Drawing.Point(46, 88);
             this.labelCONMod.Name = "labelCONMod";
-            this.labelCONMod.Size = new System.Drawing.Size(31, 24);
+            this.labelCONMod.Size = new System.Drawing.Size(28, 21);
             this.labelCONMod.TabIndex = 12;
             this.labelCONMod.Text = "+5";
             this.labelCONMod.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -957,11 +977,11 @@ namespace DirtyDand
             this.labelCONScore.AutoSize = true;
             this.labelCONScore.BackColor = System.Drawing.Color.Black;
             this.labelCONScore.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.labelCONScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCONScore.Font = new System.Drawing.Font("MrsEavesSmallCaps", 30F);
             this.labelCONScore.ForeColor = System.Drawing.Color.LightGray;
             this.labelCONScore.Location = new System.Drawing.Point(30, 34);
             this.labelCONScore.Name = "labelCONScore";
-            this.labelCONScore.Size = new System.Drawing.Size(64, 46);
+            this.labelCONScore.Size = new System.Drawing.Size(57, 43);
             this.labelCONScore.TabIndex = 11;
             this.labelCONScore.Text = "20";
             this.labelCONScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -974,9 +994,9 @@ namespace DirtyDand
             this.labelCONLabel.BackColor = System.Drawing.Color.Black;
             this.labelCONLabel.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.labelCONLabel.ForeColor = System.Drawing.Color.LightGray;
-            this.labelCONLabel.Location = new System.Drawing.Point(42, 12);
+            this.labelCONLabel.Location = new System.Drawing.Point(42, 11);
             this.labelCONLabel.Name = "labelCONLabel";
-            this.labelCONLabel.Size = new System.Drawing.Size(38, 17);
+            this.labelCONLabel.Size = new System.Drawing.Size(38, 15);
             this.labelCONLabel.TabIndex = 10;
             this.labelCONLabel.Text = "CON";
             this.labelCONLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -989,7 +1009,7 @@ namespace DirtyDand
             this.pictureBoxCON.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBoxCON.Location = new System.Drawing.Point(0, 0);
             this.pictureBoxCON.Name = "pictureBoxCON";
-            this.pictureBoxCON.Size = new System.Drawing.Size(124, 123);
+            this.pictureBoxCON.Size = new System.Drawing.Size(123, 123);
             this.pictureBoxCON.TabIndex = 1;
             this.pictureBoxCON.TabStop = false;
             // 
@@ -1000,9 +1020,9 @@ namespace DirtyDand
             this.panelAbilityDEX.Controls.Add(this.labelDEXLabel);
             this.panelAbilityDEX.Controls.Add(this.pictureBoxDEX);
             this.panelAbilityDEX.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelAbilityDEX.Location = new System.Drawing.Point(124, 0);
+            this.panelAbilityDEX.Location = new System.Drawing.Point(123, 0);
             this.panelAbilityDEX.Name = "panelAbilityDEX";
-            this.panelAbilityDEX.Size = new System.Drawing.Size(124, 123);
+            this.panelAbilityDEX.Size = new System.Drawing.Size(123, 123);
             this.panelAbilityDEX.TabIndex = 8;
             // 
             // labelDEXMod
@@ -1012,11 +1032,11 @@ namespace DirtyDand
             this.labelDEXMod.AutoSize = true;
             this.labelDEXMod.BackColor = System.Drawing.Color.Black;
             this.labelDEXMod.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.labelDEXMod.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDEXMod.Font = new System.Drawing.Font("MrsEavesSmallCaps", 14F);
             this.labelDEXMod.ForeColor = System.Drawing.Color.LightGray;
             this.labelDEXMod.Location = new System.Drawing.Point(46, 88);
             this.labelDEXMod.Name = "labelDEXMod";
-            this.labelDEXMod.Size = new System.Drawing.Size(31, 24);
+            this.labelDEXMod.Size = new System.Drawing.Size(28, 21);
             this.labelDEXMod.TabIndex = 12;
             this.labelDEXMod.Text = "+5";
             this.labelDEXMod.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1028,11 +1048,11 @@ namespace DirtyDand
             this.labelDEXScore.AutoSize = true;
             this.labelDEXScore.BackColor = System.Drawing.Color.Black;
             this.labelDEXScore.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.labelDEXScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDEXScore.Font = new System.Drawing.Font("MrsEavesSmallCaps", 30F);
             this.labelDEXScore.ForeColor = System.Drawing.Color.LightGray;
             this.labelDEXScore.Location = new System.Drawing.Point(30, 34);
             this.labelDEXScore.Name = "labelDEXScore";
-            this.labelDEXScore.Size = new System.Drawing.Size(64, 46);
+            this.labelDEXScore.Size = new System.Drawing.Size(57, 43);
             this.labelDEXScore.TabIndex = 11;
             this.labelDEXScore.Text = "20";
             this.labelDEXScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1045,9 +1065,9 @@ namespace DirtyDand
             this.labelDEXLabel.BackColor = System.Drawing.Color.Black;
             this.labelDEXLabel.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.labelDEXLabel.ForeColor = System.Drawing.Color.LightGray;
-            this.labelDEXLabel.Location = new System.Drawing.Point(42, 12);
+            this.labelDEXLabel.Location = new System.Drawing.Point(42, 11);
             this.labelDEXLabel.Name = "labelDEXLabel";
-            this.labelDEXLabel.Size = new System.Drawing.Size(36, 17);
+            this.labelDEXLabel.Size = new System.Drawing.Size(34, 15);
             this.labelDEXLabel.TabIndex = 10;
             this.labelDEXLabel.Text = "DEX";
             this.labelDEXLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1060,7 +1080,7 @@ namespace DirtyDand
             this.pictureBoxDEX.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBoxDEX.Location = new System.Drawing.Point(0, 0);
             this.pictureBoxDEX.Name = "pictureBoxDEX";
-            this.pictureBoxDEX.Size = new System.Drawing.Size(124, 123);
+            this.pictureBoxDEX.Size = new System.Drawing.Size(123, 123);
             this.pictureBoxDEX.TabIndex = 1;
             this.pictureBoxDEX.TabStop = false;
             // 
@@ -1073,7 +1093,7 @@ namespace DirtyDand
             this.panelAbilitySTR.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelAbilitySTR.Location = new System.Drawing.Point(0, 0);
             this.panelAbilitySTR.Name = "panelAbilitySTR";
-            this.panelAbilitySTR.Size = new System.Drawing.Size(124, 123);
+            this.panelAbilitySTR.Size = new System.Drawing.Size(123, 123);
             this.panelAbilitySTR.TabIndex = 7;
             // 
             // labelSTRMod
@@ -1083,11 +1103,11 @@ namespace DirtyDand
             this.labelSTRMod.AutoSize = true;
             this.labelSTRMod.BackColor = System.Drawing.Color.Black;
             this.labelSTRMod.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.labelSTRMod.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSTRMod.Font = new System.Drawing.Font("MrsEavesSmallCaps", 14F);
             this.labelSTRMod.ForeColor = System.Drawing.Color.LightGray;
             this.labelSTRMod.Location = new System.Drawing.Point(46, 88);
             this.labelSTRMod.Name = "labelSTRMod";
-            this.labelSTRMod.Size = new System.Drawing.Size(31, 24);
+            this.labelSTRMod.Size = new System.Drawing.Size(28, 21);
             this.labelSTRMod.TabIndex = 12;
             this.labelSTRMod.Text = "+5";
             this.labelSTRMod.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1099,11 +1119,11 @@ namespace DirtyDand
             this.labelSTRScore.AutoSize = true;
             this.labelSTRScore.BackColor = System.Drawing.Color.Black;
             this.labelSTRScore.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.labelSTRScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSTRScore.Font = new System.Drawing.Font("MrsEavesSmallCaps", 30F);
             this.labelSTRScore.ForeColor = System.Drawing.Color.LightGray;
             this.labelSTRScore.Location = new System.Drawing.Point(30, 34);
             this.labelSTRScore.Name = "labelSTRScore";
-            this.labelSTRScore.Size = new System.Drawing.Size(64, 46);
+            this.labelSTRScore.Size = new System.Drawing.Size(57, 43);
             this.labelSTRScore.TabIndex = 11;
             this.labelSTRScore.Text = "20";
             this.labelSTRScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1116,9 +1136,9 @@ namespace DirtyDand
             this.labelSTRLable.BackColor = System.Drawing.Color.Black;
             this.labelSTRLable.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.labelSTRLable.ForeColor = System.Drawing.Color.LightGray;
-            this.labelSTRLable.Location = new System.Drawing.Point(42, 12);
+            this.labelSTRLable.Location = new System.Drawing.Point(42, 11);
             this.labelSTRLable.Name = "labelSTRLable";
-            this.labelSTRLable.Size = new System.Drawing.Size(36, 17);
+            this.labelSTRLable.Size = new System.Drawing.Size(32, 15);
             this.labelSTRLable.TabIndex = 10;
             this.labelSTRLable.Text = "STR";
             this.labelSTRLable.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1131,23 +1151,23 @@ namespace DirtyDand
             this.pictureBoxSTR.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBoxSTR.Location = new System.Drawing.Point(0, 0);
             this.pictureBoxSTR.Name = "pictureBoxSTR";
-            this.pictureBoxSTR.Size = new System.Drawing.Size(124, 123);
+            this.pictureBoxSTR.Size = new System.Drawing.Size(123, 123);
             this.pictureBoxSTR.TabIndex = 1;
             this.pictureBoxSTR.TabStop = false;
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
             this.ClientSize = new System.Drawing.Size(1904, 1041);
             this.Controls.Add(this.panelOpenScreen);
             this.Controls.Add(this.panelMenu);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("MrsEavesSmallCaps", 10F);
             this.ForeColor = System.Drawing.Color.Black;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.MinimumSize = new System.Drawing.Size(772, 623);
+            this.Margin = new System.Windows.Forms.Padding(5);
+            this.MinimumSize = new System.Drawing.Size(773, 623);
             this.Name = "MainForm";
             this.Text = "DirtyDanD";
             this.panelMenu.ResumeLayout(false);
