@@ -40,8 +40,8 @@ namespace DirtyDand.Globals
 
         public static ToolTip[] toolTips =
         {
-            new ToolTip("incapacitated","An incapacitated creature can't take Actions or Reactions"),
-            new ToolTip("deafend","A deafend creature can't hear and automatically fails any ability check that requires hearing")
+            new ToolTip("Incapacitated","An incapacitated creature can't take Actions or Reactions"),
+            new ToolTip("Deafened","A deafend creature can't hear and automatically fails any ability check that requires hearing")
 
         };
 

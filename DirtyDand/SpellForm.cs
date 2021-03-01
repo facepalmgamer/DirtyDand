@@ -1,5 +1,5 @@
 ﻿using DirtyDand.Classes;
-using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace DirtyDand
@@ -13,7 +13,9 @@ namespace DirtyDand
             this.spell = spell;
             this.main = main;
             InitializeComponent();
+            label1.BackColor = Color.Transparent;
             label1.Text = spell.spellName;
+
         }
 
         private void button1_Click(object sender, System.EventArgs e)

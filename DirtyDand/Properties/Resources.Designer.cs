@@ -101,6 +101,16 @@ namespace DirtyDand.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap pageBackground {
+            get {
+                object obj = ResourceManager.GetObject("pageBackground", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Abi-Dalzim&apos;s Horrid Wilting
         ///8th-level necromancy
         ///Casting Time: 1 action
