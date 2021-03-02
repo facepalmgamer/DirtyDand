@@ -104,6 +104,7 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Globals\GlobalVariables.cs" />
+    <Compile Include="Handlers\CharacterHandler.cs" />
     <Compile Include="Handlers\SpellHandler.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
