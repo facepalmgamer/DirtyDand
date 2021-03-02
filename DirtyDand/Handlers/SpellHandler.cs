@@ -201,50 +201,47 @@ namespace DirtyDand.Handlers
 
         public void SortLevel()
         {
-            List<List<Spell>> levels = new List<List<Spell>>();
+            List<Spell>[] levelLists = new List<Spell>[10];
             for (int i = 0; i < 10; i++)
-                levels.Add(new List<Spell>());
+                levelLists[i] = new List<Spell>();
 
-            for (int i = 0; i < spellRegistry.Count(); i++)
-            {
-                switch (spellRegistry.ElementAt(i).level)
+            foreach (Spell s in spellRegistry)
+                switch (s.level)
                 {
                     case 0:
-                        levels.ElementAt(0).Add(spellRegistry.ElementAt(i));
+                        levelLists[0].Add(s);
                         break;
                     case 1:
-                        levels.ElementAt(1).Add(spellRegistry.ElementAt(i));
+                        levelLists[1].Add(s); 
                         break;
                     case 2:
-                        levels.ElementAt(2).Add(spellRegistry.ElementAt(i));
+                        levelLists[2].Add(s); 
                         break;
                     case 3:
-                        levels.ElementAt(3).Add(spellRegistry.ElementAt(i));
+                        levelLists[3].Add(s); 
                         break;
                     case 4:
-                        levels.ElementAt(4).Add(spellRegistry.ElementAt(i));
+                        levelLists[4].Add(s); 
                         break;
                     case 5:
-                        levels.ElementAt(5).Add(spellRegistry.ElementAt(i));
+                        levelLists[5].Add(s); 
                         break;
                     case 6:
-                        levels.ElementAt(6).Add(spellRegistry.ElementAt(i));
+                        levelLists[6].Add(s); 
                         break;
                     case 7:
-                        levels.ElementAt(7).Add(spellRegistry.ElementAt(i));
+                        levelLists[7].Add(s); 
                         break;
                     case 8:
-                        levels.ElementAt(8).Add(spellRegistry.ElementAt(i));
+                        levelLists[8].Add(s); 
                         break;
                     case 9:
-                        levels.ElementAt(9).Add(spellRegistry.ElementAt(i));
+                        levelLists[9].Add(s); 
                         break;
                 }
-
-            }
             spellRegistry.Clear();
-            foreach (List<Spell> e in levels)
-                spellRegistry.AddRange(e);
+            foreach (List<Spell> l in levelLists)
+                spellRegistry.AddRange(l);
         }
     }
 }
