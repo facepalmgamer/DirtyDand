@@ -202,44 +202,15 @@ namespace DirtyDand.Handlers
         public void SortLevel()
         {
             List<Spell>[] levelLists = new List<Spell>[10];
+
             for (int i = 0; i < 10; i++)
                 levelLists[i] = new List<Spell>();
 
             foreach (Spell s in spellRegistry)
-                switch (s.level)
-                {
-                    case 0:
-                        levelLists[0].Add(s);
-                        break;
-                    case 1:
-                        levelLists[1].Add(s); 
-                        break;
-                    case 2:
-                        levelLists[2].Add(s); 
-                        break;
-                    case 3:
-                        levelLists[3].Add(s); 
-                        break;
-                    case 4:
-                        levelLists[4].Add(s); 
-                        break;
-                    case 5:
-                        levelLists[5].Add(s); 
-                        break;
-                    case 6:
-                        levelLists[6].Add(s); 
-                        break;
-                    case 7:
-                        levelLists[7].Add(s); 
-                        break;
-                    case 8:
-                        levelLists[8].Add(s); 
-                        break;
-                    case 9:
-                        levelLists[9].Add(s); 
-                        break;
-                }
+                levelLists[s.level].Add(s);
+
             spellRegistry.Clear();
+
             foreach (List<Spell> l in levelLists)
                 spellRegistry.AddRange(l);
         }

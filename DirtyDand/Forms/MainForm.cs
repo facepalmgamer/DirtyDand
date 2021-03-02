@@ -34,7 +34,6 @@ namespace DirtyDand
             spellHandler = new SpellHandler();
 
             spellHandler.SortLevel();
-
         }
 
         #region Character
