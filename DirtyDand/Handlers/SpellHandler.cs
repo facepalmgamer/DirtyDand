@@ -18,7 +18,7 @@ namespace DirtyDand.Handlers
 
             foreach (string e in spells)
             {
-                spellRegistry.Add(new Classes.Spell());
+                spellRegistry.Add(new Spell());
                 //Splits file into spells
                 string[] fakeLine = e.Split('\n');
                 List<string> lines = fakeLine.ToList();

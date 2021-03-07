@@ -15,7 +15,6 @@ namespace DirtyDand
             InitializeComponent();
             label1.BackColor = Color.Transparent;
             label1.Text = spell.spellName;
-
         }
 
         private void button1_Click(object sender, System.EventArgs e)

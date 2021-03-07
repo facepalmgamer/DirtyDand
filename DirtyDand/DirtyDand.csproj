@@ -88,6 +88,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Item.cs" />
+    <Compile Include="Classes\Weapon.cs" />
     <Compile Include="Forms\CharacterForm.cs">
       <SubType>Form</SubType>
     </Compile>

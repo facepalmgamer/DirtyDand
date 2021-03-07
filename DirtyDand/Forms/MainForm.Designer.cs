@@ -453,6 +453,7 @@ namespace DirtyDand
             this.buttonExportCharacter.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(11)))), ((int)(((byte)(11)))));
             this.buttonExportCharacter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.buttonExportCharacter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonExportCharacter.Font = new System.Drawing.Font("MrsEavesSmallCaps", 12F);
             this.buttonExportCharacter.ForeColor = System.Drawing.Color.LightGray;
             this.buttonExportCharacter.Location = new System.Drawing.Point(0, 270);
             this.buttonExportCharacter.Margin = new System.Windows.Forms.Padding(5);
@@ -461,7 +462,6 @@ namespace DirtyDand
             this.buttonExportCharacter.Size = new System.Drawing.Size(255, 55);
             this.buttonExportCharacter.TabIndex = 5;
             this.buttonExportCharacter.Text = "Export Character";
-            this.buttonExportCharacter.Font = new System.Drawing.Font("MrsEavesSmallCaps", 12F);
             this.buttonExportCharacter.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonExportCharacter.UseVisualStyleBackColor = true;
             // 
@@ -473,6 +473,7 @@ namespace DirtyDand
             this.buttonRemoveCharacter.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(11)))), ((int)(((byte)(11)))));
             this.buttonRemoveCharacter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.buttonRemoveCharacter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRemoveCharacter.Font = new System.Drawing.Font("MrsEavesSmallCaps", 12F);
             this.buttonRemoveCharacter.ForeColor = System.Drawing.Color.LightGray;
             this.buttonRemoveCharacter.Location = new System.Drawing.Point(0, 215);
             this.buttonRemoveCharacter.Margin = new System.Windows.Forms.Padding(5);
@@ -481,7 +482,6 @@ namespace DirtyDand
             this.buttonRemoveCharacter.Size = new System.Drawing.Size(255, 55);
             this.buttonRemoveCharacter.TabIndex = 4;
             this.buttonRemoveCharacter.Text = "Remove Character";
-            this.buttonRemoveCharacter.Font = new System.Drawing.Font("MrsEavesSmallCaps", 12F);
             this.buttonRemoveCharacter.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonRemoveCharacter.UseVisualStyleBackColor = true;
             // 

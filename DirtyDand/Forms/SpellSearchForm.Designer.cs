@@ -51,7 +51,7 @@ namespace DirtyDand
             this.panelMain.Controls.Add(this.panelSearch);
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMain.Location = new System.Drawing.Point(0, 0);
-            this.panelMain.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelMain.Margin = new System.Windows.Forms.Padding(4);
             this.panelMain.Name = "panelMain";
             this.panelMain.Size = new System.Drawing.Size(1632, 918);
             this.panelMain.TabIndex = 3;
@@ -63,7 +63,7 @@ namespace DirtyDand
             this.panelSpellMain.Controls.Add(this.dataGridViewSpells);
             this.panelSpellMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelSpellMain.Location = new System.Drawing.Point(0, 151);
-            this.panelSpellMain.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelSpellMain.Margin = new System.Windows.Forms.Padding(4);
             this.panelSpellMain.Name = "panelSpellMain";
             this.panelSpellMain.Size = new System.Drawing.Size(1632, 767);
             this.panelSpellMain.TabIndex = 7;
@@ -99,7 +99,7 @@ namespace DirtyDand
             this.dataGridViewSpells.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewSpells.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.dataGridViewSpells.Location = new System.Drawing.Point(0, 0);
-            this.dataGridViewSpells.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridViewSpells.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewSpells.Name = "dataGridViewSpells";
             this.dataGridViewSpells.ReadOnly = true;
             this.dataGridViewSpells.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -128,7 +128,7 @@ namespace DirtyDand
             this.panelSearch.Controls.Add(this.textBoxSearchBar);
             this.panelSearch.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSearch.Location = new System.Drawing.Point(0, 0);
-            this.panelSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelSearch.Margin = new System.Windows.Forms.Padding(4);
             this.panelSearch.Name = "panelSearch";
             this.panelSearch.Size = new System.Drawing.Size(1632, 151);
             this.panelSearch.TabIndex = 3;
@@ -140,11 +140,11 @@ namespace DirtyDand
             this.buttonSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSearch.ForeColor = System.Drawing.Color.LightGray;
             this.buttonSearch.Location = new System.Drawing.Point(1340, 12);
-            this.buttonSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonSearch.Margin = new System.Windows.Forms.Padding(4);
             this.buttonSearch.Name = "buttonSearch";
             this.buttonSearch.Size = new System.Drawing.Size(200, 127);
             this.buttonSearch.TabIndex = 1;
-            this.buttonSearch.Text = "button1";
+            this.buttonSearch.Text = "Search";
             this.buttonSearch.UseVisualStyleBackColor = false;
             this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
             // 
@@ -157,7 +157,7 @@ namespace DirtyDand
             this.textBoxSearchBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 68F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxSearchBar.ForeColor = System.Drawing.Color.LightGray;
             this.textBoxSearchBar.Location = new System.Drawing.Point(13, 12);
-            this.textBoxSearchBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxSearchBar.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxSearchBar.Name = "textBoxSearchBar";
             this.textBoxSearchBar.Size = new System.Drawing.Size(1303, 103);
             this.textBoxSearchBar.TabIndex = 0;
@@ -171,7 +171,7 @@ namespace DirtyDand
             this.Controls.Add(this.panelMain);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "SpellSearchForm";
             this.Text = "SpellForm";
             this.panelMain.ResumeLayout(false);
