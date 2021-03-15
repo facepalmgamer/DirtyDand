@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
+using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 
@@ -19,26 +20,27 @@ namespace Scraper
 
             List<Task> tasks = new List<Task>();
 
-            tasks.Add(Task.Run(() => Get5EToolsInfo(path, "https://5e.tools/spells.html", "Spells")));
+            /*tasks.Add(Task.Run(() => Get5EToolsInfo(path, "https://5e.tools/spells.html", "Spells")));
             Console.WriteLine("starting 5E spells");
 
             tasks.Add(Task.Run(() => Get5EToolsInfo(path, "https://5e.tools/backgrounds.html", "Backgrounds")));
             Console.WriteLine("starting 5E backgrounds");
 
             tasks.Add(Task.Run(() => Get5EToolsInfo(path, "https://5e.tools/feats.html", "Feats")));
-            Console.WriteLine("starting 5E feats");
+            Console.WriteLine("starting 5E feats");*/
 
             tasks.Add(Task.Run(() => Get5EToolsInfo(path, "https://5e.tools/races.html", "Races")));
             Console.WriteLine("starting 5E Races");
 
 
-            tasks.Add(Task.Run(() => GetWikiDotSpells(path)));
-            Console.WriteLine("starting wikidot");
+            /*tasks.Add(Task.Run(() => GetWikiDotSpells(path)));
+            Console.WriteLine("starting wikidot");*/
 
             await Task.WhenAll(tasks);
+            FixRaces(path);
             Console.WriteLine("done");
 
-            
+
         }
         static void GetWikiDotSpells(string path)
         {
@@ -106,7 +108,7 @@ namespace Scraper
             List<string> info = new List<string>();
 
             IWebDriver driver = new ChromeDriver(@"C:\dev\");
-            driver.Manage().Timeouts().ImplicitWait = new TimeSpan(0,1,0);
+            driver.Manage().Timeouts().ImplicitWait = new TimeSpan(0, 1, 0);
             driver.Url = url;
 
             driver.FindElement(By.CssSelector("button[class='btn btn-default ']")).Click();//opens filer
@@ -118,7 +120,7 @@ namespace Scraper
             info.Add(driver.FindElement(By.CssSelector("span[class='stats-name copyable']")).Text);//gets the name
             ReadOnlyCollection<IWebElement> elementInfo = driver.FindElements(By.CssSelector("td[colspan='6']"));//gets all other info
             foreach (IWebElement e in elementInfo)
-              info.Add(e.Text);//adds ainfo to list
+                info.Add(e.Text);//adds ainfo to list
             info.Add("~");
 
 
@@ -130,14 +132,7 @@ namespace Scraper
                 foreach (IWebElement i in elementInfo)
                     info.Add(i.Text);//adds ainfo to list
                 info.Add("~");
-                
-            }
 
-            switch (name)
-            {
-                case "Races":
-                    FixRaces(ref info);
-                    break;
             }
 
             string[] lines = info.ToArray();
@@ -145,10 +140,33 @@ namespace Scraper
             driver.Close();
         }
 
-        public static void FixRaces(ref List<string> info)
+        public static void FixRaces(string path)
         {
-            
-            
+            string[] races = File.ReadAllText(path + "Races5E.txt").Split('~');
+            List<string> update = new List<string>();
+            foreach(string e in races)
+            {
+                string[] fakeLines = e.Split('\n');
+                List<string> lines = fakeLines.ToList();
+                lines.Remove("\r");
+                lines.RemoveAll(IsBlank);
+                string source = lines[lines.Count() - 1].Substring(8, lines[lines.Count() - 1].IndexOf(", ") - 1);
+                if (lines.Last().Contains("UA"))
+                    lines[0] = lines[0] + "(" + source + ")";
+                for (int i = 0; i < lines.Count(); i++)
+                    update.Add(lines[i]);
+            }
+            races = update.ToArray();
+            File.WriteAllLines(path + "Races5E.txt", races);
+
+        }
+
+        private static bool IsBlank(string s)
+        {
+            if (s.Equals(""))
+                return true;
+            else
+                return false;
         }
 
         public static string RemoveParagraphBullShit(string bs)
@@ -187,6 +205,6 @@ namespace Scraper
             return bs;
         }
 
-        
+
     }
 }
