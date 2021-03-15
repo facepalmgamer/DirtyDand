@@ -20,21 +20,25 @@ namespace Scraper
 
             List<Task> tasks = new List<Task>();
 
-            /*tasks.Add(Task.Run(() => Get5EToolsInfo(path, "https://5e.tools/spells.html", "Spells")));
-            Console.WriteLine("starting 5E spells");
+            //tasks.Add(Task.Run(() => Get5EToolsInfo(path, "https://5e.tools/spells.html", "Spells")));
+            //Console.WriteLine("starting 5E spells");
 
-            tasks.Add(Task.Run(() => Get5EToolsInfo(path, "https://5e.tools/backgrounds.html", "Backgrounds")));
-            Console.WriteLine("starting 5E backgrounds");
+            //tasks.Add(Task.Run(() => Get5EToolsInfo(path, "https://5e.tools/backgrounds.html", "Backgrounds")));
+            //Console.WriteLine("starting 5E backgrounds");
 
-            tasks.Add(Task.Run(() => Get5EToolsInfo(path, "https://5e.tools/feats.html", "Feats")));
-            Console.WriteLine("starting 5E feats");*/
+            //tasks.Add(Task.Run(() => Get5EToolsInfo(path, "https://5e.tools/feats.html", "Feats")));
+            //Console.WriteLine("starting 5E feats");
 
             tasks.Add(Task.Run(() => Get5EToolsInfo(path, "https://5e.tools/races.html", "Races")));
             Console.WriteLine("starting 5E Races");
 
 
-            /*tasks.Add(Task.Run(() => GetWikiDotSpells(path)));
-            Console.WriteLine("starting wikidot");*/
+            //tasks.Add(Task.Run(() => GetWikiDotSpells(path)));
+            //Console.WriteLine("starting wikidot");
+
+            tasks.Add(Task.Run(() => GetWikiDotClasses(path, "Fighter")));
+            tasks.Add(Task.Run(() => GetWikiDotClasses(path, "Barbarian")));
+
 
             await Task.WhenAll(tasks);
             FixRaces(path);
@@ -103,6 +107,82 @@ namespace Scraper
 
             //int level, enum school, string castingTime, int range, bool v, bool s, bool m, string material, string suration, 
         }
+        static void GetWikiDotClasses(string path, string name)
+        {
+            List<string> spellsURL = new List<string>();
+            List<string> spellsHTML = new List<string>();
+
+            string url = "http://dnd5e.wikidot.com/" + name.ToLower();
+
+            WebClient client = new WebClient();
+
+            string html = client.DownloadString(url);
+
+
+            html = RemoveParagraphBullShit(html);
+
+            html = html.Substring(html.IndexOf("The " + name), html.Length - html.IndexOf("The " + name));
+            html = html.Substring(0, html.IndexOf("\n\n\n\n\n\n\n\n\n"));
+
+            string subclasses = html.Substring(html.IndexOf("grants you features"), html.LastIndexOf("\n\n") - html.IndexOf("grants you features"));
+            subclasses = subclasses.Remove(0, subclasses.IndexOf("Source") + 9);
+
+            List<string> subClassList = subclasses.Split('\n').ToList();
+            int z = 0;
+            do
+            {
+                int x = 0;
+                for (z = 0; z < subClassList.Count; z++)
+                {
+                    if (subClassList[z] != "")
+                        x++;
+                    else
+                        x = 0;
+                    if (x != 2)
+                    {
+                        if (subClassList.Count == z + 1)
+                        {
+                            subClassList.RemoveAt(z);
+                            x = 0;
+                            break;
+
+                        }
+                        if (x == 1 && subClassList[z + 1] == "")
+                        {
+                            Console.WriteLine(subClassList[z]);
+                            subClassList.RemoveAt(z);
+                            x = 0;
+                            break;
+                        }
+                        else if (x > 2)
+                        {
+                            subClassList.RemoveAt(z - 2);
+                            subClassList.RemoveAt(z - 1);
+                            subClassList.RemoveAt(z);
+                            x = 0;
+                            break;
+                        }
+                    }
+
+                }
+            }
+            while (z != subClassList.Count);
+
+            subClassList.RemoveAll(IsBlank);
+            for (int i = 1; i < subClassList.Count; i += 2)
+                subClassList[i] = "";
+            subClassList.RemoveAll(IsBlank);
+            for (int i = 0; i < subClassList.Count; i++)
+            {
+                subClassList[i] = subClassList[i].ToLower().Trim();
+                subClassList[i] = subClassList[i].Replace(' ', '-');
+            }
+
+            File.WriteAllLines(path + name + ".txt", subClassList.ToArray());
+
+        }
+
+
         static void Get5EToolsInfo(string path, string url, string name)
         {
             List<string> info = new List<string>();
@@ -144,7 +224,7 @@ namespace Scraper
         {
             string[] races = File.ReadAllText(path + "Races5E.txt").Split('~');
             List<string> update = new List<string>();
-            foreach(string e in races)
+            foreach (string e in races)
             {
                 string[] fakeLines = e.Split('\n');
                 List<string> lines = fakeLines.ToList();
@@ -161,13 +241,7 @@ namespace Scraper
 
         }
 
-        private static bool IsBlank(string s)
-        {
-            if (s.Equals(""))
-                return true;
-            else
-                return false;
-        }
+
 
         public static string RemoveParagraphBullShit(string bs)
         {
@@ -190,6 +264,12 @@ namespace Scraper
                 temp += bs.Substring(bs.IndexOf("&quot;") + 6, bs.Length - bs.IndexOf("&quot;") - 6);
                 bs = temp;
             }
+            while (bs.Contains("&amp;"))
+            {
+                temp = bs.Substring(0, bs.IndexOf("&amp;")) + "&";
+                temp += bs.Substring(bs.IndexOf("&amp;") + 5, bs.Length - bs.IndexOf("&amp;") - 5);
+                bs = temp;
+            }
             while (bs.Contains("&#8212;"))
             {
                 temp = bs.Substring(0, bs.IndexOf("&#8212;")) + "—";
@@ -204,7 +284,12 @@ namespace Scraper
             }
             return bs;
         }
-
-
+        private static bool IsBlank(string s)
+        {
+            if (s.Equals(""))
+                return true;
+            else
+                return false;
+        }
     }
 }
